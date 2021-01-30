@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # WARNING: This script is being replaced by latexmk (and it's init file .latexmkrc). This script still works but
 #          is no longer supported and not used in Github Actions workflows.
@@ -53,10 +53,13 @@ function version() {
 
   if [[ -f "${dir}/VERSION" ]] ; then
     head -n1 "${dir}/VERSION" | tr . -
+  elif [[ -f "../VERSION" ]] ; then
+    head -n1 "../VERSION" | tr . -
   elif [[ -f "VERSION" ]] ; then
-    head -n1 VERSION | tr . -
+    head -n1 "VERSION" | tr . -
   else
-    echo "UNKNOWN VERSION"
+    echo "0.1" > "VERSION"
+    echo "0-1"
   fi
 }
 
@@ -73,20 +76,14 @@ function runLaTex() {
   local latexCommand="\def\customerCode{${customerCode}}"
 
   latexCommand+=" \def\documentName{${documentName}}"
-  latexCommand+=" \def\documentVersion{${version}}"
+  latexCommand+=" \def\documentVersion{${version//-/.}}"
 
   if [[ ${run} -eq 4 ]] ; then
     skipGeneratingPdf=""
   fi
 
-  if [[ "${mode}" == "draft" ]] ; then
-    latexCommand+="\def\DocumentClassOptions{} \input{"${file}'}'
-  elif [[ "${mode}" == "final" ]] ; then
-    latexCommand+="\def\DocumentClassOptions{final} \input{"${file}'}'
-  else
-    echo "ERROR: Unknown draft/final mode"
-    return 1
-  fi
+  latexCommand+="\def\documentMode{${mode}}"
+  latexCommand+="\input{"${file}'}'
 
   echo "*******************"
   echo "******************* lualatex run ${run} ${mode} ${customerCode} ${file}"
@@ -287,7 +284,12 @@ function runInkScapeOnSVGFile() {
       return 1
     fi
   else
-    if ! inkscape "${svgFile}" -D --export-filename="${pdfFile}" --export-type="pdf" --export-latex ; then
+    if ! inkscape "${svgFile}" \
+       --export-area-drawing \
+       --export-filename="${pdfFile}" \
+       --export-pdf-version=1.5 \
+       --export-type="pdf" \
+       --export-latex ; then
       echo "ERROR: Error occurred with inkscape ${svgFile}"
       return 1
     fi
@@ -573,15 +575,29 @@ function runBuildForMode() {
 
   return 0
 }
+
+function defaultCustomerCode() {
+
+  local gitRepoOrgName="$(git config --get remote.origin.url | sed 's!^.*github.com[:/]\(.*\)/.*$!\1!g')"
+
+  gitRepoOrgName="${gitRepoOrgName,,}"
+
+  if [[ -n "${gitRepoOrgName}" ]] ; then
+    echo "${gitRepoOrgName}"
+    return 0
+  fi
+  echo "agnos.ai"
+}
+
 function runTheBuild() {
 
-  local customerCode="agnos"
+  local customerCode="$(defaultCustomerCode)"
 
   if [[ $# -lt 1 ]] ; then
     echo "Usage: $0 [--local] [--draft] [--final] [--skip-pandoc] [--open] [--customer <customer code>] <name of main doc>"
     echo ""
     echo "The --draft option is the default but if you want to both draft and final versions of the document then specify them both."
-    echo "The default customer code is ${customerCode}."
+    echo "The default customer code is \"${customerCode}\"."
     return 1
   fi
 
@@ -681,6 +697,18 @@ function runTheBuild() {
   return $?
 }
 
+function openPdfForReal() {
+
+  local -r pdf="$1"
+
+  if [[ -d /Applications/Skim.app ]] ; then
+    open -a "Skim" "${pdf}"
+    return $?
+  fi
+
+  open "${pdf}"
+}
+
 function openPdf() {
 
   ((openThePdf)) || return 0
@@ -698,9 +726,11 @@ function openPdf() {
   local -r jobName=$(jobName "${customerCode}" "${mode}" "${documentName}" "${version}")
 
   if [[ -f "../out/${jobName}.pdf" ]] ; then
-    open "../out/${jobName}.pdf"
+    openPdfForReal "../out/${jobName}.pdf"
   elif [[ -f "${mainDir}/${jobName}.pdf" ]] ; then
-    open "${mainDir}/${jobName}.pdf"
+    openPdfForReal "${mainDir}/${jobName}.pdf"
+  elif [[ -f "../${mainDir}/${jobName}.pdf" ]] ; then
+    openPdfForReal "../${mainDir}/${jobName}.pdf"
   else
     echo "ERROR: Could not find ${jobName}.pdf"
     echo "mainDir=${mainDir}"
