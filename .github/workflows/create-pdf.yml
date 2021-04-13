@@ -5,7 +5,7 @@ jobs:
   create-pdf:
     strategy:
       matrix:
-        customer: [ 'ekgf' ]
+        customer_code: [ 'ekgf' ]
         document_main: [ 'ekg-manifesto' ]
         document_mode: [ 'draft', 'final' ]
         include:
@@ -48,8 +48,8 @@ jobs:
           #
           name: ${{ matrix.customer_code }}
           #
-          # path: unfortunately we cannot use ${{ steps.pdf.outputs.file }} here because the ekg-mm directory
-          #       in the repo is not a real directory but a symlink to /mnt/ekg-mm. The problem with that is that
+          # path: unfortunately we cannot use ${{ steps.pdf.outputs.file }} here because the ekg-manifesto directory
+          #       in the repo is not a real directory but a symlink to /mnt/ekg-manifesto. The problem with that is that
           #       the upload-artifact code cannot deal with that. Using a glob pattern like below is the fix for
           #       that
           #
