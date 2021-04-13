@@ -41,48 +41,32 @@
     quality of the data in the data stores}
 }
 
-\newglossaryentry{ekg:platform}{
-    type=\glsdefaulttype,
-    name={EKG/Platform},
-    parent={ekg},
-    description={The \gls{ekgp} is a system architecture concept that stands for the layer of software services that provide
-    and serve the Enterprise Knowledge Graph to end-users and other systems.
-    }
-}
-
-\newglossaryentry{ekg:storage}{
-    type=\glsdefaulttype,
-    name={EKG/Storage},
-    parent={ekg},
-    description={EKG/Storage is a system architecture concept that stands for the layer of data storage services such as a "Triple store" or an
-    "Object Store" that serve the various other layers of a typical EKG operation such as the "EKG Platform" and the EKG DataOps pipelines. }
-}
-
-\newglossaryentry{ekg:dataops}{
-    type=\glsdefaulttype,
-    name={EKG/DataOps},
-    parent={ekg},
-    description={..todo..}
-}
-
-\newglossaryentry{ekg:monitoring}{
+\newglossaryentry{bitemporality}{
+    name={Bi-temporality},
     type=\glsdefaulttype,
     name={EKG/Monitoring},
     parent={ekg},
     description={..todo..}
 }
 
-\newglossaryentry{bitemporality}{
-    name={Bi-temporality},%
+\newglossaryentry{bitemporality}{name={Bi-temporality},%
     type=\glsdefaulttype,%
     description={Bi-temporality is a feature of a system (or an Ontology) that allows for the recording of timestamps along two time lines:
     the time when the event was happening in the real world and the time when the event was recorded. See also "multi-temporality".}
 }
 
+\newglossaryentry{system-architecture}{
+    type=\glsdefaulttype,
+    name={system architecture},
+    description={
+        A system architecture is the conceptual model that defines the structure, behavior, and more views of a system.
+    }
+}
+
 \newglossaryentry{object}{
     name={Object},%
     type=\glsdefaulttype,%
-    description={A knowledge resource, that is intended to be referenceable and shared. 
+    description={A knowledge resource, that is intended to be referenceable and shared.
     It does not include structured values (\textit{blank nodes}) used in only one place.}
 }
 
@@ -110,7 +94,7 @@
     type=\glsdefaulttype,%
     first="Enterprise Knowledge Graph IRI (EKG/IRI)",
     description={
-        An \gls{iri} that forms the identity of an object in the \gls{ekg}. 
+        An \gls{iri} that forms the identity of an object in the \gls{ekg}.
         Any given object in an \gls{ekg} has an EKG/IRI for which special rules are defined by the \gls{ekgf}.
         Not to be confused by \glspl{canonical-identifier}.
     }
@@ -137,15 +121,18 @@
 \newglossaryentry{data-point}{
     name={Data Point},
     type=\glsdefaulttype,%
-    description={A fact representing the value(s) of a property for an object in some context. 
-    Each value may be a simple data (e.g. a number, string or date) or another object. 
+    description={A fact representing the value(s) of a property for an object in some context.
+    Each value may be a simple data (e.g. a number, string or date) or another object.
     The combination of object, property and value is a \textit{triple}.}
 }
 
 \newglossaryentry{dataset}{
     name={Dataset},
     type=\glsdefaulttype,%
-    description={A collection of data, published or curated by a single agent, 
+    description={A collection of data, published or curated by a single agent,
     and available for access or download in one or more serializations or formats.}
 }
+
+
+
 
