@@ -9,7 +9,7 @@ jobs:
         document_main: [ 'ekg-manifesto' ]
         document_mode: [ 'draft', 'final' ]
         include:
-          - document_main: 'ekg-mm'
+          - document_main: 'ekg-manifesto'
             folder: '0ACknmC_fYtNyUk9PVA'
             channel: 'ekg-manifesto-latest'
     runs-on: ubuntu-latest
