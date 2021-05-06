@@ -52,8 +52,6 @@ print "default_files=@default_files  $_[0]\n";
 foreach (@default_files) {
   print "$_\n";
 }
-print "\%O=%O\n";
-print "\%O=%S\n";
 
 #
 # Find the main doc and derive some values from it.
@@ -206,6 +204,7 @@ sub getVersionString() {
     if (starts_with($ENV{'GITHUB_REF'}, 'refs/tags/')) {
         my $tag = $ENV{'GITHUB_REF'};
         $tag =~ 'refs/tags/';
+        print "Git tag is ${tag}\n";
         $suffix = "${tag}";
     } else {
         #
