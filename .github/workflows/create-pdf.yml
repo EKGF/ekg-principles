@@ -21,6 +21,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
+        name: Event Name
+        run: |
+          echo "Event triggered by $GITHUB_EVENT_NAME"
+          echo "Dispatch type ${{ github.event.action }}"
+      -
         name: Set up Git repository
         uses: actions/checkout@v2
       -
