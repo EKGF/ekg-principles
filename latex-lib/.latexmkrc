@@ -202,8 +202,8 @@ sub getVersionSuffix() {
         $suffix = "${suffix}.$ENV{'USER'}";
     } else {
         if (starts_with($ENV{'GITHUB_REF'}, 'refs/tags/')) {
-            my $tag = $ENV{'GITHUB_REF'}
-            $tag =~ 'refs/tags/'
+            my $tag = $ENV{'GITHUB_REF'};
+            $tag =~ 'refs/tags/';
             $suffix = "${suffix}.${tag}";
         } else {
             $suffix = "${suffix}.$ENV{'GITHUB_RUN_NUMBER'}";
