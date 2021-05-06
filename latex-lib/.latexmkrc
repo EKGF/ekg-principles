@@ -202,9 +202,9 @@ sub getVersionString() {
     # If we are running in a job that is being triggered by a push with a tag then
     # assume that the tag is the version number
     #
-    if (starts_with($gitref, 'refs/tags/v')) {
+    if (starts_with($gitref, 'refs/tags/')) {
         my $tag = $gitref;
-        $tag =~ s@refs/tags/v@@;
+        $tag =~ s@refs/tags/@@;
         $suffix = "${tag}";
     } else {
         #
@@ -334,8 +334,6 @@ $jobname =~ s/--/-/g ;
 $jobname =~ s@/@-@g ;
 
 print "Job name: ${jobname}\n";
-
-exit(1);
 
 $lualatex_bin = "lualatex";
 if (-f "/Library/TeX/texbin/lualatex") {
