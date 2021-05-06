@@ -197,14 +197,14 @@ sub starts_with {
 sub getVersionString() {
     my $prefix = '';
     my $suffix = '';
+    my $gitref = $ENV{'GITHUB_REF'};
     #
     # If we are running in a job that is being triggered by a push with a tag then
     # assume that the tag is the version number
     #
-    if (starts_with($ENV{'GITHUB_REF'}, 'refs/tags/')) {
-        my $tag = $ENV{'GITHUB_REF'};
-        $tag =~ 'refs/tags/';
-        print "Git tag is ${tag}\n";
+    if (starts_with($gitref, 'refs/tags/v')) {
+        my $tag = $gitref;
+        $tag =~ s@refs/tags/v@@;
         $suffix = "${tag}";
     } else {
         #
@@ -334,6 +334,8 @@ $jobname =~ s/--/-/g ;
 $jobname =~ s@/@-@g ;
 
 print "Job name: ${jobname}\n";
+
+exit(1);
 
 $lualatex_bin = "lualatex";
 if (-f "/Library/TeX/texbin/lualatex") {
