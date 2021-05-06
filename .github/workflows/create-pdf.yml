@@ -94,3 +94,11 @@ jobs:
           token: "${{ secrets.SLACK_TOKEN }}"
           path: "${{ steps.pdf.outputs.file }}"
           channel: "${{ matrix.channel }}"
+      -
+        name: Release
+          uses: softprops/action-gh-release@v1
+          if: startsWith(github.ref, 'refs/tags/')
+          with:
+            files: ${{ steps.pdf.outputs.file }}
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
