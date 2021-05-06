@@ -24,7 +24,7 @@ jobs:
         name: Event Name
         run: |
           echo "Event triggered by $GITHUB_EVENT_NAME"
-          echo "Dispatch type ${{ github.event.action }}"
+          echo "The branch or tag ref that triggered the workflow: $GITHUB_REF"
       -
         name: Set up Git repository
         uses: actions/checkout@v2
