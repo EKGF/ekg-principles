@@ -1,5 +1,11 @@
 name: Create PDF
-on: [push]
+
+on:
+  push:
+    branches:
+      - '*'
+    tags:
+      - '*'
 
 jobs:
   create-pdf:
