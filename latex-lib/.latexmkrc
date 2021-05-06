@@ -192,12 +192,22 @@ sub getCurrentBranchName() {
     return ${branchName};
 }
 
+sub begins_with() {
+    return substr($_[0], 0, length($_[1])) eq $_[1];
+}
+
 sub getVersionSuffix() {
     my $suffix = '';
     if (! $ENV{'GITHUB_RUN_NUMBER'}) {
         $suffix = "${suffix}.$ENV{'USER'}";
     } else {
-        $suffix = "${suffix}.$ENV{'GITHUB_RUN_NUMBER'}";
+        if (starts_with($ENV{'GITHUB_REF'}, 'refs/tags/')) {
+            my $tag = $ENV{'GITHUB_REF'}
+            $tag =~ 'refs/tags/'
+            $suffix = "${suffix}.${tag}";
+        } else {
+            $suffix = "${suffix}.$ENV{'GITHUB_RUN_NUMBER'}";
+        }
     }
     my $branchName = getCurrentBranchName();
     if ($branchName ~~ ['main', 'master']) {
