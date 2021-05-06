@@ -192,7 +192,7 @@ sub getCurrentBranchName() {
     return ${branchName};
 }
 
-sub begins_with() {
+sub starts_with() {
     return substr($_[0], 0, length($_[1])) eq $_[1];
 }
 
