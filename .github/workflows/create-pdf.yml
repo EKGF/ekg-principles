@@ -101,7 +101,6 @@ jobs:
       -
         name: Upload to slack step
         uses: adrey/slack-file-upload-action@master
-        if: ${{ github.ref == 'refs/heads/xxxmain' }}
         with:
           token: "${{ secrets.SLACK_TOKEN }}"
           path: "${{ steps.pdf.outputs.file }}"
