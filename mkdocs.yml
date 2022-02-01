@@ -1,8 +1,8 @@
-site_name: EKG/MM
-site_description: Maturity Model for the Enterprise Knowledge Graph (EKG)
-repo_name: 'ekgf/ekg-mm'
-repo_url: https://github.com/ekgf/ekg-mm
-site_url: https://maturity-model.ekgf.org
+site_name: EKG/Manifesto
+site_description: Manifesto for the Enterprise Knowledge Graph (EKG)
+repo_name: 'ekgf/ekg-manifesto'
+repo_url: https://github.com/ekgf/ekg-manifesto
+site_url: https://manifesto.ekgf.org
 site_dir: site
 site_author: Enterprise Knowledge Graph Foundation
 copyright: Copyright &copy; 2022 Enterprise Knowledge Graph Foundation
@@ -46,7 +46,7 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/EKGF
     - icon: fontawesome/brands/github
-      link: https://github.com/ekgf/ekg-mm
+      link: https://github.com/ekgf/ekg-manifesto
 plugins:
   - search:
       prebuild_index: true
