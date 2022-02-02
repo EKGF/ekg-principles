@@ -9,7 +9,7 @@
 4. Increasing competitiveness depends more and more on having the 
    highest quality and depth of data, information and knowledge
 5. One "censored", biased, Single version of the Truth (SVOT)
-   is no longer good enough for many—if not most—use cases in 
+   is no longer good enough for many — if not most—use cases in 
    most domains
 6. The world becomes more and more polarised due to 
    "information bubbles" that many people are not escaping
