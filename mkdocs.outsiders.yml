@@ -10,6 +10,7 @@ plugins:
         securityLevel: 'loose'
 extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js
+  - javascript/refresh_on_toggle_dark_light.js
 markdown_extensions:
   - pymdownx.superfences:
       custom_fences:

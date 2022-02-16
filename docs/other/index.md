@@ -25,14 +25,16 @@ this is a project that is being maintained in the GitHub repository
 
 You're welcome to contribute.
 
+## Catalog
+
+All use cases from the community, their datasets and their ontologies:
+[https://catalog.ekgf.org](https://catalog.ekgf.org)
+
 ## Use Case Tree Method
 
-A proposal for a front-to-back method to support your EKG journey: 
-[https://use-case-tree-method.ekgf.org](https://use-case-tree-method.ekgf.org), 
-this is a project that is being maintained in the GitHub repository 
+A proposal for a front-to-back method to support your EKG journey:
+[https://use-case-tree-method.ekgf.org](https://use-case-tree-method.ekgf.org),
+this is a project that is being maintained in the GitHub repository
 [EKGF/use-case-tree-method](https://github.com/EKGF/use-case-tree-method).
 
 You're welcome to contribute.
-
-
-
