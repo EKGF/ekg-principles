@@ -137,7 +137,7 @@ jobs:
           mv ekgf-ekg-manifesto-*.pdf docs/assets/ekgf-ekg-manifesto.pdf
           ls -al docs/assets  || true
       -
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           key: ${{ github.ref }}
