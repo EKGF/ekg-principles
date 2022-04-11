@@ -52,7 +52,7 @@ jobs:
           echo "::set-output name=file::${file}"
       -
         name: Upload PDF to job page
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           #
           # name: leaving out the document name here so that all agnos docs end up in one zip file
@@ -68,7 +68,7 @@ jobs:
           if-no-files-found: error
       -
         name: Upload PDF to Github Actions job page
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: 'public'
           path: '${{ matrix.document_main }}/${{ matrix.customer_code }}-*.pdf'
