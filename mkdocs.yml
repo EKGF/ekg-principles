@@ -48,8 +48,9 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
 #   - navigation.sections
-    - navigation.expand
+#    - navigation.expand
     - navigation.indexes
+    - toc.follow
     - content.code.annotate
 extra:
   generator: false
@@ -70,30 +71,18 @@ extra_javascript:
   - "javascript/refresh_on_toggle_dark_light.js"
   - "https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"
 plugins:
-  - include-markdown
-  - git-revision-date
   - search:
       lang:
         - en
-  - awesome-pages:
-      filename: .pages.yaml
-      collapse_single_pages: false
-      strict: true
-  - exclude:
-      glob:
-        - "*.tmp"
-        - "*.sparql"
-        - "*.gz"
-        - diagrams/src/*
-      regex:
-        - '.*\.(tmp|bin|tar)$'
-        - '_.*\.md$'
-  - macros:
-      module_name: docs/main
+  - exclude-search:
+      exclude:
+        - 'fragment/*'
+  - include-markdown
+  - git-revision-date
   - build_plantuml:
       render: "server" # or "local" for local rendering
       bin_path: "/usr/local/bin/plantuml" # ignored when render: server
-      server: "http://www.plantuml.com/plantuml" # offical plantuml server
+      server: "http://www.plantuml.com/plantuml" # official plantuml server
       output_format: "svg" # or "png"
       diagram_root: "docs/diagrams" # should reside under docs_dir
       output_folder: "out"
@@ -103,6 +92,59 @@ plugins:
       theme_folder: "include/themes"
       theme_light: "light.puml"
       theme_dark: "dark.puml"
+  - awesome-pages:
+      filename: '.pages.yaml'
+      collapse_single_pages: false
+      strict: true
+  - exclude:
+      glob:
+        - "*.tmp"
+        - "*.sparql"
+        - "*.gz"
+        - 'diagrams/src/*'
+        - 'fragment/*'
+      regex:
+        - '.*\.(tmp|bin|tar)$'
+        - '_.*\.md$'
+  - macros:
+      module_name: 'docs/main'
+  - kroki:
+      ServerURL: https://kroki.io/
+      DownloadImages: false
+      DownloadDir: docs/diagrams/out
+#  - with-pdf:
+#      author: The Team
+#      copyright: Copyright &copy; 2018 - 2022 agnos.ai UK Ltd & Stealth Software Technologies, Inc --- Confidential
+#      cover: true
+#      back_cover: false
+#      cover_title: The Datapoint Protocol
+#      cover_subtitle: Pitch, Business Plan & Proposal
+#      #custom_template_path: TEMPLATES PATH
+#      toc_title: Table of Contents
+#      heading_shift: false
+#      toc_level: 1
+#      ordered_chapter_level: 3
+#      #excludes_children:
+#        #    - 'release-notes/:upgrading'
+#        #    - 'release-notes/:changelog'
+#        #
+#      exclude_pages:
+#        - pdf.md
+#        #convert_iframe:
+#        #    - src: IFRAME SRC
+#        #      img: POSTER IMAGE URL
+#        #      text: ALTERNATE TEXT
+#        #    - src: ...
+#        #two_columns_level: 3
+#      output_path: assets/datapoint-protocol.pdf
+#      enabled_if_env: ENABLE_PDF_EXPORT
+#      debug_html: false
+#      show_anchors: false
+#      verbose: false
+#      render_js: false
+#      strict: false
+#      #headless_chrome_path: headless-chromium
+#      #
 
 markdown_extensions:
   - toc:
@@ -122,13 +164,13 @@ markdown_extensions:
       base_path:
         - .
         - docs
-        - Queries/SPARQL/
       check_paths: true
       auto_append:
         - abbreviations.md
   - pymdownx.details
   - pymdownx.mark
   - pymdownx.smartsymbols
+  - pymdownx.critic
   - pymdownx.emoji:
       emoji_generator: !!python/name:materialx.emoji.to_svg
       emoji_index: !!python/name:materialx.emoji.twemoji

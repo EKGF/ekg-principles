@@ -1,9 +1,15 @@
+---
+hide:
+  - navigation
+---
 # Manifesto
 
 ## Ideals
 
-1. Much higher levels of transparency, sustainability, fairness and
-   accountability are going to be required at all levels in any organization
+1. Much higher levels of [transparency](vocab/transparency), [openness](vocab/openness.md),
+   [sustainability](vocab/sustainability.md), [fairness](vocab/fairness.md) and
+   [accountability](vocab/accountability.md) are going to be required at all levels
+   in any organization or ecosystem.
 2. Human Capital needs to be known, valued, leveraged and optimized
 3. Data Capital needs to be known, valued, leveraged and optimized
 4. Increasing competitiveness depends more and more on having the 
