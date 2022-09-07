@@ -140,6 +140,7 @@ docs-install-brew-packages:
 	brew upgrade cairo || brew install cairo
 	brew upgrade freetype || brew install freetype
 	brew upgrade libffi || brew install libffi
+	brew upgrade pango || brew install pango
 	brew upgrade libjpeg || brew install libjpeg
 	brew upgrade libpng || brew install libpng
 	brew upgrade zlib || brew install zlib
@@ -211,6 +212,7 @@ endif
 	$(PIP) install --upgrade mkdocs-git-revision-date-plugin
 	$(PIP) install --upgrade mkdocs-minify-plugin
 	$(PIP) install --upgrade mkdocs-redirects
+	$(PIP) install --upgrade mkdocs-kroki-plugin
 	$(PIP) install --upgrade mdx-spanner
 	$(PIP) install --upgrade markdown-emdash
 ifeq ($(PAT_MKDOCS_INSIDERS),)
