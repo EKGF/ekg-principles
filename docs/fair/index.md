@@ -1,6 +1,8 @@
 ---
 author:
   - Jacobus Geluk
+hide:
+  - nav
 ---
 # Mapping to the FAIR principles
 
@@ -57,9 +59,9 @@ EKG Principles are slightly more specific or prescriptive:
 The data usually need to be integrated with other data.
 In addition, the data need to interoperate with applications or workflows for analysis, storage, and processing.
 
-- **[I1]** -- (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.
-- **[I2]** -- (Meta)data use vocabularies that follow FAIR principles
-- **[I3]** -- (Meta)data include qualified references to other (meta)data
+- **I1** -- (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.
+- **I2** -- (Meta)data use vocabularies that follow FAIR principles
+- **I3** -- (Meta)data include qualified references to other (meta)data
 
 ### Differences
 

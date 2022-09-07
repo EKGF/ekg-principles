@@ -13,7 +13,7 @@ but existing data quality tooling could also be used.
 
 ### Rationale
 
-This information is needed to allow the right information to be used for each use case.
+This information is needed to allow the right information to be used for each [use case](https://use-case-tree-method.ekgf.org/concept/use-case/).
 
 ### Implication
 

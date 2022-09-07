@@ -1,0 +1,22 @@
+CairoSVG==2.5.2
+EditorConfig==0.12.3
+markdown-emdash==0.1.0
+mdx-spanner==0.0.5
+mkdocs==1.3.0
+mkdocs-awesome-pages-plugin==2.7.0
+mkdocs-build-plantuml-plugin==1.7.3
+mkdocs-exclude==1.0.2
+mkdocs-exclude-search==0.6.4
+mkdocs-git-revision-date-plugin==0.3.2
+mkdocs-graphviz==1.4.4
+mkdocs-include-markdown-plugin==3.5.2
+mkdocs-kroki-plugin==0.3.0
+mkdocs-localsearch==0.9.1
+mkdocs-macros-plugin==0.7.0
+mkdocs-material @ git+https://${PAT_MKDOCS_INSIDERS}@github.com/squidfunk/mkdocs-material-insiders.git
+mkdocs-material-extensions==1.0.3
+mkdocs-mermaid2-plugin==0.6.0
+mkdocs-minify-plugin==0.5.0
+mkdocs-redirects==1.0.4
+mkdocs==1.3.0
+pipenv==2022.6.7
