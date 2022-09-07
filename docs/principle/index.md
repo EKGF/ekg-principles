@@ -1,3 +1,8 @@
+---
+hide:
+- navigation
+- toc
+---
 # EKG Principles
 
 These principles are intended to provide guidelines for the development and deployment
