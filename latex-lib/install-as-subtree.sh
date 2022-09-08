@@ -277,7 +277,7 @@ function main() {
     echo "Your preferred method to fetch git content is HTTPS" >&2
   fi
   addGitRemote "agnos-ai" "latex-lib"
-  addGitRemote "EKGF" "ekg-manifesto"
+  addGitRemote "EKGF" "ekg-principles"
 
   for mount_point in $(getSubTrees) ; do
     echo "sub tree: ${mount_point}" >&2

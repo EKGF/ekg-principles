@@ -86,9 +86,9 @@ Pull:
 git fetch ekg-mm && git subtree pull --prefix=mnt/ekg-mm ekg-mm main --squash
 ----
 
-=== EKG/Manifesto
+=== EKG/Principles
 
-Or take for instance the EKG/Manifesto repository at https://github.com/EKGF/ekg-manifesto, you should however import
+Or take for instance the EKG/Principles repository at https://github.com/EKGF/ekg-principles, you should however import
 such a content repo under the /mnt directory (mnt stands for "mount", analogous to
 mounting a file system in Unix), see the `--prefix` option below.
 
@@ -96,29 +96,29 @@ If you prefer using HTTPS urls:
 
 [source,asciidoc]
 ----
-git remote add -f ekg-manifesto https://github.com/EKGF/ekg-manifesto.git &&
-git subtree add --prefix=mnt/ekg-manifesto --squash ekg-manifesto/main
+git remote add -f ekg-principles https://github.com/EKGF/ekg-principles.git &&
+git subtree add --prefix=mnt/ekg-principles --squash ekg-principles/main
 ----
 
 If you prefer using SSH urls:
 
 [source,asciidoc]
 ----
-git remote add -f ekg-manifesto git@github.com:EKGF/ekg-manifesto.git &&
-git subtree add --prefix=mnt/ekg-manifesto --squash ekg-manifesto/main
+git remote add -f ekg-principles git@github.com:EKGF/ekg-principles.git &&
+git subtree add --prefix=mnt/ekg-principles --squash ekg-principles/main
 ----
 
 Push:
 
 [source,asciidoc]
 ----
-git subtree push --prefix=mnt/ekg-manifesto ekg-manifesto main
+git subtree push --prefix=mnt/ekg-principles ekg-principles main
 ----
 
 Pull:
 
 [source,asciidoc]
 ----
-git fetch ekg-manifesto && git subtree pull --prefix=mnt/ekg-manifesto ekg-manifesto main --squash
+git fetch ekg-principles && git subtree pull --prefix=mnt/ekg-principles ekg-principles main --squash
 ----
 

@@ -1,8 +1,8 @@
 site_name: EKG/Principles
 site_description: Manifesto and principles for the Enterprise Knowledge Graph (EKG)
-repo_name: 'ekgf/ekg-manifesto'
-repo_url: https://github.com/EKGF/ekg-manifesto
-site_url: https://manifesto.ekgf.org
+repo_name: 'ekgf/ekg-principles'
+repo_url: https://github.com/EKGF/ekg-principles
+site_url: https://principles.ekgf.org
 edit_uri: edit/main/docs/
 site_dir: site
 site_author: Enterprise Knowledge Graph Foundation
@@ -66,7 +66,7 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/EKGF
     - icon: fontawesome/brands/github
-      link: https://github.com/EKGF/ekg-manifesto
+      link: https://github.com/EKGF/ekg-principles
 extra_javascript:
   - "javascript/images_dark.js"
   - "javascript/refresh_on_toggle_dark_light.js"

@@ -159,7 +159,7 @@
 \AtEndDocument{\global\expandafter\let \csname @nodocument\endcsname \relax\insertPrintTodos}
 %
 %
-% \ifdocumentname{ekg-manifesto}{
+% \ifdocumentname{ekg-principles}{
 %    do nothing
 % }{
 %    As a reference, we include the manifesto chapter here...

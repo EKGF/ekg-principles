@@ -7,12 +7,12 @@ have lead to various websites:
 
 The main website of the Foundation: [https://ekgf.org](https://ekgf.org)
 
-## Manifesto
+## Principles
 
-The EKG Manifesto: 
-[https://manifesto.ekgf.org](https://manifesto.ekgf.org), 
+The EKG/Principles: 
+[https://principles.ekgf.org](https://principles.ekgf.org), 
 this is a project that is being maintained in the GitHub repository 
-[EKGF/ekg-manifesto](https://github.com/EKGF/ekg-manifesto).
+[EKGF/ekg-principles](https://github.com/EKGF/ekg-principles).
 
 You're welcome to contribute.
 

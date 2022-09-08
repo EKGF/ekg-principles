@@ -204,10 +204,10 @@ docs-deploy:
 docs-assets: $(PDF_ASSET_EDITORS_VERSION) $(PDF_ASSET_RELEASE_VERSION)
 
 .PHONY: docs-sync-from
-docs-sync-from: docs-sync-from-ekg-mm docs-sync-from-ekg-manifesto
+docs-sync-from: docs-sync-from-ekg-mm docs-sync-from-ekg-principles
 
 .PHONY: docs-sync-to
-docs-sync-to: docs-sync-to-ekg-mm docs-sync-to-ekg-manifesto
+docs-sync-to: docs-sync-to-ekg-mm docs-sync-to-ekg-principles
 
 .PHONY: docs-sync
 docs-sync: docs-sync-from docs-sync-to
@@ -220,11 +220,11 @@ docs-sync-from-ekg-mm: $(wildcard ../ekg-mm/docs-overrides/*)
 docs-sync-to-ekg-mm: $(wildcard ../ekg-mm/Makefile)
 	cd ../ekg-mm && make docs-sync-from
 
-.PHONY: docs-sync-from-ekg-manifesto
-docs-sync-from-ekg-manifesto: $(wildcard ../ekg-manifesto/docs-overrides/*)
-	rsync --checksum --recursive --update --itemize-changes --verbose ../ekg-manifesto/docs-overrides/ docs-overrides/
+.PHONY: docs-sync-from-ekg-principles
+docs-sync-from-ekg-principles: $(wildcard ../ekg-principles/docs-overrides/*)
+	rsync --checksum --recursive --update --itemize-changes --verbose ../ekg-principles/docs-overrides/ docs-overrides/
 
-.PHONY: docs-sync-to-ekg-manifesto
-docs-sync-to-ekg-manifesto: $(wildcard ../ekg-manifesto/Makefile)
-	cd ../ekg-manifesto && make docs-sync-from
+.PHONY: docs-sync-to-ekg-principles
+docs-sync-to-ekg-principles: $(wildcard ../ekg-principles/Makefile)
+	cd ../ekg-principles && make docs-sync-from
 

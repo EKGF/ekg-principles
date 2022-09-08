@@ -52,4 +52,4 @@ out/
 .idea
 *.fdb_latexmk
 *.xdy
-/ekg-manifesto/*.pdf
+/ekg-principles/*.pdf
