@@ -22,7 +22,7 @@ _Resolving_ an identifier can be done in three ways:
    object to an EKG/IRI.
 2. constructing it via a standardized policy from key components and applying a hash and optionally
    signing it---where the object represented by the EKG/IRI may or may not already exist.
-3. constructing it by giving the object an \gls{ekg:iri} based on a random number in case the EKG is
+3. constructing it by giving the object an EKG/IRI based on a random number in case the EKG is
    the authoritative source for the given object.
 
 ## Rationale
