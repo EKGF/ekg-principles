@@ -56,10 +56,10 @@ theme:
 extra:
   generator: false
   giscus:
-    repo_id: 'MDEwOlJlcG9zaXRvcnkzMzQ0MDY2ODI='
+    repo_id: 'MDEwOlJlcG9zaXRvcnkzMzQ0MDY2ODI'
     category:
-      name: 'General'
-      id: 'MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyODQ4OTU5'
+      name: 'Page Comments'
+      id: 'DIC_kwDOE-6kGs4CRUx_'
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/EKG_Foundation
