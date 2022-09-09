@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: EKG/Principles
 site_description: Manifesto and principles for the Enterprise Knowledge Graph (EKG)
-repo_name: 'ekgf/ekg-principles'
+repo_name: 'EKGF/ekg-principles'
 repo_url: https://github.com/EKGF/ekg-principles
 site_url: https://principles.ekgf.org
 edit_uri: edit/main/docs/
@@ -48,10 +49,11 @@ theme:
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
-#   - navigation.sections
+#    - navigation.sections
 #    - navigation.expand
     - navigation.indexes
     - toc.follow
+    - toc.integrate
     - content.code.annotate
 extra:
   generator: false
@@ -150,6 +152,7 @@ plugins:
 markdown_extensions:
   - toc:
       permalink: true
+  - meta
   - mdx_spanner
   - def_list
   - abbr
@@ -160,6 +163,9 @@ markdown_extensions:
   - tables
   - md_in_html
   - mkdocs_graphviz
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
   - pymdownx.smartsymbols
   - pymdownx.snippets:
       base_path:
@@ -170,6 +176,7 @@ markdown_extensions:
         - abbreviations.md
   - pymdownx.details
   - pymdownx.mark
+  - pymdownx.magiclink
   - pymdownx.smartsymbols
   - pymdownx.critic
   - pymdownx.emoji:
