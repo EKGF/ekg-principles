@@ -12,7 +12,7 @@ The main website of the Foundation: [https://ekgf.org](https://ekgf.org)
 The EKG/Principles: 
 [https://principles.ekgf.org](https://principles.ekgf.org), 
 this is a project that is being maintained in the GitHub repository 
-[EKGF/ekg-principles](https://github.com/EKGF/ekg-principles).
+[EKGF/principles](https://github.com/EKGF/principles).
 
 You're welcome to contribute.
 

@@ -56,7 +56,7 @@ theme:
 extra:
   generator: false
   giscus:
-    repo_id: 'MDEwOlJlcG9zaXRvcnkzMzQ0MDY2ODI'
+    repo_id: 'MDEwOlJlcG9zaXRvcnkzMzQ0MDY2ODI='
     category:
       name: 'Page Comments'
       id: 'DIC_kwDOE-6kGs4CRUx_'

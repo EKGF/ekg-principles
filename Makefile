@@ -71,6 +71,7 @@ docs-install-brew-packages:
 	brew upgrade libpng || brew install libpng
 	brew upgrade zlib || brew install zlib
 	brew upgrade plantuml || brew install plantuml
+	brew upgrade graphviz || brew install graphviz
 
 .PHONY: docs-install-brew
 ifeq ($(YOUR_OS), Linux)
@@ -129,11 +130,13 @@ docs-install-standard-python-packages:
 	$(PIP) install --upgrade wheel
 	$(PIP) install --upgrade pipenv
 #	$(PIP) install --upgrade plantuml-markdown
+	$(PIP) install --upgrade mdutils
 	$(PIP) install --upgrade mkdocs-build-plantuml-plugin
 	$(PIP) install --upgrade mkdocs
 	$(PIP) install --upgrade mkdocs-localsearch
 	$(PIP) install --upgrade mkdocs-graphviz
 	$(PIP) install --upgrade mkdocs-exclude
+	$(PIP) install --upgrade mkdocs-exclude-search
 	$(PIP) install --upgrade mkdocs-include-markdown-plugin
 	$(PIP) install --upgrade mkdocs-awesome-pages-plugin
 	$(PIP) install --upgrade mkdocs-macros-plugin
@@ -141,6 +144,7 @@ docs-install-standard-python-packages:
 	$(PIP) install --upgrade mkdocs-git-revision-date-plugin
 	$(PIP) install --upgrade mkdocs-minify-plugin
 	$(PIP) install --upgrade mkdocs-redirects
+	$(PIP) install --upgrade mkdocs-gen-files
 	$(PIP) install --upgrade mkdocs-kroki-plugin
 	$(PIP) install --upgrade mdx-spanner
 	$(PIP) install --upgrade markdown-emdash
@@ -212,13 +216,13 @@ docs-sync-to: docs-sync-to-ekg-mm docs-sync-to-ekg-principles
 .PHONY: docs-sync
 docs-sync: docs-sync-from docs-sync-to
 
-.PHONY: docs-sync-from-ekg-mm
-docs-sync-from-ekg-mm: $(wildcard ../ekg-mm/docs-overrides/*)
-	rsync --checksum --recursive --update --itemize-changes --verbose ../ekg-mm/docs-overrides/ docs-overrides/
+.PHONY: docs-sync-from-ekg-maturity
+docs-sync-from-ekg-maturity: $(wildcard ../ekg-maturity/docs-overrides/*)
+	rsync --checksum --recursive --update --itemize-changes --verbose ../ekg-maturity/docs-overrides/ docs-overrides/
 
-.PHONY: docs-sync-to-ekg-mm
-docs-sync-to-ekg-mm: $(wildcard ../ekg-mm/Makefile)
-	cd ../ekg-mm && make docs-sync-from
+.PHONY: docs-sync-to-ekg-maturity
+docs-sync-to-ekg-maturity: $(wildcard ../ekg-maturity/Makefile)
+	cd ../ekg-maturity && make docs-sync-from
 
 .PHONY: docs-sync-from-ekg-principles
 docs-sync-from-ekg-principles: $(wildcard ../ekg-principles/docs-overrides/*)
