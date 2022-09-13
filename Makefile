@@ -22,11 +22,9 @@ ifeq ($(YOUR_OS), Darwin)
 		PIP := $(shell asdf where python)/bin/python -m pip
 endif
 endif
-DOC_ORG_NAME := ekgf
-DOC_ROOT_NAME := $(shell basename `git rev-parse --show-toplevel`)
+
 CURRENT_BRANCH := $(shell git branch --show-current)
-DOC_VERSION := $(shell cat $(DOC_ROOT_NAME)/VERSION)
-PAT_MKDOCS_INSIDERS := $(shell cat ~/.secrets/PAT_MKDOCS_INSIDERS.txt 2>/dev/null)
+PAT_MKDOCS_INSIDERS := $(shell cat $(HOME)/.secrets/PAT_MKDOCS_INSIDERS.txt 2>/dev/null)
 ifeq ($(PAT_MKDOCS_INSIDERS),)
 MKDOCS_CONFIG_FILE := 'mkdocs.outsiders.yml'
 $(info You don't have the $(HOME)/.secrets/PAT_MKDOCS_INSIDERS.txt file so we are using the open source version of MkDocs)
@@ -188,10 +186,6 @@ docs-build:
 docs-build-clean:
 	$(MKDOCS) build --config-file $(MKDOCS_CONFIG_FILE) --clean
 
-.PHONY: docs-build-with-pdf
-docs-build-with-pdf:
-	ENABLE_PDF_EXPORT=1 $(MKDOCS) build --config-file $(MKDOCS_CONFIG_FILE)
-
 .PHONY: docs-serve
 docs-serve: docs-assets
 	$(MKDOCS) serve --config-file $(MKDOCS_CONFIG_FILE) --livereload --strict
@@ -204,14 +198,11 @@ docs-serve-debug:
 docs-deploy:
 	$(MKDOCS) gh-deploy --config-file $(MKDOCS_CONFIG_FILE) --verbose
 
-.PHONY: docs-assets
-docs-assets: $(PDF_ASSET_EDITORS_VERSION) $(PDF_ASSET_RELEASE_VERSION)
-
 .PHONY: docs-sync-from
-docs-sync-from: docs-sync-from-ekg-mm docs-sync-from-ekg-principles
+docs-sync-from: docs-sync-from-ekg-maturity docs-sync-from-ekg-principles
 
 .PHONY: docs-sync-to
-docs-sync-to: docs-sync-to-ekg-mm docs-sync-to-ekg-principles
+docs-sync-to: docs-sync-to-ekg-maturity docs-sync-to-ekg-principles
 
 .PHONY: docs-sync
 docs-sync: docs-sync-from docs-sync-to
