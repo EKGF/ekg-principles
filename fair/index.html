@@ -473,7 +473,7 @@
               
                 
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1465,16 +1465,23 @@
 
 <h1 id="mapping-to-the-fair-principles">Mapping to the FAIR principles<a class="headerlink" href="#mapping-to-the-fair-principles" title="Permanent link">&para;</a></h1>
 <p>The <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> are a popular set
-of principles used by many Knowledge Graph practitioners.
-This article maps the FAIR principles to the relevant <abbr title="Enterprise Knowledge Graph">EKG</abbr> principles.</p>
-<h2 id="findable">Findable<a class="headerlink" href="#findable" title="Permanent link">&para;</a></h2>
+of principles used by many Knowledge Graph practitioners.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">F - Findable</label><label for="__tabbed_1_2">A - Accessible</label><label for="__tabbed_1_3">I - Interoperable</label><label for="__tabbed_1_4">R - Reusable</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="grid cards" markdown>
+<ul>
+<li>
+<p><strong>FAIR Definition</strong></p>
 <ul>
 <li><strong>F1</strong> -- (Meta)data are assigned a globally unique and persistent identifier</li>
 <li><strong>F2</strong> -- Data are described with rich metadata (defined by R1 below)</li>
 <li><strong>F3</strong> -- Metadata clearly and explicitly include the identifier of the data they describe</li>
 <li><strong>F4</strong> -- (Meta)data are registered or indexed in a searchable resource</li>
 </ul>
-<h3 id="differences">Differences<a class="headerlink" href="#differences" title="Permanent link">&para;</a></h3>
+</li>
+<li>
+<p><strong>Differences</strong></p>
 <p><abbr title="Enterprise Knowledge Graph">EKG</abbr> Principles are slightly more specific or prescriptive:</p>
 <ul>
 <li>Metadata (objects) and data (objects) can potentially have multiple identifiers (but at least one).</li>
@@ -1482,49 +1489,77 @@ This article maps the FAIR principles to the relevant <abbr title="Enterprise Kn
 <li>The <abbr title="Enterprise Knowledge Graph">EKG</abbr> identifiers (<abbr title="Enterprise Knowledge Graph">EKG</abbr>/IRIs) of data objects (but not necessarily metadata objects) should be
   "opaque" as in "meaningless", (relatively) safe to be emailed around, stored in other platforms,
   maximising "proliferation".</li>
-<li>FAIR principle F3 would be phrased the other way around: the data described by metadata refers to it via
+<li>FAIR principle <strong>F3</strong> would be phrased the other way around: the data described by metadata refers to it via
   the metadata identifier (i.e. the predicate-IRI).</li>
-<li>FAIR principle F4 slightly differs as well, the <abbr title="Enterprise Knowledge Graph">EKG</abbr> Principles require metadata to be directly
+<li>FAIR principle <strong>F4</strong> slightly differs as well, the <abbr title="Enterprise Knowledge Graph">EKG</abbr> Principles require metadata to be directly
   resolvable (via HTTP) machine-readable definitions of the semantics in verifiable formal logic
   (preferably OWL 2).</li>
 </ul>
-<h2 id="accessible">Accessible<a class="headerlink" href="#accessible" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="grid cards" markdown>
+<ul>
+<li>
+<p><strong>FAIR Definition</strong></p>
 <p>Once the user finds the required data, they need to know how they can be accessed,
-possibly including authentication and authorisation.</p>
+ possibly including authentication and authorisation.</p>
 <ul>
 <li><strong>A1</strong> -- (Meta)data are retrievable by their identifier using a standardized communications protocol</li>
 <li><strong>A1.1</strong> -- The protocol is open, free, and universally implementable</li>
 <li><strong>A1.2</strong> -- The protocol allows for an authentication and authorisation procedure, where necessary</li>
 <li><strong>A2</strong> -- Metadata are accessible, even when the data are no longer available</li>
 </ul>
-<h3 id="differences_1">Differences<a class="headerlink" href="#differences_1" title="Permanent link">&para;</a></h3>
+</li>
+<li>
+<p><strong>Differences</strong></p>
 <p><abbr title="Enterprise Knowledge Graph">EKG</abbr> Principles are slightly more specific or prescriptive:</p>
 <ul>
 <li><em>"using a standardized communications protocol"</em> would be explicitly the HTTP protocol
-  (or actually HTTPS/TLS) as a minimum requirement and in addition to that any other protocol, 
-  standardized or not.</li>
+   (or actually HTTPS/TLS) as a minimum requirement and in addition to that any other protocol, 
+   standardized or not.</li>
 <li><em>"metadata are accessible"</em> would be more explicit for the <abbr title="Enterprise Knowledge Graph">EKG</abbr>: 
-  all metadata has to be accessible through IRIs that are always "resolvable" via the HTTP protocol.
-  In other words, make sure that all your <em>OWL 2</em> ontologies or <em><abbr title="Resource Definition Framework, the standard that defines the basic building block of a semantic graph: the so-called &quot;triple&quot; i.e. an RDF-statement">RDF</abbr> Schema (RDFS)</em> 
-  vocabularies are placed on highly available durable infrastructure that can always be accessed via HTTP.</li>
+   all metadata has to be accessible through IRIs that are always "resolvable" via the HTTP protocol.
+   In other words, make sure that all your <em>OWL 2</em> ontologies or <em><abbr title="Resource Definition Framework, the standard that defines the basic building block of a semantic graph: the so-called &quot;triple&quot; i.e. an RDF-statement">RDF</abbr> Schema (RDFS)</em> 
+   vocabularies are placed on highly available durable infrastructure that can always be accessed via HTTP.</li>
 </ul>
-<h2 id="interoperable">Interoperable<a class="headerlink" href="#interoperable" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="grid cards" markdown>
+<ul>
+<li>
+<p><strong>FAIR Definition</strong></p>
 <p>The data usually need to be integrated with other data.
-In addition, the data need to interoperate with applications or workflows for analysis, storage, and processing.</p>
+ In addition, the data need to interoperate with applications or workflows for analysis, storage, and processing.</p>
 <ul>
 <li><strong>I1</strong> -- (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.</li>
 <li><strong>I2</strong> -- (Meta)data use vocabularies that follow FAIR principles</li>
 <li><strong>I3</strong> -- (Meta)data include qualified references to other (meta)data</li>
 </ul>
-<h3 id="differences_2">Differences<a class="headerlink" href="#differences_2" title="Permanent link">&para;</a></h3>
+</li>
+<li>
+<p><strong>Differences</strong></p>
 <p><abbr title="Enterprise Knowledge Graph">EKG</abbr> Principles are slightly more specific or prescriptive:</p>
 <ul>
 <li>In the <abbr title="Enterprise Knowledge Graph">EKG</abbr> the metadata that describes meaning i.e. the semantics
-  (there are also many other types of metadata) that 
-  <em>formal and broadly applicable language for knowledge representation</em>
-  has to be preferably <em>OWL 2</em> or at least <em><abbr title="Resource Definition Framework, the standard that defines the basic building block of a semantic graph: the so-called &quot;triple&quot; i.e. an RDF-statement">RDF</abbr> Schema (RDFS)</em> or <em>SHACL</em>.</li>
+   (there are also many other types of metadata) that 
+   <em>formal and broadly applicable language for knowledge representation</em>
+   has to be preferably <em>OWL 2</em> or at least <em><abbr title="Resource Definition Framework, the standard that defines the basic building block of a semantic graph: the so-called &quot;triple&quot; i.e. an RDF-statement">RDF</abbr> Schema (RDFS)</em> or <em>SHACL</em>.</li>
 </ul>
-<h2 id="reusable">Reusable<a class="headerlink" href="#reusable" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="grid cards" markdown>
+<ul>
+<li>
+<p><strong>FAIR Definition</strong></p>
 <p>The ultimate goal of FAIR is to optimise the reuse of data.
 To achieve this, metadata and data should be well-described so that they can be replicated and/or
 combined in different settings.</p>
@@ -1538,7 +1573,9 @@ combined in different settings.</p>
 metadata (information about that digital object), and infrastructure.
 For instance, principle F4 defines that both metadata and data are registered or indexed in a
 searchable resource (the infrastructure component).</p>
-<h3 id="differences_3">Differences<a class="headerlink" href="#differences_3" title="Permanent link">&para;</a></h3>
+</li>
+<li>
+<p><strong>Differences</strong></p>
 <p><abbr title="Enterprise Knowledge Graph">EKG</abbr> Principles are slightly more specific or prescriptive:</p>
 <ul>
 <li><em>optimization of the reuse of data is the ultimate goal</em>. 
@@ -1547,7 +1584,7 @@ searchable resource (the infrastructure component).</p>
   Furthermore, overall connectedness of all data and knowledge is an equally important goal.</li>
 <li><em>metadata and data should be well-described</em> but should also be as "unbiased" as possible, not designed
   for one particular (set of) use case(s) but designed to represent the version of the truth that a given data
-  source provides with the highest level of integrity.
+  source provides with the highest level of integrity.<br/>
   See principle <a href="../principle/05-self-describing/">5 -- Self-describing</a>.</li>
 <li><em>Meta(data) are richly described with a plurality of accurate and relevant attributes</em>.
   "<em>Richly described</em>" would not be specific enough for <abbr title="Enterprise Knowledge Graph">EKG</abbr>.
@@ -1558,6 +1595,12 @@ searchable resource (the infrastructure component).</p>
   Since an <abbr title="Enterprise Knowledge Graph">EKG</abbr> is a collection of self-describing datasets, each dataset will have its 
   various types of metadata organized in a structured way.</li>
 </ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 
   
     
@@ -1571,7 +1614,7 @@ searchable resource (the infrastructure component).</p>
         <span class="md-icon" title="Date of last update">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
         </span>
-        2022-09-07
+        2022-09-14
       </span>
     
     
