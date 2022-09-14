@@ -1,8 +1,11 @@
 
+VIRTUAL_ENV := ./.venv
+
 ifeq ($(OS),Windows_NT)
     YOUR_OS := Windows
     INSTALL_TARGET := install-windows
     MKDOCS := mkdocs
+    PYTHON := python3
     PIP := pip
 else
     YOUR_OS := $(shell sh -c 'uname 2>/dev/null || echo Unknown')
@@ -10,18 +13,24 @@ ifeq ($(YOUR_OS), Linux)
     INSTALL_TARGET := install-linux
 ifneq ($(wildcard /home/runner/.*),) # this means we're running in Github Actions
 		MKDOCS := mkdocs
+		PYTHON := python3
 		PIP := pip
 else
 		MKDOCS := $(shell asdf where python)/bin/mkdocs
-		PIP := $(shell asdf where python)/bin/python -m pip
+		PYTHON := $(shell asdf where python)/bin/python3
+		PIP := $(PYTHON) -m pip
 endif
 endif
 ifeq ($(YOUR_OS), Darwin)
     INSTALL_TARGET := install-macos
 		MKDOCS := $(shell asdf where python)/bin/mkdocs
-		PIP := $(shell asdf where python)/bin/python -m pip
+		PYTHON := $(shell asdf where python)/bin/python3
+		PIP := $(PYTHON) -m pip
 endif
 endif
+
+VENV_PYTHON := $(VIRTUAL_ENV)/bin/python3
+VENV_PIP := $(VIRTUAL_ENV)/bin/pip3
 
 CURRENT_BRANCH := $(shell git branch --show-current)
 PAT_MKDOCS_INSIDERS := $(shell cat $(HOME)/.secrets/PAT_MKDOCS_INSIDERS.txt 2>/dev/null)
@@ -114,38 +123,34 @@ docs-install-asdf-packages: docs-install-asdf
 	asdf install
 
 .PHONY: docs-install-python-packages
-ifneq ($(wildcard /home/runner/.*),)
-docs-install-python-packages: docs-install-asdf
-docs-install-python-packages: docs-install-asdf
-else
 docs-install-python-packages: docs-install-asdf-packages docs-install-standard-python-packages docs-install-special-python-packages
-endif
 
 .PHONY: docs-install-standard-python-packages
-docs-install-standard-python-packages:
+docs-install-standard-python-packages: python-venv
 	@echo "Install standard python packages via pip:"
-	$(PIP) install --upgrade pip
-	$(PIP) install --upgrade wheel
-	$(PIP) install --upgrade pipenv
-#	$(PIP) install --upgrade plantuml-markdown
-	$(PIP) install --upgrade mdutils
-	$(PIP) install --upgrade mkdocs-build-plantuml-plugin
-	$(PIP) install --upgrade mkdocs
-	$(PIP) install --upgrade mkdocs-localsearch
-	$(PIP) install --upgrade mkdocs-graphviz
-	$(PIP) install --upgrade mkdocs-exclude
-	$(PIP) install --upgrade mkdocs-exclude-search
-	$(PIP) install --upgrade mkdocs-include-markdown-plugin
-	$(PIP) install --upgrade mkdocs-awesome-pages-plugin
-	$(PIP) install --upgrade mkdocs-macros-plugin
-	$(PIP) install --upgrade mkdocs-mermaid2-plugin
-	$(PIP) install --upgrade mkdocs-git-revision-date-plugin
-	$(PIP) install --upgrade mkdocs-minify-plugin
-	$(PIP) install --upgrade mkdocs-redirects
-	$(PIP) install --upgrade mkdocs-gen-files
-	$(PIP) install --upgrade mkdocs-kroki-plugin
-	$(PIP) install --upgrade mdx-spanner
-	$(PIP) install --upgrade markdown-emdash
+	$(VENV_PIP) install --upgrade pip
+	$(VENV_PIP) install --upgrade wheel
+	$(VENV_PIP) install --upgrade pipenv
+#	$(VENV_PIP) install --upgrade plantuml-markdown
+	$(VENV_PIP) install --upgrade mdutils
+	$(VENV_PIP) install --upgrade mkdocs
+	$(VENV_PIP) install --upgrade mkdocs-awesome-pages-plugin
+	$(VENV_PIP) install --upgrade mkdocs-build-plantuml-plugin
+	$(VENV_PIP) install --upgrade mkdocs-exclude
+	$(VENV_PIP) install --upgrade mkdocs-exclude-search
+	$(VENV_PIP) install --upgrade mkdocs-gen-files
+	$(VENV_PIP) install --upgrade mkdocs-git-revision-date-plugin
+	$(VENV_PIP) install --upgrade mkdocs-graphviz
+	$(VENV_PIP) install --upgrade mkdocs-include-markdown-plugin
+	$(VENV_PIP) install --upgrade mkdocs-kroki-plugin
+	$(VENV_PIP) install --upgrade mkdocs-localsearch
+	$(VENV_PIP) install --upgrade mkdocs-macros-plugin
+	$(VENV_PIP) install --upgrade mkdocs-mermaid2-plugin
+	$(VENV_PIP) install --upgrade mkdocs-minify-plugin
+	$(VENV_PIP) install --upgrade mkdocs-redirects
+	$(VENV_PIP) install --upgrade mdx-spanner
+	$(VENV_PIP) install --upgrade markdown-emdash
+	$(VENV_PIP) install --upgrade "git+https://github.com/EKGF/ekglib.git"
 
 .PHONY: docs-install-python-packages-via-requirements-txt
 docs-install-python-packages-via-requirements-txt:
@@ -153,7 +158,7 @@ ifeq ($(PAT_MKDOCS_INSIDERS),)
 	@echo "ERROR: Can only run this when PAT_MKDOCS_INSIDERS is known"
 else
 	@echo "Install standard python packages according to requirements.txt:"
-	@PAT_MKDOCS_INSIDERS=$(PAT_MKDOCS_INSIDERS) $(PIP) install -r requirements.txt
+	@PAT_MKDOCS_INSIDERS=$(PAT_MKDOCS_INSIDERS) $(VENV_PIP) install -r requirements.txt
 endif
 
 .PHONY: docs-install-special-python-packages
@@ -162,21 +167,25 @@ docs-install-special-python-packages: docs-install-pdf-python-packages docs-inst
 .PHONY: docs-install-pdf-python-packages
 docs-install-pdf-python-packages:
 	@echo "Install PDF python packages via pip:"
-	$(PIP) install --upgrade weasyprint
-	cd ../mkdocs-with-pdf && $(PIP) install -e .
-	#$(PIP) install --upgrade mkdocs-with-pdf
-	#$(PIP) install --upgrade weasyprint==52
-	#$(PIP) install --upgrade mkpdfs-mkdocs
+	$(VENV_PIP) install --upgrade weasyprint
+	cd ../mkdocs-with-pdf && $(VENV_PIP) install -e .
+	#$(VENV_PIP) install --upgrade mkdocs-with-pdf
+	#$(VENV_PIP) install --upgrade weasyprint==52
+	#$(VENV_PIP) install --upgrade mkpdfs-mkdocs
 
 .PHONY: docs-install-mkdocs-insider-version-packages
 docs-install-mkdocs-insider-version-packages:
 ifeq ($(PAT_MKDOCS_INSIDERS),)
 	@echo "Install standard mkdocs python package via pip:"
-	$(PIP) install --upgrade --force-reinstall mkdocs-material
+	$(VENV_PIP) install --upgrade --force-reinstall mkdocs-material
 else
 	@echo "Install special insiders version of mkdocs python package via pip:"
-	@$(PIP) install --upgrade --force-reinstall git+https://$(PAT_MKDOCS_INSIDERS)@github.com/squidfunk/mkdocs-material-insiders.git
+	@$(VENV_PIP) install --upgrade --force-reinstall git+https://$(PAT_MKDOCS_INSIDERS)@github.com/squidfunk/mkdocs-material-insiders.git
 endif
+
+.PHONY: python-venv
+python-venv:
+	$(PYTHON) -m venv --upgrade --upgrade-deps $(VIRTUAL_ENV)
 
 .PHONY: docs-build
 docs-build:
@@ -187,7 +196,7 @@ docs-build-clean:
 	$(MKDOCS) build --config-file $(MKDOCS_CONFIG_FILE) --clean
 
 .PHONY: docs-serve
-docs-serve: docs-assets
+docs-serve:
 	$(MKDOCS) serve --config-file $(MKDOCS_CONFIG_FILE) --livereload --strict
 
 .PHONY: docs-serve-debug
