@@ -3,8 +3,10 @@ title: 6 -- Measurement
 ---
 # Measurement
 
-The quality and characteristics of the managed knowledge must be measurable and measured. 
+<!--summary-start-->
+The quality and characteristics of the managed knowledge must be measurable and measured.
 Measurement criteria are used to designate fitness-for-defined-purpose and must be actionable.
+<!--summary-end-->
 
 Quality comprises multiple dimensions including _accuracy_, _timeliness_, _completeness_, _relevance_, 
 _conformity_, _integrity_. 

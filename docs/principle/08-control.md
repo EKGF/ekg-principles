@@ -3,8 +3,10 @@ title: 8 -- Control
 ---
 # Control
 
-Entitlement, privacy and business policies will be modeled in the EKG 
+<!--summary-start-->
+Entitlement, privacy and business policies will be modeled in the EKG
 and automatically executed, enforced and audited at the Data Point level.
+<!--summary-end-->
 
 The EKG can use enterprise and organization knowledge to express 
 access not only in terms of access control lists, but in terms of 

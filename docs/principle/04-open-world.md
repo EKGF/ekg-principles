@@ -3,9 +3,11 @@ title: 4 -- Open World
 ---
 # Open World
 
-Information can vary over time, come from many internal and external sources, 
-and be based on different identifiers and models. 
+<!--summary-start-->
+Information can vary over time, come from many internal and external sources,
+and be based on different identifiers and models.
 These _multiple versions of the truth (MVOT)_ need to be reconciled on access by context.
+<!--summary-end-->
 
 Different sources might not always be consistent about the same Data Point. 
 And that may be legitimate for various business, geographical, privacy, legal or timing reasons. 

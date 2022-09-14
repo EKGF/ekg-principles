@@ -3,9 +3,11 @@ title: 5 -- Self-describing
 ---
 # Self-describing
 
-An EKG is composed of a set of _self-describing datasets (SDDs)_ that provide 
-information about _lineage_, _provenance_, _pedigree_, _maturity_, _quality_, 
+<!--summary-start-->
+An EKG is composed of a set of _self-describing datasets (SDDs)_ that provide
+information about _lineage_, _provenance_, _pedigree_, _maturity_, _quality_,
 _licensing_ and _governance_.
+<!--summary-end-->
 
 As specified in [principle 2](02-meaning), the properties in each Data Point are 
 linked to their definition so the meaning is not in doubt. 

@@ -3,9 +3,11 @@ title: 9 -- Ecosystem
 ---
 # Ecosystem
 
+<!--summary-start-->
 An enterprise will use a heterogeneous set of technologies and data sources which
-will be incorporated into the EKG over time. 
+will be incorporated into the EKG over time.
 All data entering the ecosystem are subject to service level agreements.
+<!--summary-end-->
 
 A true EKG is a federation of multiple data-sources and systems 
 both within and external to the enterprise; seamlessly knitted together with 

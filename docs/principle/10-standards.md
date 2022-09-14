@@ -3,9 +3,11 @@ title: 10 -- Standards
 ---
 # Standards
 
+<!--summary-start-->
 Data, ontologies, definitions and business rules should be compliant with open
 standards and transparent governance procedures as defined by recognized standards
 bodies.
+<!--summary-end-->
 
 Where necessary, the EKGF will work with relevant standards bodies or projects 
 to propose new standards or enhance existing ones.

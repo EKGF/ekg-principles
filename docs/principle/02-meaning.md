@@ -3,8 +3,10 @@ title: 2 -- Meaning
 ---
 # Meaning
 
+<!--summary-start-->
 The meaning of every _Data Point_ must be directly resolvable
 to a machine-readable definition in verifiable formal logic.
+<!--summary-end-->
 
 A Data Point combines an object---using its _Enterprise Knowledge Graph 
 IRI (EKG/IRI)_ as its identifier---with the value of a _property_ in some 

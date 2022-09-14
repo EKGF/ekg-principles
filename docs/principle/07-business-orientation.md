@@ -3,9 +3,11 @@ title: 7 -- Business Orientation
 ---
 # Business Orientation
 
-All information in the EKG, and associated artifacts, are linked to defined and 
+<!--summary-start-->
+All information in the EKG, and associated artifacts, are linked to defined and
 prioritized _use cases_.
 Nothing in the EKG exists without a known business justification and purpose.
+<!--summary-end-->
 
 An EKG use case encompasses a business narrative and outcome with a clear description
 as to which exact business capability is supported, expressed in business terms and links 
