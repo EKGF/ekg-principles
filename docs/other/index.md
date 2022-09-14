@@ -19,7 +19,7 @@ You're welcome to contribute.
 ## Maturity Model
 
 The Maturity Model for the Enterprise Knowledge Graph: 
-[https://maturity-model.ekgf.org](https://maturity-model.ekgf.org),
+[https://maturity.ekgf.org](https://maturity.ekgf.org),
 this is a project that is being maintained in the GitHub repository 
 [EKGF/ekg-mm](https://github.com/EKGF/ekg-mm).
 
@@ -33,8 +33,8 @@ All use cases from the community, their datasets and their ontologies:
 ## Use Case Tree Method
 
 A proposal for a front-to-back method to support your EKG journey:
-[https://use-case-tree-method.ekgf.org](https://use-case-tree-method.ekgf.org),
+[https://method.ekgf.org](https://method.ekgf.org),
 this is a project that is being maintained in the GitHub repository
-[EKGF/use-case-tree-method](https://github.com/EKGF/use-case-tree-method).
+[EKGF/ekg-method](https://github.com/EKGF/ekg-method).
 
 You're welcome to contribute.

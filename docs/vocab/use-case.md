@@ -5,5 +5,5 @@ hide:
 <!--term-start-->
 # Use Case
 
-See [Use Case](https://use-case-tree-method.ekgf.org/concept/use-case/)
+See [Use Case](https://method.ekgf.org/concept/use-case/)
 <!--term-end-->

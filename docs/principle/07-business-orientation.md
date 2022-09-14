@@ -34,5 +34,5 @@ and provide the context for information selection.
 ### Implications
 
 The use cases themselves need to be developed and managed as part of [the 
-EKG development method](https://use-case-tree-method.ekgf.org), 
+EKG development method](https://method.ekgf.org), 
 and ideally as part of the EKG itself.
