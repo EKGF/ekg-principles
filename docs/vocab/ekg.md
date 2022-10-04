@@ -1,9 +1,10 @@
 ---
+title: Enterprise Knowledge Graph
 hide:
 - toc
 ---
 <!--term-start-->
-# EKG
+# Enterprise Knowledge Graph (EKG)
 
 much like "the web" is a virtual concept,
 an **Enterprise Knowledge Graph (EKG)** is a virtual concept 

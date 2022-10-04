@@ -1,5 +1,5 @@
-.DS_Store
 site/
+.DS_Store
 .texpadtmp
 *.aux
 *.bbl
@@ -38,7 +38,7 @@ site/
 !images/*.pdf_tex
 images/svg-inkscape/
 svg-inkscape/
-ekg-mm/images/svg-inkscape/
+*/images/svg-inkscape/
 out/
 /.project
 .uuid
