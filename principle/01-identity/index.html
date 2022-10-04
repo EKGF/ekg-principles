@@ -1243,6 +1243,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1333,7 +1335,7 @@
         
   
   <span class="md-ellipsis">
-    Ekg
+    Enterprise Knowledge Graph
     
   </span>
   
@@ -1397,6 +1399,27 @@
   
   <span class="md-ellipsis">
     Proportionality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vocab/sdd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Self-describing Dataset
     
   </span>
   
@@ -1522,25 +1545,25 @@
 
 <h1 id="identity">Identity<a class="headerlink" href="#identity" title="Permanent link">&para;</a></h1>
 <!--summary-start-->
-<p>Any object in the <abbr title="Enterprise Knowledge Graph">EKG</abbr> is identified with at least one universally <em>unique</em>, <em>opaque</em>,
+<p>Any object in the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> is identified with at least one universally <em>unique</em>, <em>opaque</em>,
 <em>permanent</em>, <em>non-reassignable</em> and <em>web-resolvable</em> identifier in the form of an
-<em>International Resource Identifier (IRI)</em> for the <abbr title="Enterprise Knowledge Graph">EKG</abbr>&mdash;i.e. an <em>Enterprise Knowledge
-Graph IRI (<abbr title="Enterprise Knowledge Graph">EKG</abbr>/IRI)</em> aka <em><abbr title="Enterprise Knowledge Graph">EKG</abbr> Identifier</em>.</p>
+<em>International Resource Identifier (IRI)</em> for the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>&mdash;i.e. an <em>Enterprise Knowledge
+Graph IRI (<abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/IRI)</em> aka <em><abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Identifier</em>.</p>
 <!--summary-end-->
 
-<p>As said, the <abbr title="Enterprise Knowledge Graph">EKG</abbr>/IRI identifier is permanent, will be proliferated across the enterprise's
+<p>As said, the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/IRI identifier is permanent, will be proliferated across the enterprise's
 universe&mdash;including its ecosystem&mdash;and will be used for the expression of facts about the
 object including relationships between objects.</p>
-<p>Additional non-<abbr title="Enterprise Knowledge Graph">EKG</abbr> identifiers may also be assigned, and they may be human-readable,
-"external" to the enterprise's <abbr title="Enterprise Knowledge Graph">EKG</abbr> and be transient and reassignable.</p>
+<p>Additional non-<abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> identifiers may also be assigned, and they may be human-readable,
+"external" to the enterprise's <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> and be transient and reassignable.</p>
 <p><em>Resolving</em> an identifier can be done in three ways:</p>
 <ol>
 <li>using it in a transaction&mdash;i.e. a query or update statement&mdash;submitted or routed via an
    internet protocol to a "lookup service" that translates one or more given "features" of an
-   object to an <abbr title="Enterprise Knowledge Graph">EKG</abbr>/IRI.</li>
+   object to an <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/IRI.</li>
 <li>constructing it via a standardized policy from key components and applying a hash and optionally
-   signing it&mdash;where the object represented by the <abbr title="Enterprise Knowledge Graph">EKG</abbr>/IRI may or may not already exist.</li>
-<li>constructing it by giving the object an <abbr title="Enterprise Knowledge Graph">EKG</abbr>/IRI based on a random number in case the <abbr title="Enterprise Knowledge Graph">EKG</abbr> is
+   signing it&mdash;where the object represented by the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/IRI may or may not already exist.</li>
+<li>constructing it by giving the object an <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/IRI based on a random number in case the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> is
    the authoritative source for the given object.</li>
 </ol>
 <h2 id="rationale">Rationale<a class="headerlink" href="#rationale" title="Permanent link">&para;</a></h2>
@@ -1549,27 +1572,27 @@ and this is still encouraged when integrating systems, there is benefit in being
 canonical and unchanging one, which can for example make the mapping of identities a many-to-one
 rather than a many-to-many task.</p>
 <p>In addition to that, to enhance the likelihood that various EKGs, or smaller Knowledge Graphs within an
-<abbr title="Enterprise Knowledge Graph">EKG</abbr>&mdash;across departments, organizations or ecosystems&mdash;can interoperate easily with each other,
-the use of standardized <abbr title="Enterprise Knowledge Graph">EKG</abbr>/IRIs needs to be encouraged since various EKGs can come to the same
+<abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>&mdash;across departments, organizations or ecosystems&mdash;can interoperate easily with each other,
+the use of standardized <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/IRIs needs to be encouraged since various EKGs can come to the same
 identifiers independently, drastically increasing the number of links across EKGs and therefore
 enhancing potential interoperability.</p>
-<p>Since <abbr title="Enterprise Knowledge Graph">EKG</abbr> Identifiers will proliferate across the enterprise and its ecosystem and be used and stored
+<p>Since <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Identifiers will proliferate across the enterprise and its ecosystem and be used and stored
 for many years to come (could be decades) it is essential that the identifiers are always resolvable
 so that the need to make copies of data for long-term storage purposes decreases drastically.</p>
 <h2 id="implications">Implications<a class="headerlink" href="#implications" title="Permanent link">&para;</a></h2>
 <ul>
-<li>There should be a mapping or service to resolve other identifiers such as names, keys or other IRIs to the <abbr title="Enterprise Knowledge Graph">EKG</abbr>/IRI.</li>
-<li>Since it is immutable, the <abbr title="Enterprise Knowledge Graph">EKG</abbr>/IRI will have to be <em>opaque</em> i.e. not be a human-readable
+<li>There should be a mapping or service to resolve other identifiers such as names, keys or other IRIs to the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/IRI.</li>
+<li>Since it is immutable, the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/IRI will have to be <em>opaque</em> i.e. not be a human-readable
   since even human names, company names, customer numbers, Social Security Numbers can change over time.</li>
 <li>Objects that already have a well-established <em><abbr title="Resource Definition Framework, the standard that defines the basic building block of a semantic graph: the so-called &quot;triple&quot; i.e. an RDF-statement">RDF</abbr></em> compliant and <em>Linked Data</em> compliant identifier
-  may not necessarily need an additional <abbr title="Enterprise Knowledge Graph">EKG</abbr>/IRI.
-  In fact, they may already have one that is external to the company's <abbr title="Enterprise Knowledge Graph">EKG</abbr>.
+  may not necessarily need an additional <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/IRI.
+  In fact, they may already have one that is external to the company's <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>.
   It is in many cases recommended to even give those well-established objects, from well-established external
-  datasets, an <abbr title="Enterprise Knowledge Graph">EKG</abbr>/IRI of your own enterprise as well for various reasons.
+  datasets, an <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/IRI of your own enterprise as well for various reasons.
   Examples of such objects are <em>Legal Entity Identifiers (LEIs)</em> and <em>Financial Instrument Global Identifiers (FIGIs)</em>.
-  The EKGF will maintain a list of these for convenience.</li>
-<li>The use of multiple <abbr title="Enterprise Knowledge Graph">EKG</abbr> identifiers&mdash;often in combination with multiple "legacy identifiers"&mdash;generally means
-  that an <abbr title="Enterprise Knowledge Graph">EKG</abbr> should <em>not</em> use the Unique Name Assumption (UNA) (where the use of a different identifier would
+  The <abbr title="Enterprise Knowledge Graph Foundation">EKGF</abbr> will maintain a list of these for convenience.</li>
+<li>The use of multiple <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> identifiers&mdash;often in combination with multiple "legacy identifiers"&mdash;generally means
+  that an <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> should <em>not</em> use the Unique Name Assumption (UNA) (where the use of a different identifier would
   imply a different object).</li>
 </ul>
 

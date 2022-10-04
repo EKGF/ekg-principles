@@ -1186,6 +1186,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1276,7 +1278,7 @@
         
   
   <span class="md-ellipsis">
-    Ekg
+    Enterprise Knowledge Graph
     
   </span>
   
@@ -1340,6 +1342,27 @@
   
   <span class="md-ellipsis">
     Proportionality
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vocab/sdd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Self-describing Dataset
     
   </span>
   
@@ -1482,16 +1505,16 @@ of principles used by many Knowledge Graph practitioners.</p>
 </li>
 <li>
 <p><strong>Differences</strong></p>
-<p><abbr title="Enterprise Knowledge Graph">EKG</abbr> Principles are slightly more specific or prescriptive:</p>
+<p><abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Principles are slightly more specific or prescriptive:</p>
 <ul>
 <li>Metadata (objects) and data (objects) can potentially have multiple identifiers (but at least one).</li>
 <li>Those identifiers do not necessarily be "persistent" as long as they are (always) resolvable (through HTTP).</li>
-<li>The <abbr title="Enterprise Knowledge Graph">EKG</abbr> identifiers (<abbr title="Enterprise Knowledge Graph">EKG</abbr>/IRIs) of data objects (but not necessarily metadata objects) should be
+<li>The <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> identifiers (<abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/IRIs) of data objects (but not necessarily metadata objects) should be
   "opaque" as in "meaningless", (relatively) safe to be emailed around, stored in other platforms,
   maximising "proliferation".</li>
 <li>FAIR principle <strong>F3</strong> would be phrased the other way around: the data described by metadata refers to it via
   the metadata identifier (i.e. the predicate-IRI).</li>
-<li>FAIR principle <strong>F4</strong> slightly differs as well, the <abbr title="Enterprise Knowledge Graph">EKG</abbr> Principles require metadata to be directly
+<li>FAIR principle <strong>F4</strong> slightly differs as well, the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Principles require metadata to be directly
   resolvable (via HTTP) machine-readable definitions of the semantics in verifiable formal logic
   (preferably OWL 2).</li>
 </ul>
@@ -1515,12 +1538,12 @@ of principles used by many Knowledge Graph practitioners.</p>
 </li>
 <li>
 <p><strong>Differences</strong></p>
-<p><abbr title="Enterprise Knowledge Graph">EKG</abbr> Principles are slightly more specific or prescriptive:</p>
+<p><abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Principles are slightly more specific or prescriptive:</p>
 <ul>
 <li><em>"using a standardized communications protocol"</em> would be explicitly the HTTP protocol
    (or actually HTTPS/TLS) as a minimum requirement and in addition to that any other protocol, 
    standardized or not.</li>
-<li><em>"metadata are accessible"</em> would be more explicit for the <abbr title="Enterprise Knowledge Graph">EKG</abbr>: 
+<li><em>"metadata are accessible"</em> would be more explicit for the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>: 
    all metadata has to be accessible through IRIs that are always "resolvable" via the HTTP protocol.
    In other words, make sure that all your <em>OWL 2</em> ontologies or <em><abbr title="Resource Definition Framework, the standard that defines the basic building block of a semantic graph: the so-called &quot;triple&quot; i.e. an RDF-statement">RDF</abbr> Schema (RDFS)</em> 
    vocabularies are placed on highly available durable infrastructure that can always be accessed via HTTP.</li>
@@ -1544,12 +1567,12 @@ of principles used by many Knowledge Graph practitioners.</p>
 </li>
 <li>
 <p><strong>Differences</strong></p>
-<p><abbr title="Enterprise Knowledge Graph">EKG</abbr> Principles are slightly more specific or prescriptive:</p>
+<p><abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Principles are slightly more specific or prescriptive:</p>
 <ul>
-<li>In the <abbr title="Enterprise Knowledge Graph">EKG</abbr> the metadata that describes meaning i.e. the semantics
+<li>In the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> the metadata that describes meaning i.e. the semantics
    (there are also many other types of metadata) that 
    <em>formal and broadly applicable language for knowledge representation</em>
-   has to be preferably <em>OWL 2</em> or at least <em><abbr title="Resource Definition Framework, the standard that defines the basic building block of a semantic graph: the so-called &quot;triple&quot; i.e. an RDF-statement">RDF</abbr> Schema (RDFS)</em> or <em>SHACL</em>.</li>
+   has to be preferably <em>OWL 2</em> or at least <em><abbr title="Resource Definition Framework, the standard that defines the basic building block of a semantic graph: the so-called &quot;triple&quot; i.e. an RDF-statement">RDF</abbr> Schema (RDFS)</em> or <em><abbr title="Shapes Constraint Language, a W3C standard">SHACL</abbr></em>.</li>
 </ul>
 </li>
 </ul>
@@ -1576,10 +1599,10 @@ searchable resource (the infrastructure component).</p>
 </li>
 <li>
 <p><strong>Differences</strong></p>
-<p><abbr title="Enterprise Knowledge Graph">EKG</abbr> Principles are slightly more specific or prescriptive:</p>
+<p><abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Principles are slightly more specific or prescriptive:</p>
 <ul>
 <li><em>optimization of the reuse of data is the ultimate goal</em>. 
-  It's an important goal for <abbr title="Enterprise Knowledge Graph">EKG</abbr> as well but reuse of knowledge and whole
+  It's an important goal for <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> as well but reuse of knowledge and whole
   use cases&mdash;with everything that comes with it&mdash;is an even higher level goal.
   Furthermore, overall connectedness of all data and knowledge is an equally important goal.</li>
 <li><em>metadata and data should be well-described</em> but should also be as "unbiased" as possible, not designed
@@ -1587,12 +1610,12 @@ searchable resource (the infrastructure component).</p>
   source provides with the highest level of integrity.<br/>
   See principle <a href="../principle/05-self-describing/">5 -- Self-describing</a>.</li>
 <li><em>Meta(data) are richly described with a plurality of accurate and relevant attributes</em>.
-  "<em>Richly described</em>" would not be specific enough for <abbr title="Enterprise Knowledge Graph">EKG</abbr>.
+  "<em>Richly described</em>" would not be specific enough for <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>.
   It would have to be <em>directly resolvable to a machine-readable definition in verifiable formal logic</em>.</li>
-<li>For all types of recognized metadata, which is metadata that services of the various <abbr title="Enterprise Knowledge Graph">EKG</abbr> platforms can
-  recognize, the EKGF will specify accepted standards or define standards itself or in
+<li>For all types of recognized metadata, which is metadata that services of the various <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> platforms can
+  recognize, the <abbr title="Enterprise Knowledge Graph Foundation">EKGF</abbr> will specify accepted standards or define standards itself or in
   collaboration with partners like the OMG.
-  Since an <abbr title="Enterprise Knowledge Graph">EKG</abbr> is a collection of self-describing datasets, each dataset will have its 
+  Since an <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> is a collection of self-describing datasets, each dataset will have its 
   various types of metadata organized in a structured way.</li>
 </ul>
 </li>
