@@ -5,12 +5,12 @@ title: 2 -- Meaning
 
 <!--summary-start-->
 The meaning of every _Data Point_ must be directly resolvable
-to a machine-readable definition in verifiable formal logic.
+to a _machine-readable definition_ in verifiable formal logic.
 <!--summary-end-->
 
-A Data Point combines an object---using its _Enterprise Knowledge Graph 
-IRI (EKG/IRI)_ as its identifier---with the value of a _property_ in some 
-context.
+A Data Point combines an object---using its [_Enterprise Knowledge Graph 
+IRI (EKG/IRI)_](https://method.ekgf.org/vocab/ekg-iri) as its 
+identifier---with the value of a _property_ in some context.
 Hence, data is expressed at its most granular level for both data-at-rest
 and data-in-motion.
 

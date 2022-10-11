@@ -4,7 +4,7 @@ title: 3 -- Distributed
 # Distributed
 
 <!--summary-start-->
-Data Points for any object may be stored in many physical stores.
+_Data Points_ for any object may be stored in many physical stores.
 Any access point provides connectivity to all EKG content regardless of where it resides.
 <!--summary-end-->
 

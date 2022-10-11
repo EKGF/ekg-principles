@@ -31,8 +31,8 @@ hide:
 
     - :material-cached:{ .lg } __3 - Distributed__
     
-         {% include-markdown "05-self-describing.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
-         [:octicons-arrow-right-24: Learn more](05-self-describing.md)
+         {% include-markdown "03-distributed.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
+         [:octicons-arrow-right-24: Learn more](03-distributed.md)
 
     - :material-cached:{ .lg } __4 - Open World__
     

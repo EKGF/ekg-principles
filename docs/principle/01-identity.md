@@ -6,8 +6,8 @@ title: 1 -- Identity
 <!--summary-start-->
 Any object in the EKG is identified with at least one universally _unique_, _opaque_,
 _permanent_, _non-reassignable_ and _web-resolvable_ identifier in the form of an
-_International Resource Identifier (IRI)_ for the EKG---i.e. an _Enterprise Knowledge
-Graph IRI (EKG/IRI)_ aka _EKG Identifier_.
+_International Resource Identifier (IRI)_ for the EKG---i.e. an [_Enterprise Knowledge Graph
+IRI (EKG/IRI)_](https://method.ekgf.org/vocab/ekg-iri) aka _EKG Identifier_.
 <!--summary-end-->
 
 As said, the EKG/IRI identifier is permanent, will be proliferated across the enterprise's
