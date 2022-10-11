@@ -9,7 +9,6 @@ on:
 
 env:
   HOMEBREW_NO_INSTALL_CLEANUP: 1
-  ENABLE_PDF_EXPORT: 1
 
 jobs:
   build:
@@ -24,7 +23,7 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@master
       -
         name: Install Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v4.1.0
         with:
           python-version: '3.10.7'
       -
