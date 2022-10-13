@@ -47,6 +47,8 @@
       
     
     
+      <link rel="stylesheet" href="../css/timeago.css">
+    
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -87,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-syntax-error" class="md-skip">
+        <a href="#ekg-principles" class="md-skip">
           Skip to content
         </a>
       
@@ -1200,6 +1202,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1455,11 +1459,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../vocab/use-case-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Case Tree
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../vocab/use-case/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Use case
+    Use Case
     
   </span>
   
@@ -1492,7 +1518,32 @@
                 
 
 
-                  
+                  <!--
+  Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Tags -->
+
+
+<!-- Actions -->
 
   <a href="https://github.com/EKGF/ekg-principles/edit/main/docs/principle/index.md" title="Edit this page" class="md-content__button md-icon">
     
@@ -1500,21 +1551,187 @@
   </a>
 
 
-<h1 id="macro-syntax-error"><em>Macro Syntax Error</em><a class="headerlink" href="#macro-syntax-error" title="Permanent link">&para;</a></h1>
-<p><em>Line 20 in Markdown file:</em> <strong>expected token 'end of statement block', got 'string'</strong> 
-<div class="highlight"><pre><span></span><code>         <span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">BEGIN</span> <span class="n">INCLUDE</span> <span class="mi">01</span><span class="o">-</span><span class="n">identity</span><span class="o">.</span><span class="n">md</span> <span class="s1">&#39;&amp;lt;!--summary-start--&amp;gt;&#39;</span> <span class="s1">&#39;&amp;lt;!--summary-end--&amp;gt;&#39;</span> <span class="o">--&gt;</span>
 
-         <span class="n">Any</span> <span class="nb">object</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">EKG</span> <span class="ow">is</span> <span class="n">identified</span> <span class="k">with</span> <span class="n">at</span> <span class="n">least</span> <span class="n">one</span> <span class="n">universally</span> <span class="n">_unique_</span><span class="p">,</span> <span class="n">_opaque_</span><span class="p">,</span>
-         <span class="n">_permanent_</span><span class="p">,</span> <span class="n">_non</span><span class="o">-</span><span class="n">reassignable_</span> <span class="ow">and</span> <span class="n">_web</span><span class="o">-</span><span class="n">resolvable_</span> <span class="n">identifier</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">form</span> <span class="n">of</span> <span class="n">an</span>
-         <span class="n">_International</span> <span class="n">Resource</span> <span class="n">Identifier</span> <span class="p">(</span><span class="n">IRI</span><span class="p">)</span><span class="n">_</span> <span class="k">for</span> <span class="n">the</span> <span class="n">EKG</span><span class="o">---</span><span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span> <span class="n">an</span> <span class="p">[</span><span class="n">_Enterprise</span> <span class="n">Knowledge</span> <span class="n">Graph</span>
-         <span class="n">IRI</span> <span class="p">(</span><span class="n">EKG</span><span class="o">/</span><span class="n">IRI</span><span class="p">)</span><span class="n">_</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">method</span><span class="o">.</span><span class="n">ekgf</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">vocab</span><span class="o">/</span><span class="n">ekg</span><span class="o">-</span><span class="n">iri</span><span class="p">)</span> <span class="n">aka</span> <span class="n">_EKG</span> <span class="n">Identifier_</span><span class="o">.</span>
 
-         <span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">END</span> <span class="n">INCLUDE</span> <span class="o">--&gt;</span>
-</code></pre></div></p>
+
+<!-- Page content -->
+<h1 id="ekg-principles"><abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Principles<a class="headerlink" href="#ekg-principles" title="Permanent link">&para;</a></h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Intro</label><label for="__tabbed_1_2">10 Principles</label><label for="__tabbed_1_3">List</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>These principles are intended to provide guidelines for the development and deployment
+of an <a href="../vocab/ekg/"><em>Enterprise Knowledge Graph (<abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>)</em></a>. </p>
+<p>The principles emphasize shared meaning and content reuse that are the cornerstone
+of operating in complex and interconnected environments.</p>
+<p>An enterprise that complies with all ten principles has an Enterprise Knowledge Graph.</p>
+</div>
+<div class="tabbed-block">
+<div class="grid cards" markdown>
+<ul>
+<li>
+<p><span class="twemoji lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 8-4 4h3a6 6 0 0 1-6 6c-1 0-1.97-.25-2.8-.7l-1.46 1.46A7.93 7.93 0 0 0 12 20a8 8 0 0 0 8-8h3M6 12a6 6 0 0 1 6-6c1 0 1.97.25 2.8.7l1.46-1.46A7.93 7.93 0 0 0 12 4a8 8 0 0 0-8 8H1l4 4 4-4"/></svg></span> <strong>1 - Identity</strong></p>
+<!-- BEGIN INCLUDE 01-identity.md '&lt;!--summary-start--&gt;' '&lt;!--summary-end--&gt;' -->
+<p>Any object in the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> is identified with at least one universally <em>unique</em>, <em>opaque</em>,
+ <em>permanent</em>, <em>non-reassignable</em> and <em>web-resolvable</em> identifier in the form of an
+ <em>International Resource Identifier (IRI)</em> for the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>---i.e. an <a href="https://method.ekgf.org/vocab/ekg-iri"><em>Enterprise Knowledge Graph
+ IRI (<abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/IRI)</em></a> aka <em><abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Identifier</em>.</p>
+<p><!-- END INCLUDE -->
+ <a href="01-identity/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.22 19.03a.75.75 0 0 0 1.06 0l6.25-6.25a.75.75 0 0 0 0-1.06l-6.25-6.25a.75.75 0 1 0-1.06 1.06l4.97 4.97H3.75a.75.75 0 0 0 0 1.5h14.44l-4.97 4.97a.75.75 0 0 0 0 1.06z"/></svg></span> Learn more</a></p>
+</li>
+<li>
+<p><span class="twemoji lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 8-4 4h3a6 6 0 0 1-6 6c-1 0-1.97-.25-2.8-.7l-1.46 1.46A7.93 7.93 0 0 0 12 20a8 8 0 0 0 8-8h3M6 12a6 6 0 0 1 6-6c1 0 1.97.25 2.8.7l1.46-1.46A7.93 7.93 0 0 0 12 4a8 8 0 0 0-8 8H1l4 4 4-4"/></svg></span> <strong>2 - Meaning</strong></p>
+<!-- BEGIN INCLUDE 02-meaning.md '&lt;!--summary-start--&gt;' '&lt;!--summary-end--&gt;' -->
+<p>The meaning of every <em>Data Point</em> must be directly resolvable
+ to a <em>machine-readable definition</em> in verifiable formal logic.</p>
+<p><!-- END INCLUDE -->
+ <a href="02-meaning/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.22 19.03a.75.75 0 0 0 1.06 0l6.25-6.25a.75.75 0 0 0 0-1.06l-6.25-6.25a.75.75 0 1 0-1.06 1.06l4.97 4.97H3.75a.75.75 0 0 0 0 1.5h14.44l-4.97 4.97a.75.75 0 0 0 0 1.06z"/></svg></span> Learn more</a></p>
+</li>
+<li>
+<p><span class="twemoji lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 8-4 4h3a6 6 0 0 1-6 6c-1 0-1.97-.25-2.8-.7l-1.46 1.46A7.93 7.93 0 0 0 12 20a8 8 0 0 0 8-8h3M6 12a6 6 0 0 1 6-6c1 0 1.97.25 2.8.7l1.46-1.46A7.93 7.93 0 0 0 12 4a8 8 0 0 0-8 8H1l4 4 4-4"/></svg></span> <strong>3 - Distributed</strong></p>
+<!-- BEGIN INCLUDE 03-distributed.md '&lt;!--summary-start--&gt;' '&lt;!--summary-end--&gt;' -->
+<p><em>Data Points</em> for any object may be stored in many physical stores.
+ Any access point provides connectivity to all <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> content regardless of where it resides.</p>
+<p><!-- END INCLUDE -->
+ <a href="03-distributed/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.22 19.03a.75.75 0 0 0 1.06 0l6.25-6.25a.75.75 0 0 0 0-1.06l-6.25-6.25a.75.75 0 1 0-1.06 1.06l4.97 4.97H3.75a.75.75 0 0 0 0 1.5h14.44l-4.97 4.97a.75.75 0 0 0 0 1.06z"/></svg></span> Learn more</a></p>
+</li>
+<li>
+<p><span class="twemoji lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 8-4 4h3a6 6 0 0 1-6 6c-1 0-1.97-.25-2.8-.7l-1.46 1.46A7.93 7.93 0 0 0 12 20a8 8 0 0 0 8-8h3M6 12a6 6 0 0 1 6-6c1 0 1.97.25 2.8.7l1.46-1.46A7.93 7.93 0 0 0 12 4a8 8 0 0 0-8 8H1l4 4 4-4"/></svg></span> <strong>4 - Open World</strong></p>
+<!-- BEGIN INCLUDE 04-open-world.md '&lt;!--summary-start--&gt;' '&lt;!--summary-end--&gt;' -->
+<p>Information can vary over time, come from many internal and external sources,
+ and be based on different identifiers and models.
+ These <em>multiple versions of the truth (MVOT)</em> need to be reconciled on access by context.</p>
+<p><!-- END INCLUDE -->
+ <a href="04-open-world/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.22 19.03a.75.75 0 0 0 1.06 0l6.25-6.25a.75.75 0 0 0 0-1.06l-6.25-6.25a.75.75 0 1 0-1.06 1.06l4.97 4.97H3.75a.75.75 0 0 0 0 1.5h14.44l-4.97 4.97a.75.75 0 0 0 0 1.06z"/></svg></span> Learn more</a></p>
+</li>
+<li>
+<p><span class="twemoji lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 8-4 4h3a6 6 0 0 1-6 6c-1 0-1.97-.25-2.8-.7l-1.46 1.46A7.93 7.93 0 0 0 12 20a8 8 0 0 0 8-8h3M6 12a6 6 0 0 1 6-6c1 0 1.97.25 2.8.7l1.46-1.46A7.93 7.93 0 0 0 12 4a8 8 0 0 0-8 8H1l4 4 4-4"/></svg></span> <strong>5 - Self-describing</strong></p>
+<!-- BEGIN INCLUDE 05-self-describing.md '&lt;!--summary-start--&gt;' '&lt;!--summary-end--&gt;' -->
+<p>An <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> is composed of a set of <em>self-describing datasets (SDDs)</em> that provide
+ information about <em>lineage</em>, <em>provenance</em>, <em>pedigree</em>, <em>maturity</em>, <em>quality</em>,
+ <em>licensing</em> and <em>governance</em>.</p>
+<p><!-- END INCLUDE -->
+ <a href="05-self-describing/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.22 19.03a.75.75 0 0 0 1.06 0l6.25-6.25a.75.75 0 0 0 0-1.06l-6.25-6.25a.75.75 0 1 0-1.06 1.06l4.97 4.97H3.75a.75.75 0 0 0 0 1.5h14.44l-4.97 4.97a.75.75 0 0 0 0 1.06z"/></svg></span> Learn more</a></p>
+</li>
+<li>
+<p><span class="twemoji lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 8-4 4h3a6 6 0 0 1-6 6c-1 0-1.97-.25-2.8-.7l-1.46 1.46A7.93 7.93 0 0 0 12 20a8 8 0 0 0 8-8h3M6 12a6 6 0 0 1 6-6c1 0 1.97.25 2.8.7l1.46-1.46A7.93 7.93 0 0 0 12 4a8 8 0 0 0-8 8H1l4 4 4-4"/></svg></span> <strong>6 - Measurement</strong></p>
+<!-- BEGIN INCLUDE 06-measurement.md '&lt;!--summary-start--&gt;' '&lt;!--summary-end--&gt;' -->
+<p>The quality and characteristics of the managed knowledge must be measurable and measured.
+ Measurement criteria are used to designate fitness-for-defined-purpose and must be actionable.</p>
+<p><!-- END INCLUDE -->
+ <a href="06-measurement/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.22 19.03a.75.75 0 0 0 1.06 0l6.25-6.25a.75.75 0 0 0 0-1.06l-6.25-6.25a.75.75 0 1 0-1.06 1.06l4.97 4.97H3.75a.75.75 0 0 0 0 1.5h14.44l-4.97 4.97a.75.75 0 0 0 0 1.06z"/></svg></span> Learn more</a></p>
+</li>
+<li>
+<p><span class="twemoji lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 8-4 4h3a6 6 0 0 1-6 6c-1 0-1.97-.25-2.8-.7l-1.46 1.46A7.93 7.93 0 0 0 12 20a8 8 0 0 0 8-8h3M6 12a6 6 0 0 1 6-6c1 0 1.97.25 2.8.7l1.46-1.46A7.93 7.93 0 0 0 12 4a8 8 0 0 0-8 8H1l4 4 4-4"/></svg></span> <strong>7 - Business Orientation</strong></p>
+<!-- BEGIN INCLUDE 07-business-orientation.md '&lt;!--summary-start--&gt;' '&lt;!--summary-end--&gt;' -->
+<p>All information in the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>, and associated artifacts, are linked to defined and
+ prioritized <em>use cases</em>.
+ Nothing in the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> exists without a known business justification and purpose.</p>
+<p><!-- END INCLUDE -->
+ <a href="07-business-orientation/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.22 19.03a.75.75 0 0 0 1.06 0l6.25-6.25a.75.75 0 0 0 0-1.06l-6.25-6.25a.75.75 0 1 0-1.06 1.06l4.97 4.97H3.75a.75.75 0 0 0 0 1.5h14.44l-4.97 4.97a.75.75 0 0 0 0 1.06z"/></svg></span> Learn more</a></p>
+</li>
+<li>
+<p><span class="twemoji lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 8-4 4h3a6 6 0 0 1-6 6c-1 0-1.97-.25-2.8-.7l-1.46 1.46A7.93 7.93 0 0 0 12 20a8 8 0 0 0 8-8h3M6 12a6 6 0 0 1 6-6c1 0 1.97.25 2.8.7l1.46-1.46A7.93 7.93 0 0 0 12 4a8 8 0 0 0-8 8H1l4 4 4-4"/></svg></span> <strong>8 - Control</strong></p>
+<!-- BEGIN INCLUDE 08-control.md '&lt;!--summary-start--&gt;' '&lt;!--summary-end--&gt;' -->
+<p>Entitlement, privacy and business policies will be modeled in the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>
+ and automatically executed, enforced and audited at the Data Point level.</p>
+<p><!-- END INCLUDE -->
+ <a href="08-control/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.22 19.03a.75.75 0 0 0 1.06 0l6.25-6.25a.75.75 0 0 0 0-1.06l-6.25-6.25a.75.75 0 1 0-1.06 1.06l4.97 4.97H3.75a.75.75 0 0 0 0 1.5h14.44l-4.97 4.97a.75.75 0 0 0 0 1.06z"/></svg></span> Learn more</a></p>
+</li>
+<li>
+<p><span class="twemoji lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 8-4 4h3a6 6 0 0 1-6 6c-1 0-1.97-.25-2.8-.7l-1.46 1.46A7.93 7.93 0 0 0 12 20a8 8 0 0 0 8-8h3M6 12a6 6 0 0 1 6-6c1 0 1.97.25 2.8.7l1.46-1.46A7.93 7.93 0 0 0 12 4a8 8 0 0 0-8 8H1l4 4 4-4"/></svg></span> <strong>9 - Ecosystem</strong></p>
+<!-- BEGIN INCLUDE 09-ecosystem.md '&lt;!--summary-start--&gt;' '&lt;!--summary-end--&gt;' -->
+<p>An enterprise will use a heterogeneous set of technologies and data sources which
+ will be incorporated into the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> over time.
+ All data entering the ecosystem are subject to service level agreements.</p>
+<p><!-- END INCLUDE -->
+ <a href="09-ecosystem/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.22 19.03a.75.75 0 0 0 1.06 0l6.25-6.25a.75.75 0 0 0 0-1.06l-6.25-6.25a.75.75 0 1 0-1.06 1.06l4.97 4.97H3.75a.75.75 0 0 0 0 1.5h14.44l-4.97 4.97a.75.75 0 0 0 0 1.06z"/></svg></span> Learn more</a></p>
+</li>
+<li>
+<p><span class="twemoji lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 8-4 4h3a6 6 0 0 1-6 6c-1 0-1.97-.25-2.8-.7l-1.46 1.46A7.93 7.93 0 0 0 12 20a8 8 0 0 0 8-8h3M6 12a6 6 0 0 1 6-6c1 0 1.97.25 2.8.7l1.46-1.46A7.93 7.93 0 0 0 12 4a8 8 0 0 0-8 8H1l4 4 4-4"/></svg></span> <strong>10 - Standards</strong></p>
+<!-- BEGIN INCLUDE 10-standards.md '&lt;!--summary-start--&gt;' '&lt;!--summary-end--&gt;' -->
+<p>Data, ontologies, definitions and business rules should be compliant with open
+ standards and transparent governance procedures as defined by recognized standards
+ bodies.</p>
+<p><!-- END INCLUDE -->
+ <a href="10-standards/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M13.22 19.03a.75.75 0 0 0 1.06 0l6.25-6.25a.75.75 0 0 0 0-1.06l-6.25-6.25a.75.75 0 1 0-1.06 1.06l4.97 4.97H3.75a.75.75 0 0 0 0 1.5h14.44l-4.97 4.97a.75.75 0 0 0 0 1.06z"/></svg></span> Learn more</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th align="right"></th>
+<th>Principle</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1.</td>
+<td><a href="01-identity/">Identity</a></td>
+<td>Any given object is identified with at least one universally unique, opaque, permanent, and web-resolvable identifier.</td>
+</tr>
+<tr>
+<td align="right">2.</td>
+<td><a href="02-meaning/">Meaning</a></td>
+<td>The meaning of every data point must be directly resolvable to a machine-readable mathematical definition.</td>
+</tr>
+<tr>
+<td align="right">3.</td>
+<td><a href="05-self-describing/">Distributed</a></td>
+<td>An <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> can incorporate any number of datasets of any number of data sources that can be hosted by any number of independent <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Platforms. Any given access point provides connectivity to the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> regardless of where it resides.</td>
+</tr>
+<tr>
+<td align="right">4.</td>
+<td><a href="04-open-world/">Open World</a></td>
+<td>Information can vary over time, come from many internal and external sources, and be based on different identities and models.  These “multiple versions of the truth” need to be reconciled on access by context.</td>
+</tr>
+<tr>
+<td align="right">5.</td>
+<td><a href="05-self-describing/">Self-describing</a></td>
+<td>An <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> is composed of a set of self-describing datasets that provide information about lineage, provenance, pedigree, maturity, quality, and governance. The <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Platform has policy enforcement services that are driven by these self-describing datasets.</td>
+</tr>
+<tr>
+<td align="right">6.</td>
+<td><a href="06-measurement/">Measurement</a></td>
+<td>The quality and characteristics of the managed knowledge must be measurable and measured.  Measurement criteria are used to designate fitness-for-defined-purpose and must be actionable.</td>
+</tr>
+<tr>
+<td align="right">7.</td>
+<td><a href="07-business-orientation/">Business Orientation</a></td>
+<td>All artifacts around and information in the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> are linked to defined and prioritized use cases.  Nothing in the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> exists without a known business justification and purpose.</td>
+</tr>
+<tr>
+<td align="right">8.</td>
+<td><a href="08-control/">Control</a></td>
+<td>Entitlement, privacy, and business policies will be modeled in the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> and automatically executed, enforced, and audited at the data point level.</td>
+</tr>
+<tr>
+<td align="right">9.</td>
+<td><a href="09-ecosystem/">Ecosystem</a></td>
+<td>An enterprise will use a heterogeneous set of technologies and data sources that will be incorporated into the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> over time.   All components of the ecosystem are subject to service level agreements.</td>
+</tr>
+<tr>
+<td align="right">10.</td>
+<td><a href="10-standards/">Standards</a></td>
+<td>Both the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Platform and knowledge content should be based on open standards. Where necessary, the <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Foundation will work to expand those standards.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<!-- Source file information -->
+
 
   
     
   
+  
+    
   
 
 
@@ -1524,14 +1741,24 @@
         <span class="md-icon" title="Date of last update">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
         </span>
-        2022-10-11
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-10-11T15:10:08-04:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-10-11</span>
       </span>
     
+    
+      <span class="md-source-file__fact">
+        <span class="md-icon" title="Date of creation">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+        </span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-09-07T07:14:55-04:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-09-07</span>
+      </span>
     
     
     
   </aside>
 
+
+
+<!-- Was this page helpful? -->
 
   
 
@@ -1583,6 +1810,8 @@
     </fieldset>
   </form>
 
+
+<!-- Comment system -->
 
                 
 
@@ -1746,6 +1975,10 @@
     
     
       <script src="../assets/javascripts/bundle.abceede4.min.js"></script>
+      
+        <script src="../js/timeago.min.js"></script>
+      
+        <script src="../js/timeago_mkdocs_material.js"></script>
       
         <script src="../javascript/images_dark.js"></script>
       

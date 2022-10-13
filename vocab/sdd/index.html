@@ -47,6 +47,8 @@
       
     
     
+      <link rel="stylesheet" href="../../css/timeago.css">
+    
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
@@ -1200,6 +1202,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -1863,11 +1867,33 @@
   
   
     <li class="md-nav__item">
+      <a href="../use-case-tree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Case Tree
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../use-case/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Use case
+    Use Case
     
   </span>
   
@@ -1900,7 +1926,32 @@
                 
 
 
-                  
+                  <!--
+  Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Tags -->
+
+
+<!-- Actions -->
 
   <a href="https://github.com/EKGF/ekg-principles/edit/main/docs/vocab/sdd.md" title="Edit this page" class="md-content__button md-icon">
     
@@ -1908,6 +1959,15 @@
   </a>
 
 
+
+<!--
+  Hack: check whether the content contains a h1 headline. If it doesn't, the
+  page title (or respectively site name) is used as the main headline.
+-->
+
+
+
+<!-- Page content -->
 <!--term-start-->
 <h1 id="self-describing-dataset-sdd">Self-describing Dataset (<abbr title="Self-describing dataset, an EKGF standard">SDD</abbr>)<a class="headerlink" href="#self-describing-dataset-sdd" title="Permanent link">&para;</a></h1>
 <p>In a mature Enterprise Knowledge Graph (<abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>), the information provided (or consumed) by 
@@ -1916,7 +1976,7 @@ that we call a <em>self-describing dataset (<abbr title="Self-describing dataset
 Depending on maturity and architecture these SDDs are also known as <em>data products</em> or
 <em>data services</em>.</p>
 <p>The general idea is that <em>everything that <ins>can</ins> be said about a given dataset
-<ins>should</ins> be described&mdash;as close as possible and ideally in&mdash;that dataset itself.</em></p>
+<ins>should</ins> be described---as close as possible and ideally in---that dataset itself.</em></p>
 <p>Many topic areas can require such description, most of which would be described as "policies"
 in the form of models that are enforceable by <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/Platform Services at run-time.</p>
 <!--term-end-->
@@ -1972,7 +2032,7 @@ in the form of models that are enforceable by <abbr title="Enterprise Knowledge 
 </ul>
 <h3 id="data-profiling-policies">Data Profiling Policies<a class="headerlink" href="#data-profiling-policies" title="Permanent link">&para;</a></h3>
 <h3 id="source-pricing">Source Pricing<a class="headerlink" href="#source-pricing" title="Permanent link">&para;</a></h3>
-<p>In order to be able to calculate <em>the cost of data</em> it is useful to know&mdash;per dataset&mdash;what
+<p>In order to be able to calculate <em>the cost of data</em> it is useful to know---per dataset---what
 was paid to obtain or create the data.</p>
 <h3 id="usage-pricing">Usage Pricing<a class="headerlink" href="#usage-pricing" title="Permanent link">&para;</a></h3>
 <p>What are the pricing options for users of the data.</p>
@@ -2014,7 +2074,7 @@ and which parts are historic (or future / "what if") data? And which design patt
 temporality? Smart model-driven <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/Platform services can then a) maintain temporality and b) use it properly.</p>
 <h3 id="data-retention-archiving-policies">Data Retention &amp; Archiving Policies<a class="headerlink" href="#data-retention-archiving-policies" title="Permanent link">&para;</a></h3>
 <h3 id="physical-dataset-policies">Physical Dataset Policies<a class="headerlink" href="#physical-dataset-policies" title="Permanent link">&para;</a></h3>
-<p>Given the logical dataset&mdash;the <abbr title="Self-describing dataset, an EKGF standard">SDD</abbr>&mdash;which physical manifestations does it have, what types, which ones
+<p>Given the logical dataset---the <abbr title="Self-describing dataset, an EKGF standard">SDD</abbr>---which physical manifestations does it have, what types, which ones
 are allowable etc.</p>
 <p>For instance, one <abbr title="Self-describing dataset, an EKGF standard">SDD</abbr> produced overnight by a batch-job, stored as an <abbr title="Resource Definition Framework, the standard that defines the basic building block of a semantic graph: the so-called &quot;triple&quot; i.e. an RDF-statement">RDF</abbr> file in an S3 bucket, may be
 loaded into different databases of different types at different locations.</p>
@@ -2106,9 +2166,14 @@ realistic test-data in the first place.</p>
 </ol>
 </div>
 
+<!-- Source file information -->
+
+
   
     
   
+  
+    
   
 
 
@@ -2118,14 +2183,24 @@ realistic test-data in the first place.</p>
         <span class="md-icon" title="Date of last update">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
         </span>
-        2022-10-05
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-10-05T07:26:30-04:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-10-05</span>
       </span>
     
+    
+      <span class="md-source-file__fact">
+        <span class="md-icon" title="Date of creation">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+        </span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2022-10-04T09:53:23-04:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2022-10-04</span>
+      </span>
     
     
     
   </aside>
 
+
+
+<!-- Was this page helpful? -->
 
   
 
@@ -2177,6 +2252,8 @@ realistic test-data in the first place.</p>
     </fieldset>
   </form>
 
+
+<!-- Comment system -->
 
                 
 
@@ -2346,6 +2423,10 @@ realistic test-data in the first place.</p>
     
     
       <script src="../../assets/javascripts/bundle.abceede4.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
       
         <script src="../../javascript/images_dark.js"></script>
       
