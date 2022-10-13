@@ -1,6 +1,9 @@
 ---
+title: Use Case
 hide:
 - toc
+authors:
+- Jacobus Geluk
 ---
 <!--term-start-->
 # Use Case
