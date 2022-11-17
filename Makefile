@@ -151,7 +151,7 @@ docs-install-standard-python-packages: python-venv
 	$(VENV_PIP) install --upgrade mkdocs-minify-plugin
 	$(VENV_PIP) install --upgrade mkdocs-redirects
 	$(VENV_PIP) install --upgrade mkdocs-kroki-plugin
-	$(VENV_PIP) install --upgrade --no-cache-dir "git+https://github.com/EKGF/ekglib.git"
+# $(VENV_PIP) install --upgrade --no-cache-dir "git+https://github.com/EKGF/ekglib.git"
 # $(VENV_PIP) install --upgrade mdx-spanner
 #	$(VENV_PIP) install --upgrade markdown-emdash
 	$(VENV_PIP) freeze > requirements.txt
@@ -205,7 +205,7 @@ docs-serve:
 
 .PHONY: docs-serve-debug
 docs-serve-debug:
-	$(VENV_MKDOCS) serve --config-file $(MKDOCS_CONFIG_FILE) --livereload --strict --verbose
+	$(VENV_MKDOCS) serve --config-file $(MKDOCS_CONFIG_FILE) --livereload --verbose
 
 .PHONY: docs-deploy
 docs-deploy:
