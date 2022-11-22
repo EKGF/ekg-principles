@@ -71,7 +71,9 @@ hide:
 - :fontawesome-regular-circle-right:{ .lg } __Environmental Sustainability__
 
     ---
-    - Insight in environmental footprint
+    - Insight in environmental footprint 
+    - Environmental Accountability across all infrastructures and all supply chains
+    - Optimize your value chain
 
 - :fontawesome-regular-circle-right:{ .lg } __Contextual Truth__
 
@@ -79,6 +81,7 @@ hide:
     - Dialogue with the truth
     - Consider all the (re)sources
     - Last-minute contextual computation based on all assessed information sources
+    - Test your assumptions with empirical data
 
 - :fontawesome-regular-circle-right:{ .lg } __Reusability__
 
@@ -100,13 +103,20 @@ hide:
 - :fontawesome-regular-circle-right:{ .lg } __Resilience__
 
     ---
+    - Ensures mission-critical operations
+    - Technical & Business Resilience
+    - Business Continuity & Disaster Recovery
+    - Pro-active mitigation of the impact of change
+    - Quickly recompose your business
 
 - :fontawesome-regular-circle-right:{ .lg } __Power of Abstraction__
 
     ---
-    - Infinite Zooming
-    - Understand all perspectives, Holistic & Precise
+    - Infinite Zooming, understand all perspectives, Holistically & Precise
     - Understand the forest & the trees (and the elephant in the room)
+    - Contextually powered abstraction
+    - Separation of Concerns
+    - Full interoperability across the conceptual space
 
 - :fontawesome-regular-circle-right:{ .lg } __Competitive Advantage__
 
@@ -117,11 +127,13 @@ hide:
     - Increase agility (and speed)
     - Optimize economies of scale
 
-- :fontawesome-regular-circle-right:{ .lg } __Manage Cost__
+- :fontawesome-regular-circle-right:{ .lg } __Manage Profitability__
 
     ---
-    - Manage & Control Cost (and Costs)
+    - Manage investment effectively
+    - Manage Business Development
+    - Convert data into an asset
+    - Reduce cost of integrations
     - Optimize Value Chains
-
 
 </div>
