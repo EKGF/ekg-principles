@@ -1,5 +1,5 @@
 ---
-title: Fit-for-purpose EKG Themes
+title: Fit-for-purpose Business Themes
 hide:
 - navigation
 - toc
