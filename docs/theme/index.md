@@ -1,5 +1,5 @@
 ---
-title: Fit-for-purpose Business Themes
+title: Purposeful Business Themes
 hide:
 - navigation
 - toc
