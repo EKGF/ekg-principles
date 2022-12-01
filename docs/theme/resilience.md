@@ -9,6 +9,8 @@ authors:
 ---
 # Resilience
 
+EKG contribution to Resilience.
+
 <!--summary-start-->
 - Ensures mission-critical operations
 - Technical & Business Resilience

@@ -9,6 +9,8 @@ authors:
 ---
 # Environmental Sustainability
 
+EKG contribution to Environmental Sustainability.
+
 <!--summary-start-->
 - Insight in environmental footprint 
 - Environmental Accountability across all infrastructures and all supply chains

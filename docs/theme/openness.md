@@ -9,6 +9,8 @@ authors:
 ---
 # Openness
 
+EKG contribution to Openness.
+
 <!--summary-start-->
 - Connect, Access, Take-up the silos
 - Enable Silo Synergies

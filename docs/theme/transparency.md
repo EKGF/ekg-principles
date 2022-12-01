@@ -10,6 +10,8 @@ authors:
 
 # Transparency
 
+EKG contribution to Transparancy.
+
 <!--summary-start-->
 - Scalable Traceability
 - Grasping the impact of your business decisions across

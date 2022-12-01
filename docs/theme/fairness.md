@@ -9,6 +9,8 @@ authors:
 ---
 # Fairness
 
+EKG contribution to Fairness.
+
 <!--summary-start-->
 - Recognition of value-chain contributors
 - Less biased appreciation

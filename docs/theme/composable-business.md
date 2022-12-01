@@ -9,6 +9,8 @@ authors:
 ---
 # Composable Business
 
+EKG contribution to Composable Business.
+
 <!--summary-start-->
 - Composable Business Identity
 - Model-driven Business

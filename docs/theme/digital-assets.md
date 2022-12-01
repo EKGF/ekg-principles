@@ -9,6 +9,8 @@ authors:
 ---
 # Digital Assets
 
+EKG contribution to Digital Assets.
+
 <!--summary-start-->
 - Turn data and knowledge into financial assets
 - Apply Accountancy Methods Knowledge

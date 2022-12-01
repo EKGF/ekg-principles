@@ -9,6 +9,8 @@ authors:
 ---
 # Manage Profitability
 
+EKG contribution to Manage Profitability.
+
 <!--summary-start-->
 - Manage investment effectively
 - Manage Business Development

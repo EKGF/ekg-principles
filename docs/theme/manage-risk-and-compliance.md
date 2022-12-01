@@ -9,6 +9,8 @@ authors:
 ---
 # Manage Risk & Compliance
 
+EKG contribution to Manage Risk & Compliance.
+
 <!--summary-start-->
 - Measure Controls
 - Aggregate impact of Risk

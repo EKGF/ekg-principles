@@ -9,6 +9,8 @@ authors:
 ---
 # Competitive Advantage
 
+EKG contribution to Competitive Advantage.
+
 <!--summary-start-->
 - Innovation
 - Knowing your markets, products and customers

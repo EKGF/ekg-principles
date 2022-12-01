@@ -10,6 +10,8 @@ authors:
 
 # Sustainability
 
+EKG contribution to Sustainability.
+
 <!--summary-start-->
 - Economies of Scale
 - Avoid duplication

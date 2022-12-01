@@ -10,6 +10,8 @@ authors:
 
 # Reusability
 
+EKG contribution to Reusability.
+
 <!--summary-start-->
 - Enable Economies of Scale
 - Legal, Operational, Semantic and Technical Interoperability
