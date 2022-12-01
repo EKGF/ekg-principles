@@ -10,7 +10,10 @@
 {% if page.meta.authors %}
 <small>
   {% for author in page.meta.authors %}
-  Author: <a href="https://maturity.ekgf.org/other/author/{{ author.lower().split(' ') | join('-') }}/">{{ author }}</a><br/>
+    {% if loop.first %}
+      Author:
+    {% endif %}
+    <a href="https://maturity.ekgf.org/other/author/{{ author.lower().split(' ') | join('-') }}/">{{ author }}</a>{%- if not loop.last -%},{%- endif -%}
   {% endfor %}
 </small>
 {% endif %}

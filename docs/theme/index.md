@@ -6,134 +6,98 @@ hide:
 - title
 ---
 
-# Fit-for-purpose EKG Themes
+# Purposeful Business Themes
 
 <div class="grid cards" markdown>
    
 - :fontawesome-regular-circle-right:{ .lg } __Transparency__
 
     ---
-    - Scalable Traceability
-    - Grasping the impact of your business decisions across
-      the whole value chain
-    - Understanding Transformations
-    - Improve Explainability
-    - Communicating the Status of the Enterprise
+    {% include-markdown "transparency.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
+    [:octicons-arrow-right-24: Learn more](transparency.md)
 
 - :fontawesome-regular-circle-right:{ .lg } __Openness__
 
     ---
-    - Connect, Access, Take-up the silos
-    - Enable Silo Synergies
-    - Readable, Discoverable, Explorable
-    - Confront Multiple Versions of the Truth
-    - Challenge Assumptions
+    {% include-markdown "openness.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
+    [:octicons-arrow-right-24: Learn more](openness.md)
 
 - :fontawesome-regular-circle-right:{ .lg } __Sustainability__
 
     ---
-    - Economies of Scale
-    - Avoid duplication
-    - Reduce waste
-    - Quality & Viability
+    {% include-markdown "sustainability.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
+    [:octicons-arrow-right-24: Learn more](sustainability.md)
 
 - :fontawesome-regular-circle-right:{ .lg } __Fairness__
 
     ---
-    - Recognition of value-chain contributors
-    - Less biased appreciation
-    - Unbiased distribution of information
+    {% include-markdown "fairness.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
+    [:octicons-arrow-right-24: Learn more](fairness.md)
 
 - :fontawesome-regular-circle-right:{ .lg } __Accountability__
 
     ---
-    - Negate the blame game
-    - Clarify success based on facts
-    - Profile of needs and wants
-      (or duties & obligations)
-      valued, leveraged, and optimized.
+    {% include-markdown "accountability.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
+    [:octicons-arrow-right-24: Learn more](accountability.md)
 
 - :fontawesome-regular-circle-right:{ .lg } __Digital Assets__
 
     ---
-    - Turn data and knowledge into financial assets
-    - Apply Accountancy Methods Knowledge
-    - Deal with data products, data services & data markets
-    - Create digital value propositions
+    {% include-markdown "digital-assets.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
+    [:octicons-arrow-right-24: Learn more](digital-assets.md)
 
 - :fontawesome-regular-circle-right:{ .lg } __Composable Business__
 
     ---
-    - Composable Business Identity
-    - Model-driven Business
-    - Replicable Modularity
+    {% include-markdown "composable-business.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
+    [:octicons-arrow-right-24: Learn more](composable-business.md)
 
 - :fontawesome-regular-circle-right:{ .lg } __Environmental Sustainability__
 
     ---
-    - Insight in environmental footprint 
-    - Environmental Accountability across all infrastructures and all supply chains
-    - Optimize your value chain
+    {% include-markdown "environmental-sustainability.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
+    [:octicons-arrow-right-24: Learn more](environmental-sustainability.md)
 
 - :fontawesome-regular-circle-right:{ .lg } __Contextual Truth__
 
     ---
-    - Dialogue with the truth
-    - Consider all the (re)sources
-    - Last-minute contextual computation based on all assessed information sources
-    - Test your assumptions with empirical data
+    {% include-markdown "contextual-truth.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
+    [:octicons-arrow-right-24: Learn more](contextual-truth.md)
 
 - :fontawesome-regular-circle-right:{ .lg } __Reusability__
 
     ---
-    - Enable Economies of Scale
-    - Legal, Operational, Semantic and Technical Interoperability
-    - Design for Replicability and Reusability
+    {% include-markdown "reusability.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
+    [:octicons-arrow-right-24: Learn more](reusability.md)
 
 - :fontawesome-regular-circle-right:{ .lg } __Manage Risk & Compliance__
 
     ---
-    - Measure Controls
-    - Aggregate impact of Risk
-    - Track Performance
-    - Assess Conformance
-    - Sanction Decisions
-    - High-resolution Due Diligence
+    {% include-markdown "manage-risk-and-compliance.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
+    [:octicons-arrow-right-24: Learn more](manage-risk-and-compliance.md)
 
 - :fontawesome-regular-circle-right:{ .lg } __Resilience__
 
     ---
-    - Ensures mission-critical operations
-    - Technical & Business Resilience
-    - Business Continuity & Disaster Recovery
-    - Pro-active mitigation of the impact of change
-    - Quickly recompose your business
+    {% include-markdown "resilience.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
+    [:octicons-arrow-right-24: Learn more](resilience.md)
 
 - :fontawesome-regular-circle-right:{ .lg } __Power of Abstraction__
 
     ---
-    - Infinite Zooming, understand all perspectives, Holistically & Precise
-    - Understand the forest & the trees (and the elephant in the room)
-    - Contextually powered abstraction
-    - Separation of Concerns
-    - Full interoperability across the conceptual space
+    {% include-markdown "power-of-abstraction.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
+    [:octicons-arrow-right-24: Learn more](power-of-abstraction.md)
 
 - :fontawesome-regular-circle-right:{ .lg } __Competitive Advantage__
 
     ---
-    - Innovation
-    - Knowing your markets, products and customers
-    - Optimize affordability
-    - Increase agility (and speed)
-    - Optimize economies of scale
+    {% include-markdown "competitive-advantage.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
+    [:octicons-arrow-right-24: Learn more](competitive-advantage.md)
 
 - :fontawesome-regular-circle-right:{ .lg } __Manage Profitability__
 
     ---
-    - Manage investment effectively
-    - Manage Business Development
-    - Convert data into an asset
-    - Reduce cost of integrations
-    - Optimize Value Chains
+    {% include-markdown "manage-profitability.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
+    [:octicons-arrow-right-24: Learn more](manage-profitability.md)
 
 </div>

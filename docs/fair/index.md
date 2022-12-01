@@ -1,5 +1,5 @@
 ---
-author:
+authors:
   - Jacobus Geluk
 hide:
   - navigation
