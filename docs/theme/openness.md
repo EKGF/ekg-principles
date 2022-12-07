@@ -9,6 +9,8 @@ authors:
 ---
 # Openness
 
+![Openness](openness.png){ width="300", loading=lazy, align=right }
+
 EKG contribution to Openness.
 
 <!--summary-start-->
