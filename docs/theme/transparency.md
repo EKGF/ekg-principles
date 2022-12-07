@@ -26,7 +26,7 @@ EKG contribution to Transparency.
 
 ## Does EKG contribute to higher levels of Transparency?
 
-Yes, an Enterprise Knowledge Graph can contribute to transparency in a number of ways.
+Yes, an Enterprise Knowledge Graph (EKG) can contribute to transparency in a number of ways.
 First, an Enterprise Knowledge Graph provides a structured and standardized representation 
 of the knowledge and information within an organization. 
 This can help to improve the accessibility and interoperability of this knowledge, 
