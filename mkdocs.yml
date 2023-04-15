@@ -134,43 +134,10 @@ plugins:
       regex:
         - '.*\.(tmp|bin|tar)$'
         - '_.*\.md$'
-#  - kroki:
-#      ServerURL: https://kroki.io/
-#      DownloadImages: false
-#      DownloadDir: docs/diagrams/out
-#  - with-pdf:
-#      author: The Team
-#      copyright: Copyright &copy; 2018 - 2022 agnos.ai UK Ltd & Stealth Software Technologies, Inc --- Confidential
-#      cover: true
-#      back_cover: false
-#      cover_title: The Datapoint Protocol
-#      cover_subtitle: Pitch, Business Plan & Proposal
-#      #custom_template_path: TEMPLATES PATH
-#      toc_title: Table of Contents
-#      heading_shift: false
-#      toc_level: 1
-#      ordered_chapter_level: 3
-#      #excludes_children:
-#        #    - 'release-notes/:upgrading'
-#        #    - 'release-notes/:changelog'
-#        #
-#      exclude_pages:
-#        - pdf.md
-#        #convert_iframe:
-#        #    - src: IFRAME SRC
-#        #      img: POSTER IMAGE URL
-#        #      text: ALTERNATE TEXT
-#        #    - src: ...
-#        #two_columns_level: 3
-#      output_path: assets/datapoint-protocol.pdf
-#      enabled_if_env: ENABLE_PDF_EXPORT
-#      debug_html: false
-#      show_anchors: false
-#      verbose: false
-#      render_js: false
-#      strict: false
-#      #headless_chrome_path: headless-chromium
-#      #
+  - kroki:
+      ServerURL: https://kroki.io/
+      DownloadImages: false
+      DownloadDir: docs/diagrams/out
 
 markdown_extensions:
   - footnotes
@@ -184,7 +151,6 @@ markdown_extensions:
   - abbr
   - admonition
 # - mdx_emdash (causes too many warnings)
-  - footnotes
   - tables
   - mkdocs_graphviz
   - pymdownx.caret
