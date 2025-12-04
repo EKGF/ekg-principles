@@ -8,96 +8,263 @@ hide:
 
 # Purposeful Business Themes
 
-<div class="grid cards" markdown>
-   
-- :fontawesome-regular-circle-right:{ .lg } __Transparency__
+=== "Themes"
 
-    ---
-    {% include-markdown "transparency.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
-    [:octicons-arrow-right-24: Learn more](transparency.md)
+    <div class="grid cards theme-cards" markdown>
+    
+    - <div class="theme-card-header theme-card-transparency">
+      :material-eye:{ .lg }
+      <div class="theme-card-title">
+        __[Transparency](transparency.md)__
+        <span class="theme-card-subtitle">Scalable Traceability</span>
+      </div>
+      </div>
 
-- :fontawesome-regular-circle-right:{ .lg } __Openness__
+        - Scalable Traceability
+        - Grasping the impact of your business decisions across the whole value chain
+        - Understanding Transformations
+        - Improve Explainability
+        - Communicating the Status of the Enterprise
 
-    ---
-    {% include-markdown "openness.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
-    [:octicons-arrow-right-24: Learn more](openness.md)
 
-- :fontawesome-regular-circle-right:{ .lg } __Sustainability__
+        [](transparency.md)
 
-    ---
-    {% include-markdown "sustainability.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
-    [:octicons-arrow-right-24: Learn more](sustainability.md)
+    - <div class="theme-card-header theme-card-openness">
+      :material-lock-open:{ .lg }
+      <div class="theme-card-title">
+        __[Openness](openness.md)__
+        <span class="theme-card-subtitle">Connect & Access</span>
+      </div>
+      </div>
 
-- :fontawesome-regular-circle-right:{ .lg } __Fairness__
+        - Connect, Access, Take-up the silos
+        - Enable Silo Synergies
+        - Readable, Discoverable, Explorable
+        - Confront Multiple Versions of the Truth
+        - Challenge Assumptions
 
-    ---
-    {% include-markdown "fairness.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
-    [:octicons-arrow-right-24: Learn more](fairness.md)
 
-- :fontawesome-regular-circle-right:{ .lg } __Accountability__
 
-    ---
-    {% include-markdown "accountability.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
-    [:octicons-arrow-right-24: Learn more](accountability.md)
+        [](openness.md)
 
-- :fontawesome-regular-circle-right:{ .lg } __Digital Assets__
+    - <div class="theme-card-header theme-card-sustainability">
+      :material-leaf:{ .lg }
+      <div class="theme-card-title">
+        __[Sustainability](sustainability.md)__
+        <span class="theme-card-subtitle">Economies of Scale</span>
+      </div>
+      </div>
 
-    ---
-    {% include-markdown "digital-assets.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
-    [:octicons-arrow-right-24: Learn more](digital-assets.md)
+        - Economies of Scale
+        - Avoid duplication
+        - Reduce waste
+        - Quality & Viability
 
-- :fontawesome-regular-circle-right:{ .lg } __Composable Business__
 
-    ---
-    {% include-markdown "composable-business.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
-    [:octicons-arrow-right-24: Learn more](composable-business.md)
 
-- :fontawesome-regular-circle-right:{ .lg } __Environmental Sustainability__
+        [](sustainability.md)
 
-    ---
-    {% include-markdown "environmental-sustainability.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
-    [:octicons-arrow-right-24: Learn more](environmental-sustainability.md)
+    - <div class="theme-card-header theme-card-fairness">
+      :material-scale-balance:{ .lg }
+      <div class="theme-card-title">
+        __[Fairness](fairness.md)__
+        <span class="theme-card-subtitle">Recognition & Distribution</span>
+      </div>
+      </div>
 
-- :fontawesome-regular-circle-right:{ .lg } __Contextual Truth__
+        - Recognition of value-chain contributors
+        - Less biased appreciation
+        - Unbiased distribution of information
 
-    ---
-    {% include-markdown "contextual-truth.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
-    [:octicons-arrow-right-24: Learn more](contextual-truth.md)
 
-- :fontawesome-regular-circle-right:{ .lg } __Reusability__
 
-    ---
-    {% include-markdown "reusability.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
-    [:octicons-arrow-right-24: Learn more](reusability.md)
+        [](fairness.md)
 
-- :fontawesome-regular-circle-right:{ .lg } __Manage Risk & Compliance__
+    - <div class="theme-card-header theme-card-accountability">
+      :material-shield-check:{ .lg }
+      <div class="theme-card-title">
+        __[Accountability](accountability.md)__
+        <span class="theme-card-subtitle">Responsibility & Trust</span>
+      </div>
+      </div>
 
-    ---
-    {% include-markdown "manage-risk-and-compliance.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
-    [:octicons-arrow-right-24: Learn more](manage-risk-and-compliance.md)
+        - Negate the blame game
+        - Clarify success based on facts
+        - Profile of needs and wants (or duties & obligations) valued, leveraged, and optimized.
 
-- :fontawesome-regular-circle-right:{ .lg } __Resilience__
 
-    ---
-    {% include-markdown "resilience.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
-    [:octicons-arrow-right-24: Learn more](resilience.md)
 
-- :fontawesome-regular-circle-right:{ .lg } __Power of Abstraction__
+        [](accountability.md)
 
-    ---
-    {% include-markdown "power-of-abstraction.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
-    [:octicons-arrow-right-24: Learn more](power-of-abstraction.md)
+    - <div class="theme-card-header theme-card-digital-assets">
+      :material-database:{ .lg }
+      <div class="theme-card-title">
+        __[Digital Assets](digital-assets.md)__
+        <span class="theme-card-subtitle">Value & Ownership</span>
+      </div>
+      </div>
 
-- :fontawesome-regular-circle-right:{ .lg } __Competitive Advantage__
+        - Turn data and knowledge into financial assets
+        - Apply Accountancy Methods Knowledge
+        - Deal with data products, data services & data markets
+        - Create digital value propositions
 
-    ---
-    {% include-markdown "competitive-advantage.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
-    [:octicons-arrow-right-24: Learn more](competitive-advantage.md)
 
-- :fontawesome-regular-circle-right:{ .lg } __Manage Profitability__
 
-    ---
-    {% include-markdown "manage-profitability.md" start="<!--summary-start-->" end="<!--summary-end-->" %}
-    [:octicons-arrow-right-24: Learn more](manage-profitability.md)
+        [](digital-assets.md)
 
-</div>
+    - <div class="theme-card-header theme-card-composable-business">
+      :material-puzzle:{ .lg }
+      <div class="theme-card-title">
+        __[Composable Business](composable-business.md)__
+        <span class="theme-card-subtitle">Modular & Flexible</span>
+      </div>
+      </div>
+
+        - Composable Business Identity
+        - Model-driven Business
+        - Replicable Modularity
+
+
+
+        [](composable-business.md)
+
+    - <div class="theme-card-header theme-card-environmental-sustainability">
+      :material-earth:{ .lg }
+      <div class="theme-card-title">
+        __[Environmental Sustainability](environmental-sustainability.md)__
+        <span class="theme-card-subtitle">Planet & Future</span>
+      </div>
+      </div>
+
+        - Insight in environmental footprint 
+        - Environmental Accountability across all infrastructures and all supply chains
+        - Optimize your value chain
+
+
+
+        [](environmental-sustainability.md)
+
+    - <div class="theme-card-header theme-card-contextual-truth">
+      :material-lightbulb:{ .lg }
+      <div class="theme-card-title">
+        __[Contextual Truth](contextual-truth.md)__
+        <span class="theme-card-subtitle">Multiple Perspectives</span>
+      </div>
+      </div>
+
+        - Dialogue with the truth
+        - Consider all the (re)sources
+        - Last-minute contextual computation based on all assessed information sources
+        - Test your assumptions with empirical data
+        - Automated Policies
+
+
+
+        [](contextual-truth.md)
+
+    - <div class="theme-card-header theme-card-reusability">
+      :material-recycle:{ .lg }
+      <div class="theme-card-title">
+        __[Reusability](reusability.md)__
+        <span class="theme-card-subtitle">Efficiency & Value</span>
+      </div>
+      </div>
+
+        - Enable Economies of Scale
+        - Legal, Operational, Semantic and Technical Interoperability
+        - Design for Replicability and Reusability
+
+
+
+        [](reusability.md)
+
+    - <div class="theme-card-header theme-card-manage-risk-compliance">
+      :material-security:{ .lg }
+      <div class="theme-card-title">
+        __[Manage Risk & Compliance](manage-risk-and-compliance.md)__
+        <span class="theme-card-subtitle">Security & Governance</span>
+      </div>
+      </div>
+
+        - Assess Conformance
+        - Sanction Decisions
+        - High-resolution Due Diligence
+
+
+
+        [](manage-risk-and-compliance.md)
+
+    - <div class="theme-card-header theme-card-resilience">
+      :material-shield:{ .lg }
+      <div class="theme-card-title">
+        __[Resilience](resilience.md)__
+        <span class="theme-card-subtitle">Adaptability & Strength</span>
+      </div>
+      </div>
+
+        - Ensures mission-critical operations
+        - Technical & Business Resilience
+        - Business Continuity & Disaster Recovery
+        - Pro-active mitigation of the impact of change
+        - Quickly recompose your business
+
+
+
+        [](resilience.md)
+
+    - <div class="theme-card-header theme-card-power-abstraction">
+      :material-layers:{ .lg }
+      <div class="theme-card-title">
+        __[Power of Abstraction](power-of-abstraction.md)__
+        <span class="theme-card-subtitle">Simplicity & Complexity</span>
+      </div>
+      </div>
+
+        - Infinite Zooming, deeper Resolution, understand all Perspectives, Holistically & Precise
+        - Understand the forest & the trees (and the elephant in the room)
+        - Contextually powered abstraction and expression
+        - Separation of Concerns
+        - Full interoperability across the conceptual space
+
+
+
+        [](power-of-abstraction.md)
+
+    - <div class="theme-card-header theme-card-competitive-advantage">
+      :material-trending-up:{ .lg }
+      <div class="theme-card-title">
+        __[Competitive Advantage](competitive-advantage.md)__
+        <span class="theme-card-subtitle">Innovation & Leadership</span>
+      </div>
+      </div>
+
+        - Innovation
+        - Knowing your markets, products and customers
+        - Optimize affordability
+        - Increase agility (and speed)
+        - Optimize economies of scale
+
+
+
+        [](competitive-advantage.md)
+
+    - <div class="theme-card-header theme-card-manage-profitability">
+      :material-chart-line:{ .lg }
+      <div class="theme-card-title">
+        __[Manage Profitability](manage-profitability.md)__
+        <span class="theme-card-subtitle">Value & Growth</span>
+      </div>
+      </div>
+
+        - Manage investment effectively
+        - Manage Business Development
+        - Convert data into an asset
+        - Reduce cost of integrations
+        - Optimize Value Chains
+
+
+
+        [](manage-profitability.md)
+
+    </div>
