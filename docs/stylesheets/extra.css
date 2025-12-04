@@ -466,7 +466,8 @@
 }
 
 /* Objective badge styling - circular badges with letters */
-.md-typeset .grid.cards .objective-badge {
+.md-typeset .grid.cards .objective-badge,
+.md-typeset .objective-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -485,7 +486,26 @@
   position: relative;
 }
 
-.md-typeset .grid.cards .objective-badge::before {
+/* Small badge variant for tables */
+.md-typeset table .objective-badge-sm {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  font-size: 0.75rem !important;
+  margin-bottom: 0 !important;
+  margin-right: 0.5rem !important;
+  vertical-align: middle !important;
+  color: white !important;
+  /* Fine-tune vertical position to align with text */
+  position: relative;
+  top: -0.25rem;
+}
+
+.md-typeset table .objective-badge-sm::before {
+  color: white !important;
+}
+
+.md-typeset .grid.cards .objective-badge::before,
+.md-typeset .objective-badge::before {
   content: attr(data-letter);
 }
 
