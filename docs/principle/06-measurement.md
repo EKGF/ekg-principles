@@ -1,7 +1,7 @@
 ---
 title: 6 -- Measurement
 ---
-# Measurement
+# <span class="objective-badge" data-letter="6"></span> Measurement
 
 <!--summary-start-->
 The quality and characteristics of the managed knowledge must be measurable and measured.

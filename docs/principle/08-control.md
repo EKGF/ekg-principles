@@ -1,7 +1,7 @@
 ---
 title: 8 -- Control
 ---
-# Control
+# <span class="objective-badge" data-letter="8"></span> Control
 
 <!--summary-start-->
 Entitlement, privacy and business policies will be modeled in the EKG

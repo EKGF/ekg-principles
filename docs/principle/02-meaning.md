@@ -1,7 +1,7 @@
 ---
 title: 2 -- Meaning
 ---
-# Meaning
+# <span class="objective-badge" data-letter="2"></span> Meaning
 
 <!--summary-start-->
 The meaning of every _Data Point_ must be directly resolvable

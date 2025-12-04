@@ -1,7 +1,7 @@
 ---
 title: 9 -- Ecosystem
 ---
-# Ecosystem
+# <span class="objective-badge" data-letter="9"></span> Ecosystem
 
 <!--summary-start-->
 An enterprise will use a heterogeneous set of technologies and data sources which

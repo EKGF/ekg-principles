@@ -1,7 +1,7 @@
 ---
 title: 10 -- Standards
 ---
-# Standards
+# <span class="objective-badge" data-letter="10"></span> Standards
 
 <!--summary-start-->
 Data, ontologies, definitions and business rules should be compliant with open

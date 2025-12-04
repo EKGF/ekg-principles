@@ -17,6 +17,8 @@
   display: grid !important;
   /* Responsive grid: 1 column on mobile, 2 on tablet, 3 on desktop */
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
 }
 
 /* Individual card styling - cards are in ul > li structure */

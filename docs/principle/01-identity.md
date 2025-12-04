@@ -1,7 +1,7 @@
 ---
 title: 1 -- Identity
 ---
-# Identity
+# <span class="objective-badge" data-letter="1"></span> Identity
 
 <!--summary-start-->
 Any object in the EKG is identified with at least one universally _unique_, _opaque_,

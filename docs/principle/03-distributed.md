@@ -1,7 +1,7 @@
 ---
 title: 3 -- Distributed
 ---
-# Distributed
+# <span class="objective-badge" data-letter="3"></span> Distributed
 
 <!--summary-start-->
 _Data Points_ for any object may be stored in many physical stores.

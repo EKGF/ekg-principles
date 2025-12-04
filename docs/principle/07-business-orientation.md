@@ -1,7 +1,7 @@
 ---
 title: 7 -- Business Orientation
 ---
-# Business Orientation
+# <span class="objective-badge" data-letter="7"></span> Business Orientation
 
 <!--summary-start-->
 All information in the EKG, and associated artifacts, are linked to defined and

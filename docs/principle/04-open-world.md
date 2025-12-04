@@ -1,7 +1,7 @@
 ---
 title: 4 -- Open World
 ---
-# Open World
+# <span class="objective-badge" data-letter="4"></span> Open World
 
 <!--summary-start-->
 Information can vary over time, come from many internal and external sources,

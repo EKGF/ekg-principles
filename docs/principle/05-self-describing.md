@@ -1,7 +1,7 @@
 ---
 title: 5 -- Self-describing
 ---
-# Self-describing
+# <span class="objective-badge" data-letter="5"></span> Self-describing
 
 <!--summary-start-->
 An EKG is composed of a set of _self-describing datasets (SDDs)_ that provide
