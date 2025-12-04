@@ -1,5 +1,7 @@
 ---
 title: Transparency
+hide:
+  - title
 authors:
   - Jacobus Geluk
   - Carl Mattocks
@@ -9,9 +11,13 @@ authors:
   - OpenAI
 ---
 
-# Transparency
-
-![Transparency](transparency.png){ width="300", loading=lazy, align=right }
+<div class="theme-card-header theme-card-transparency" style="margin: 0 0 2rem 0;" markdown="span">
+  :material-eye:{ .lg style="font-size: 3rem; margin: 0;" }
+  <div class="theme-card-title" markdown="span">
+    **Transparency**{ style="font-size: 2rem; margin: 0; color: white;" }
+    <span class="theme-card-subtitle">Scalable Traceability</span>
+  </div>
+</div>
 
 EKG contribution to Transparency.
 

@@ -1,5 +1,7 @@
 ---
 title: Power of Abstraction
+hide:
+  - title
 authors:
   - Jacobus Geluk
   - Carl Mattocks
@@ -9,9 +11,13 @@ authors:
   - OpenAI
 ---
 
-# Power of Abstraction
-
-![Power of Abstraction](power-of-abstraction.png){ width="300", loading=lazy, align=right }
+<div class="theme-card-header theme-card-power-abstraction" style="margin: 0 0 2rem 0;" markdown="span">
+  :material-layers:{ .lg style="font-size: 3rem; margin: 0;" }
+  <div class="theme-card-title" markdown="span">
+    **Power of Abstraction**{ style="font-size: 2rem; margin: 0; color: white;" }
+    <span class="theme-card-subtitle">Simplicity & Complexity</span>
+  </div>
+</div>
 
 The high resolution offered by EKG provides a high-quality view of the world at all levels of abstraction or detail.
 

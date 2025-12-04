@@ -1,5 +1,7 @@
 ---
 title: Accountability
+hide:
+  - title
 authors:
   - Jacobus Geluk
   - Carl Mattocks
@@ -8,9 +10,13 @@ authors:
   - Mike Bennett
   - OpenAI
 ---
-# Accountability
-
-![Accountability](accountability.png){ width="300", loading=lazy, align=right }
+<div class="theme-card-header theme-card-accountability" style="margin: 0 0 2rem 0;" markdown="span">
+  :material-shield-check:{ .lg style="font-size: 3rem; margin: 0;" }
+  <div class="theme-card-title" markdown="span">
+    **Accountability**{ style="font-size: 2rem; margin: 0; color: white;" }
+    <span class="theme-card-subtitle">Responsibility & Trust</span>
+  </div>
+</div>
 
 EKG contributes to the management of automated policies for Accountability.
 

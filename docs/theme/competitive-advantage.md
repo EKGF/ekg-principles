@@ -1,5 +1,7 @@
 ---
 title: Competitive Advantage
+hide:
+  - title
 authors:
   - Jacobus Geluk
   - Carl Mattocks
@@ -7,9 +9,13 @@ authors:
   - Avinash Patil
   - Mike Bennett
 ---
-# Competitive Advantage
-
-![Competitive Advantage](competitive-advantage.png){ width="300", loading=lazy, align=right }
+<div class="theme-card-header theme-card-competitive-advantage" style="margin: 0 0 2rem 0;" markdown="span">
+  :material-trending-up:{ .lg style="font-size: 3rem; margin: 0;" }
+  <div class="theme-card-title" markdown="span">
+    **Competitive Advantage**{ style="font-size: 2rem; margin: 0; color: white;" }
+    <span class="theme-card-subtitle">Innovation & Leadership</span>
+  </div>
+</div>
 
 EKG contribution to Competitive Advantage.
 
