@@ -6,7 +6,7 @@ hide:
 
 === "Values & Ideals"
 
-    1. Much higher levels of [transparency](vocab/transparency), [openness](vocab/openness.md),
+    1. Much higher levels of [transparency](vocab/transparency.md), [openness](vocab/openness.md),
        [sustainability](vocab/sustainability.md), [fairness](vocab/fairness.md) and
        [accountability](vocab/accountability.md) are going to be required at all levels
        in any organization or ecosystem.
