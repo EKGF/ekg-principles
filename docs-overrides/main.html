@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+<!-- Header is now overridden via partials/header.html -->
+{% block header %}
+  {% include "partials/header.html" %}
+{% endblock %}
+
 <!-- SEO Meta Tags -->
 {% block extrahead %}
 {{ super() }}
@@ -69,14 +74,133 @@
       syncCookieFromPalette();
 
       var ref = document.querySelector("[data-md-component=palette]");
-      if (!ref) return;
+      if (ref) {
+        ref.addEventListener("change", function () {
+          syncCookieFromPalette();
+        });
+      }
 
-      ref.addEventListener("change", function () {
-        syncCookieFromPalette();
-      });
+      // Move theme toggle from header to tabs row (second row), to the left of search box
+      (function moveThemeToggleToTabs() {
+        function relocateThemeToggle() {
+          var headerInner = document.querySelector(".md-header__inner");
+          var tabsGrid = document.querySelector(".md-tabs .md-grid");
+          
+          if (!headerInner || !tabsGrid) return;
+
+          // Check if already moved
+          if (tabsGrid.querySelector(".md-header__option[data-md-component='palette']")) return;
+
+          // Find theme toggle form in header
+          var themeToggle = headerInner.querySelector(
+            'form.md-header__option[data-md-component="palette"]'
+          );
+          if (!themeToggle) return;
+          
+          // Move ONLY the theme toggle form to tabs grid (before search wrapper)
+          var searchWrapper = tabsGrid.querySelector(".ekgf-header-search");
+          if (searchWrapper) {
+            tabsGrid.insertBefore(themeToggle, searchWrapper);
+          } else {
+            tabsGrid.appendChild(themeToggle);
+          }
+        }
+
+        relocateThemeToggle();
+        setTimeout(relocateThemeToggle, 100);
+        setTimeout(relocateThemeToggle, 500);
+        
+        if (window.document$ && typeof document$.subscribe === "function") {
+          document$.subscribe(relocateThemeToggle);
+        }
+      })();
+
+      // Sync tabs search input with Material's search system
+      (function syncTabsSearch() {
+        function setupSearchSync() {
+          var tabsSearchInput = document.querySelector(".ekgf-header-search__input");
+          var materialSearchInput = document.querySelector(".md-search__input");
+          
+          if (!tabsSearchInput || !materialSearchInput) return;
+          
+          // Sync tabs search input with Material's search
+          tabsSearchInput.addEventListener("input", function (e) {
+            materialSearchInput.value = e.target.value;
+            if (materialSearchInput.dispatchEvent) {
+              materialSearchInput.dispatchEvent(
+                new Event("input", { bubbles: true })
+              );
+            }
+          });
+
+          materialSearchInput.addEventListener("input", function () {
+            tabsSearchInput.value = materialSearchInput.value;
+          });
+          
+          // Clicking the search box should trigger Material's search dialog if it's not already active
+          tabsSearchInput.addEventListener("focus", function() {
+            var searchButton = document.querySelector('label[for="__search"]');
+            if (searchButton && !document.querySelector('.md-search[data-md-state="open"]')) {
+              // We don't necessarily want to click it if we just want to type in our own box,
+              // but Material's search logic needs to be initialized.
+            }
+          });
+        }
+        
+        setupSearchSync();
+        setTimeout(setupSearchSync, 100);
+        setTimeout(setupSearchSync, 500);
+      })();
+
+      // Logo and OMG logo are now rendered via template override (partials/header.html), no JS needed
+
+      // Move the repository widget from header to footer
+      (function ensureFooterRepo() {
+        var footerInner = document.querySelector(".md-footer-meta__inner");
+        if (!footerInner) return;
+        if (footerInner.querySelector(".ekgf-footer-repo")) return;
+
+        var headerSource = document.querySelector(".md-header__source");
+        if (!headerSource) return;
+
+        // Find the anchor tag inside the header source
+        var headerSourceLink = headerSource.querySelector("a.md-source");
+        if (!headerSourceLink) return;
+
+        // Create a simple wrapper div
+        var wrapper = document.createElement("div");
+        wrapper.classList.add("ekgf-footer-repo");
+
+        // Create a new anchor tag that matches the header exactly
+        var footerLink = document.createElement("a");
+        footerLink.href = headerSourceLink.href;
+        footerLink.title = headerSourceLink.title || "Go to repository";
+        footerLink.classList.add("md-source");
+        footerLink.setAttribute("data-md-component", "source");
+        footerLink.textContent = headerSourceLink.textContent.trim();
+
+        wrapper.appendChild(footerLink);
+
+        var social = footerInner.querySelector(".md-social");
+        if (social) {
+          footerInner.insertBefore(wrapper, social);
+        } else {
+          footerInner.appendChild(wrapper);
+        }
+      })();
     });
   })();
 </script>
+{% endblock %}
+
+<!-- Override tabs to include search box (now handled in partials/tabs.html) -->
+{% block tabs %}
+  {{ super() }}
+{% endblock %}
+
+<!-- Footer is overridden via partials/footer.html -->
+{% block footer %}
+  {% include "partials/footer.html" %}
 {% endblock %}
 
 <!-- Content -->

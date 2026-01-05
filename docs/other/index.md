@@ -9,7 +9,7 @@ The main website of the Foundation: [https://ekgf.org](https://ekgf.org)
 
 ## Principles
 
-The EKG/Principles: 
+The EKG Principles: 
 [https://principles.ekgf.org](https://principles.ekgf.org), 
 this is a project that is being maintained in the GitHub repository 
 [EKGF/principles](https://github.com/EKGF/principles).

@@ -1,0 +1,92 @@
+{#-
+  Custom footer override matching ekgf-website
+-#}
+<footer class="ekgf-footer">
+  <div class="md-grid ekgf-footer__inner">
+    <div class="ekgf-footer__grid">
+      {# About EKGF #}
+      <div class="ekgf-footer__col">
+        <h3 class="ekgf-footer__title">About EKGF</h3>
+        <p class="ekgf-footer__text">
+          Keep GenAI grounded in context for secure, high-quality
+          decisions. EKGF is the Enterprise Knowledge Graph Forum
+          at OMG.
+        </p>
+      </div>
+
+      {# Documentation #}
+      <div class="ekgf-footer__col">
+        <h3 class="ekgf-footer__title">Documentation</h3>
+        <ul class="ekgf-footer__list">
+          <li><a href="https://ekgf.org/quadrants" class="ekgf-footer__link">The EKG Quadrants</a></li>
+          <li><a href="https://method.ekgf.org" class="ekgf-footer__link">Method</a></li>
+          <li><a href="https://catalog.ekgf.org/use-case/client-360/" class="ekgf-footer__link">Catalog</a></li>
+          <li><a href="https://maturity.ekgf.org" class="ekgf-footer__link">Maturity Model</a></li>
+          <li><a href="https://principles.ekgf.org/principle/#10-principles" class="ekgf-footer__link">Principles</a></li>
+          <li><a href="https://ekgf.org/dprod" class="ekgf-footer__link">DPROD</a></li>
+        </ul>
+      </div>
+
+      {# Resources #}
+      <div class="ekgf-footer__col">
+        <h3 class="ekgf-footer__title">Resources</h3>
+        <ul class="ekgf-footer__list">
+          <li><a href="https://ekgf.org/about" class="ekgf-footer__link">About Us</a></li>
+          <li><a href="https://ekgf.org/membership" class="ekgf-footer__link">Membership</a></li>
+          <li><a href="https://ekgf.org/team" class="ekgf-footer__link">Team</a></li>
+          <li><a href="https://ekgf.org/resources" class="ekgf-footer__link">Resources</a></li>
+          <li><a href="https://ekgf.org/contact" class="ekgf-footer__link">Contact</a></li>
+          <li>
+            {% for social in config.extra.social %}
+              {% if "github" in social.icon %}
+                <a href="{{ social.link }}" target="_blank" rel="noopener noreferrer" class="ekgf-footer__link">
+                  GitHub
+                </a>
+              {% endif %}
+            {% endfor %}
+          </li>
+        </ul>
+      </div>
+
+      {# Connect #}
+      <div class="ekgf-footer__col">
+        <h3 class="ekgf-footer__title">Connect</h3>
+        <div class="ekgf-footer__social">
+          <a href="https://twitter.com/EKG_Foundation" target="_blank" rel="noopener noreferrer" class="ekgf-footer__social-link" aria-label="Twitter">
+            <span class="twemoji">{% include ".icons/fontawesome/brands/twitter.svg" %}</span>
+          </a>
+          <a href="https://www.linkedin.com/company/EKGF" target="_blank" rel="noopener noreferrer" class="ekgf-footer__social-link" aria-label="LinkedIn">
+            <span class="twemoji">{% include ".icons/fontawesome/brands/linkedin.svg" %}</span>
+          </a>
+          {% for social in config.extra.social %}
+            {% if "github" in social.icon %}
+              <a href="{{ social.link }}" target="_blank" rel="noopener noreferrer" class="ekgf-footer__social-link" aria-label="GitHub">
+                <span class="twemoji">{% include ".icons/fontawesome/brands/github.svg" %}</span>
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="ekgf-footer__bottom">
+      <p class="ekgf-footer__license">
+        <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">
+          <img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" alt="License: CC BY-SA 4.0" />
+        </a>
+      </p>
+      {% if config.copyright %}
+        <p>{{ config.copyright }}</p>
+      {% endif %}
+      <p class="ekgf-footer__legal">
+        An initiative of the
+        <a href="https://ekgf.org" target="_blank" rel="noopener noreferrer">
+          Enterprise Knowledge Graph Forum (EKGF)
+        </a>, a Managed Community of the
+        <a href="https://omg.org" target="_blank" rel="noopener noreferrer">
+          Object Management Group (OMG)
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
