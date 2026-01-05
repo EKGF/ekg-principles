@@ -6,8 +6,15 @@ Principles & Manifesto for the Enterprise Knowledge Graph
 
 [![License](https://img.shields.io/github/license/EKGF/principles.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
 
+```text
+Copyright (c) 2026 EDMCouncil Inc., d/b/a Enterprise Data Management Association ("EDMA")
+```
+
 This work is licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+
+When using or sharing this content, please provide attribution to:
+- EDMCouncil Inc., d/b/a Enterprise Data Management Association ("EDMA")
 
 ## Where is this published?
 

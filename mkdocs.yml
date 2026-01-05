@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
-site_name: EKG/Principles
+site_name: EKG Principles
 site_description: Manifesto and principles for the Enterprise Knowledge Graph (EKG)
 repo_name: 'EKGF/ekg-principles'
 repo_url: https://github.com/EKGF/ekg-principles
@@ -7,7 +7,9 @@ site_url: https://principles.ekgf.org
 edit_uri: edit/main/docs/
 site_dir: site
 site_author: Object Management Group (OMG) Enterprise Knowledge Graph Forum
-copyright: "Copyright © 2025 Object Management Group®, OMG® | All Rights Reserved"
+copyright: >-
+  Copyright © 2026 EDMCouncil Inc., d/b/a Enterprise Data Management Association ("EDMA")
+  Licensed under Creative Commons Attribution-ShareAlike 4.0 International
 
 # Navigation
 # nav: omitted, because we're using the awesome-pages plugin (https://squidfunk.github.io/mkdocs-material/plugins/awesome-pages/)
@@ -21,7 +23,6 @@ theme:
     text: Roboto
     code: Roboto Mono
   icon:
-    logo: ekgf-logo-symbol
     repo: fontawesome/brands/github
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -31,7 +32,7 @@ theme:
       toggle:
 #        icon: material/toggle-switch-off-outline
 #        icon: material/lightbulb-outline
-        icon: material/weather-sunny
+        icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -40,7 +41,7 @@ theme:
       toggle:
 #        icon: material/toggle-switch
 #        icon: material/lightbulb
-        icon: material/weather-night
+        icon: material/weather-sunny
         name: Switch to light mode
   features:
     - search.highlight
