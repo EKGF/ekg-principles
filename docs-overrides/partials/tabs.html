@@ -7,8 +7,15 @@
     <ul class="md-tabs__list">
       {% for nav_item in nav %}
         {% if nav_item.is_page or nav_item.is_section %}
+          
+          {# Resolve the URL by finding the first page in the section tree #}
+          {% set first = nav_item %}
+          {% for _ in range(4) if first.children %}
+            {% set first = first.children | first %}
+          {% endfor %}
+
           <li class="md-tabs__item">
-            <a href="{{ nav_item.url | url }}" class="md-tabs__link {% if nav_item.active %}md-tabs__link--active{% endif %}">
+            <a href="{{ first.url | url }}" class="md-tabs__link {% if nav_item.active %}md-tabs__link--active{% endif %}">
               {{ nav_item.title }}
             </a>
           </li>
