@@ -65,6 +65,9 @@
   --md-typeset-a-color: var(--md-primary-fg-color);
   --md-code-bg-color: var(--ekgf-surface-2);
   --md-code-fg-color: var(--ekgf-fg);
+
+  /* Color matching OMG logo white in dark mode */
+  --omg-logo-white: #E6E8EA;
 }
 
 /* ===== EKGF chrome alignment (header) ===== */
@@ -75,6 +78,25 @@
   box-shadow: none !important;
   color: var(--md-default-fg-color) !important;
   backdrop-filter: saturate(180%) blur(12px);
+}
+
+[data-md-color-scheme="slate"] .md-header__col--title .md-ellipsis,
+[data-md-color-scheme="slate"] .md-header__button.md-logo .ekgf-logo-text {
+  color: var(--omg-logo-white);
+  opacity: 0.85;
+}
+
+[data-md-color-scheme="slate"] .md-header__button.md-logo:hover .ekgf-logo-text {
+  opacity: 1;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link {
+  color: var(--omg-logo-white);
+  opacity: 0.85;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link--active {
+  opacity: 1;
 }
 
 .md-header__inner {
@@ -273,9 +295,48 @@
   opacity: 1;
 }
 
-/* Hide default search button in header */
-.md-header__inner label[for="__search"] {
+/* Hide default search button in header while keeping it in the DOM for Material's JS */
+.ekgf-hidden-search-trigger {
   display: none !important;
+}
+
+/* Style the search results overlay to appear below our custom search box */
+/* We don't hide the .md-search container itself, but we reposition it */
+.md-header .md-search {
+  display: block !important;
+  position: absolute;
+  top: 100%;
+  right: 0.5rem;
+  width: 30rem;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s, visibility 0.25s;
+  pointer-events: none;
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-search {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.md-header .md-search__inner {
+  background-color: var(--md-default-bg-color);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-height: 25rem;
+}
+
+/* Hide the redundant search form in the dialog since we have our own entry box */
+.md-header .md-search__form {
+  display: none;
+}
+
+/* Adjust results spacing */
+.md-header .md-search__output {
+  width: 100%;
 }
 
 /* Show search box in tabs grid */

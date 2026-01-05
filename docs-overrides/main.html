@@ -119,30 +119,56 @@
       (function syncTabsSearch() {
         function setupSearchSync() {
           var tabsSearchInput = document.querySelector(".ekgf-header-search__input");
-          var materialSearchInput = document.querySelector(".md-search__input");
+          var materialSearchInput = document.querySelector(".md-header .md-search__input");
+          var searchCheckbox = document.querySelector("#__search");
           
           if (!tabsSearchInput || !materialSearchInput) return;
           
+          // Focus sync: ensure search overlay logic is initialized
+          tabsSearchInput.addEventListener("focus", function() {
+            if (searchCheckbox && !searchCheckbox.checked && tabsSearchInput.value.length > 0) {
+              searchCheckbox.checked = true;
+              searchCheckbox.dispatchEvent(new Event("change"));
+            }
+          });
+
           // Sync tabs search input with Material's search
           tabsSearchInput.addEventListener("input", function (e) {
-            materialSearchInput.value = e.target.value;
+            var value = e.target.value;
+            materialSearchInput.value = value;
+            
+            // Trigger input event on Material's input
             if (materialSearchInput.dispatchEvent) {
               materialSearchInput.dispatchEvent(
                 new Event("input", { bubbles: true })
               );
             }
+
+            // Open/close search overlay based on input length
+            if (searchCheckbox) {
+              if (value.length > 0 && !searchCheckbox.checked) {
+                searchCheckbox.checked = true;
+                searchCheckbox.dispatchEvent(new Event("change"));
+              } else if (value.length === 0 && searchCheckbox.checked) {
+                searchCheckbox.checked = false;
+                searchCheckbox.dispatchEvent(new Event("change"));
+              }
+            }
           });
 
+          // Sync back from Material search (e.g. if cleared via 'X' button)
           materialSearchInput.addEventListener("input", function () {
-            tabsSearchInput.value = materialSearchInput.value;
+            if (tabsSearchInput.value !== materialSearchInput.value) {
+              tabsSearchInput.value = materialSearchInput.value;
+            }
           });
           
-          // Clicking the search box should trigger Material's search dialog if it's not already active
-          tabsSearchInput.addEventListener("focus", function() {
-            var searchButton = document.querySelector('label[for="__search"]');
-            if (searchButton && !document.querySelector('.md-search[data-md-state="open"]')) {
-              // We don't necessarily want to click it if we just want to type in our own box,
-              // but Material's search logic needs to be initialized.
+          // Handle Escape key to close search
+          tabsSearchInput.addEventListener("keydown", function(e) {
+            if (e.key === "Escape" && searchCheckbox) {
+              searchCheckbox.checked = false;
+              searchCheckbox.dispatchEvent(new Event("change"));
+              tabsSearchInput.blur();
             }
           });
         }
