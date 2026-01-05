@@ -5,17 +5,22 @@
 <nav class="md-tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
-      {% for nav_item in nav %}
-        {% if nav_item.is_page or nav_item.is_section %}
-          
-          {# Resolve the URL by finding the first page in the section tree #}
-          {% set first = nav_item %}
-          {% for _ in range(4) if first.children %}
-            {% set first = first.children | first %}
-          {% endfor %}
-
-          <li class="md-tabs__item">
-            <a href="{{ first.url | url }}" class="md-tabs__link {% if nav_item.active %}md-tabs__link--active{% endif %}">
+      {% for nav_item in nav.items %}
+        {% if nav_item.children %}
+          {% set first_child = nav_item.children | first %}
+          {% if first_child.children %}
+            {% set target = first_child.children | first %}
+          {% else %}
+            {% set target = first_child %}
+          {% endif %}
+          <li class="md-tabs__item {% if nav_item.active %}md-tabs__item--active{% endif %}">
+            <a href="{{ target.url }}" class="md-tabs__link {% if nav_item.active %}md-tabs__link--active{% endif %}">
+              {{ nav_item.title }}
+            </a>
+          </li>
+        {% else %}
+          <li class="md-tabs__item {% if nav_item.active %}md-tabs__item--active{% endif %}">
+            <a href="{{ nav_item.url }}" class="md-tabs__link {% if nav_item.active %}md-tabs__link--active{% endif %}">
               {{ nav_item.title }}
             </a>
           </li>

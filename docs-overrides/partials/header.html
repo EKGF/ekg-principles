@@ -51,16 +51,12 @@
       </div>
     </div>
 
-    {# Hidden components for JS to relocate to tabs/footer #}
-    <div hidden>
+    {# Components for JS to relocate to tabs/footer #}
+    <div class="ekgf-header-hidden-components">
       {% if config.theme.palette %}
-        {% if not config.theme.palette is mapping %}
-          {% include "partials/palette.html" %}
-        {% endif %}
+        {% include "partials/palette.html" %}
       {% endif %}
-      {% if not config.theme.palette is mapping %}
-        {% include "partials/javascripts/palette.html" %}
-      {% endif %}
+      {% include "partials/javascripts/palette.html" %}
       {% if config.extra.alternate %}
         {% include "partials/alternate.html" %}
       {% endif %}

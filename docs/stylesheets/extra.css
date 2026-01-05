@@ -289,10 +289,16 @@
   padding-top: 0.4rem !important;
   padding-bottom: 0.4rem !important;
   line-height: 1.2;
+  color: var(--md-default-fg-color);
 }
 
 .md-tabs__link:hover {
   opacity: 1;
+}
+
+/* Hide the wrapper containing components to be relocated by JS */
+.ekgf-header-hidden-components {
+  display: none;
 }
 
 /* Hide default search button in header while keeping it in the DOM for Material's JS */
@@ -378,11 +384,6 @@
 .ekgf-header-search__input::placeholder {
   color: var(--md-default-fg-color--light);
   opacity: 0.6;
-}
-
-/* Hide theme toggle in header (it's moved to tabs row) */
-.md-header__inner .md-header__option[data-md-component="palette"] {
-  display: none !important;
 }
 
 /* Show theme toggle in tabs row, positioned to the left of search box */
@@ -539,13 +540,13 @@
 }
 
 .ekgf-footer__title {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .ekgf-footer__text {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   color: var(--md-default-fg-color--light);
   line-height: 1.6;
 }
@@ -561,7 +562,7 @@
 }
 
 .ekgf-footer__link {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   color: var(--md-default-fg-color--light);
   text-decoration: none;
   transition: color 0.2s ease;
@@ -594,8 +595,8 @@
 }
 
 .ekgf-footer__social-link .twemoji svg {
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 0.95rem;
+  height: 0.95rem;
   fill: currentColor;
 }
 
@@ -604,7 +605,7 @@
   padding-top: 0;
   border-top: 0.5px solid var(--omg-separator-color);
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   color: var(--md-default-fg-color--light);
 }
 
@@ -614,7 +615,7 @@
 }
 
 .ekgf-footer__license img {
-  height: 20px !important;
+  height: 17px !important;
   width: auto !important;
   display: inline-block !important;
 }
