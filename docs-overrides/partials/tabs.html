@@ -14,20 +14,27 @@
             {% set target = first_child %}
           {% endif %}
           <li class="md-tabs__item {% if nav_item.active %}md-tabs__item--active{% endif %}">
-            <a href="{{ target.url }}" class="md-tabs__link {% if nav_item.active %}md-tabs__link--active{% endif %}">
+            <a href="{{ target.url | url }}" class="md-tabs__link {% if nav_item.active %}md-tabs__link--active{% endif %}">
               {{ nav_item.title }}
             </a>
           </li>
         {% else %}
           <li class="md-tabs__item {% if nav_item.active %}md-tabs__item--active{% endif %}">
-            <a href="{{ nav_item.url }}" class="md-tabs__link {% if nav_item.active %}md-tabs__link--active{% endif %}">
+            <a href="{{ nav_item.url | url }}" class="md-tabs__link {% if nav_item.active %}md-tabs__link--active{% endif %}">
               {{ nav_item.title }}
             </a>
           </li>
         {% endif %}
       {% endfor %}
     </ul>
-    {# Include our custom search box here, inside the grid #}
-    {% include "partials/search-box.html" %}
+    {# Include theme toggle and search box directly in tabs row #}
+    <div class="ekgf-tabs-controls">
+      {# Include theme toggle directly in tabs row #}
+      {% if config.theme.palette %}
+        {% include "partials/palette.html" %}
+      {% endif %}
+      {# Include our custom search box here, inside the grid #}
+      {% include "partials/search-box.html" %}
+    </div>
   </div>
 </nav>

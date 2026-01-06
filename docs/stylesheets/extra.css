@@ -12,7 +12,7 @@
 
   /* ekgf.org surface tokens (light) */
   --ekgf-bg: #ffffff;
-  --ekgf-fg: #09090b;
+  --ekgf-fg: rgba(1, 1, 1, 0.8); /* #010101 at 80% opacity */
   --ekgf-muted-fg: #71717a;
   --ekgf-border: var(--omg-separator-color);
   --ekgf-surface-2: #f4f4f5;
@@ -25,8 +25,8 @@
   --md-default-bg-color: var(--ekgf-bg);
   --md-default-fg-color: var(--ekgf-fg);
   --md-default-fg-color--light: var(--ekgf-muted-fg);
-  --md-default-fg-color--lighter: rgba(9, 9, 11, 0.35);
-  --md-default-fg-color--lightest: rgba(9, 9, 11, 0.12);
+  --md-default-fg-color--lighter: rgba(1, 1, 1, 0.35);
+  --md-default-fg-color--lightest: rgba(1, 1, 1, 0.12);
   --md-typeset-color: var(--ekgf-fg);
   --md-typeset-a-color: var(--md-primary-fg-color);
   --md-code-bg-color: var(--ekgf-surface-2);
@@ -96,6 +96,7 @@
 }
 
 [data-md-color-scheme="slate"] .md-tabs__link--active {
+  color: #ff9900 !important;
   opacity: 1;
 }
 
@@ -264,10 +265,10 @@
 .md-tabs .md-grid {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   position: relative;
   min-height: 2.8rem;
-  padding-right: 23rem; /* Space for theme toggle and search */
+  gap: 1rem;
 }
 
 .md-tabs__list {
@@ -293,6 +294,12 @@
 }
 
 .md-tabs__link:hover {
+  opacity: 1;
+  color: var(--md-default-fg-color) !important;
+}
+
+.md-tabs__link--active {
+  color: #ff9900 !important;
   opacity: 1;
 }
 
@@ -349,12 +356,8 @@
 .md-tabs .md-grid .ekgf-header-search {
   display: flex !important;
   align-items: center;
-  position: absolute;
-  right: 0.5rem;
   width: 18.75rem; /* 300px */
-  z-index: 10;
-  top: 50%;
-  transform: translateY(-50%);
+  flex-shrink: 0;
 }
 
 .ekgf-header-search__form {
@@ -386,18 +389,64 @@
   opacity: 0.6;
 }
 
-/* Show theme toggle in tabs row, positioned to the left of search box */
-.md-tabs .md-grid .md-header__option[data-md-component="palette"] {
-  display: block !important;
-  position: absolute;
-  right: 20rem; /* Position to the left of search box (18.75rem search + gap) */
-  top: 50%;
-  transform: translateY(-50%);
+/* Wrapper for theme toggle and search in tabs row */
+.ekgf-tabs-controls {
+  display: flex !important;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
-/* Match theme toggle icon color to search icon (dimmed) */
+/* Theme toggle styling - make it visible */
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] {
+  display: flex !important;
+  align-items: center;
+  gap: 0.25rem;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative !important;
+  transform: none !important;
+}
+
+/* Match theme toggle icon color to menu items */
 .md-tabs .md-grid .md-header__option[data-md-component="palette"] .md-header__button {
-  color: var(--md-default-fg-color--light) !important;
+  color: var(--md-default-fg-color) !important;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] .md-header__button:hover {
+  opacity: 1;
+}
+
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] .md-header__button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] label {
+  display: flex !important;
+  align-items: center;
+}
+
+/* Show only the appropriate toggle button based on current theme */
+/* When input is NOT checked, show its associated label (the toggle to switch TO that theme) */
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] input:not(:checked) + label[hidden] {
+  display: flex !important;
+  visibility: visible !important;
+}
+
+/* When input IS checked, hide its label (already in that theme) */
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] input:checked + label[hidden] {
+  display: none !important;
 }
 
 /* Search wrapper in tabs row - always visible search box */

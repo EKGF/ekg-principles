@@ -80,40 +80,7 @@
         });
       }
 
-      // Move theme toggle from header to tabs row (second row), to the left of search box
-      (function moveThemeToggleToTabs() {
-        function relocateThemeToggle() {
-          var headerInner = document.querySelector(".md-header__inner");
-          var tabsGrid = document.querySelector(".md-tabs .md-grid");
-          
-          if (!headerInner || !tabsGrid) return;
-
-          // Check if already moved
-          if (tabsGrid.querySelector(".md-header__option[data-md-component='palette']")) return;
-
-          // Find theme toggle form in header
-          var themeToggle = headerInner.querySelector(
-            'form.md-header__option[data-md-component="palette"]'
-          );
-          if (!themeToggle) return;
-          
-          // Move ONLY the theme toggle form to tabs grid (before search wrapper)
-          var searchWrapper = tabsGrid.querySelector(".ekgf-header-search");
-          if (searchWrapper) {
-            tabsGrid.insertBefore(themeToggle, searchWrapper);
-          } else {
-            tabsGrid.appendChild(themeToggle);
-          }
-        }
-
-        relocateThemeToggle();
-        setTimeout(relocateThemeToggle, 100);
-        setTimeout(relocateThemeToggle, 500);
-        
-        if (window.document$ && typeof document$.subscribe === "function") {
-          document$.subscribe(relocateThemeToggle);
-        }
-      })();
+      // Theme toggle is now directly included in tabs.html, no JS relocation needed
 
       // Sync tabs search input with Material's search system
       (function syncTabsSearch() {

@@ -51,11 +51,8 @@
       </div>
     </div>
 
-    {# Components for JS to relocate to tabs/footer #}
+    {# Components for JS to relocate to footer #}
     <div class="ekgf-header-hidden-components">
-      {% if config.theme.palette %}
-        {% include "partials/palette.html" %}
-      {% endif %}
       {% include "partials/javascripts/palette.html" %}
       {% if config.extra.alternate %}
         {% include "partials/alternate.html" %}
