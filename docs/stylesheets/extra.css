@@ -11,14 +11,16 @@
   --omg-separator-color: rgba(163, 163, 163, 0.85);
 
   /* ekgf.org surface tokens (light) */
-  --ekgf-bg: #ffffff;
+  /* Slightly off-white to create a subtle contrast vs the (pure white) footer */
+  --ekgf-bg: hsl(240 4.8% 97%);
   --ekgf-fg: rgba(1, 1, 1, 0.8); /* #010101 at 80% opacity */
   --ekgf-muted-fg: #71717a;
   --ekgf-border: var(--omg-separator-color);
   --ekgf-surface-2: #f4f4f5;
   --ekgf-header-bg: rgba(255, 255, 255, 0.9);
   --ekgf-header-border: var(--omg-separator-color);
-  --ekgf-footer-bg: rgba(255, 255, 255, 0.5);
+  /* Footer should read as fully white, slightly distinct from content */
+  --ekgf-footer-bg: #ffffff;
   --ekgf-footer-border: var(--omg-separator-color);
 
   /* Map tokens into Material variables */
@@ -45,14 +47,19 @@
   --omg-separator-color: rgba(148, 163, 184, 0.85);
 
   /* ekgf.org surface tokens (dark) */
-  --ekgf-bg: #121216;
+  /*
+    Match ekgf-website's subtle "pre-footer" dark section tone as the standard
+    background: slightly lighter than the footer/background.
+  */
+  --ekgf-bg: hsl(240 10% 10%);
   --ekgf-fg: #afafb6;
   --ekgf-muted-fg: #6d6d78;
   --ekgf-border: var(--omg-separator-color);
   --ekgf-surface-2: #242428;
   --ekgf-header-bg: rgba(18, 18, 22, 0.9);
   --ekgf-header-border: var(--omg-separator-color);
-  --ekgf-footer-bg: rgba(18, 18, 22, 0.5);
+  /* Footer/background a touch darker than content to preserve section contrast */
+  --ekgf-footer-bg: hsl(240 10% 8%);
   --ekgf-footer-border: var(--omg-separator-color);
 
   /* Map tokens into Material variables */
@@ -74,7 +81,7 @@
 
 .md-header {
   background-color: var(--ekgf-header-bg) !important;
-  border-bottom: 0.5px solid var(--omg-separator-color) !important;
+  border-bottom: none !important;
   box-shadow: none !important;
   color: var(--md-default-fg-color) !important;
   backdrop-filter: saturate(180%) blur(12px);
@@ -174,6 +181,14 @@
   text-align: center;
   display: inline-block;
   font-size: 1.25rem;
+  /*
+    Match MkDocs Material H1 typography (but keep header colors unchanged).
+    From built Material CSS: `.md-typeset h1,.md-typeset h2{font-weight:300;letter-spacing:-.01em}`
+    and `.md-typeset h1{line-height:1.3}`
+  */
+  font-weight: 300 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.3 !important;
 }
 
 .md-header__col--omg {
@@ -257,7 +272,7 @@
 
 .md-tabs {
   background-color: var(--ekgf-header-bg) !important;
-  border-bottom: 0.5px solid var(--omg-separator-color) !important;
+  border-bottom: none !important;
   box-shadow: none !important;
   overflow-y: hidden !important; /* Prevent vertical scrollbar */
 }
@@ -589,7 +604,7 @@ body[data-md-color-scheme="slate"]
 /* ===== EKGF chrome alignment (footer) ===== */
 
 .ekgf-footer {
-  border-top: 0.5px solid var(--omg-separator-color) !important;
+  border-top: none !important;
   background-color: var(--ekgf-footer-bg);
   color: var(--md-default-fg-color);
   width: 100%;
