@@ -4,13 +4,17 @@
 
     if (paletteSwitcher0) {
         paletteSwitcher0.addEventListener("change", function () {
-            location.reload();
+            setTimeout(function() {
+                location.reload();
+            }, 100);
         });
     }
 
     if (paletteSwitcher1) {
         paletteSwitcher1.addEventListener("change", function () {
-            location.reload();
+            setTimeout(function() {
+                location.reload();
+            }, 100);
         });
     }
 })();

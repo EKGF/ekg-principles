@@ -392,62 +392,96 @@
 /* Wrapper for theme toggle and search in tabs row */
 .ekgf-tabs-controls {
   display: flex !important;
-  align-items: center;
-  gap: 1rem;
-  flex-shrink: 0;
-  margin-left: auto;
+  align-items: center !important;
+  gap: 0 !important;
+  flex-shrink: 0 !important;
+  margin-left: auto !important;
+  height: 100% !important;
 }
 
-/* Theme toggle styling - make it visible */
+/* Remove any extra spacing around the palette form inside the tabs controls */
+.md-tabs .ekgf-tabs-controls form.md-header__option[data-md-component="palette"] {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+
+.md-tabs .ekgf-tabs-controls .ekgf-header-search {
+  margin-left: 0 !important;
+}
+
+/* Theme toggle styling */
 .md-tabs .md-grid .md-header__option[data-md-component="palette"] {
   display: flex !important;
-  align-items: center;
-  gap: 0.25rem;
+  align-items: center !important;
   opacity: 1 !important;
   visibility: visible !important;
   position: relative !important;
   transform: none !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+}
+
+/* Show only ONE theme toggle icon (moon in light mode, sun in dark mode) */
+/* Hide both labels by default (scoped to our tabs row placement) */
+.md-tabs .ekgf-tabs-controls form.md-header__option[data-md-component="palette"]
+  > label.md-header__button {
+  display: none !important;
+}
+
+/* Light mode: show the icon that switches TO dark mode */
+body[data-md-color-scheme="default"]
+  .md-tabs
+  .ekgf-tabs-controls
+  form.md-header__option[data-md-component="palette"]
+  > label.md-header__button[for="__palette_1"] {
+  display: flex !important;
+}
+
+/* Dark mode: show the icon that switches TO light mode */
+body[data-md-color-scheme="slate"]
+  .md-tabs
+  .ekgf-tabs-controls
+  form.md-header__option[data-md-component="palette"]
+  > label.md-header__button[for="__palette_0"] {
+  display: flex !important;
 }
 
 /* Match theme toggle icon color to menu items */
 .md-tabs .md-grid .md-header__option[data-md-component="palette"] .md-header__button {
   color: var(--md-default-fg-color) !important;
-  opacity: 0.8;
+  opacity: 0.8 !important;
   transition: opacity 0.2s ease;
   display: flex !important;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  padding: 0.25rem;
-  cursor: pointer;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 2.4rem !important;
+  height: 2.4rem !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+  background: transparent !important;
+  border: none !important;
 }
 
 .md-tabs .md-grid .md-header__option[data-md-component="palette"] .md-header__button:hover {
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .md-tabs .md-grid .md-header__option[data-md-component="palette"] .md-header__button svg {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  display: block !important;
+  fill: currentColor !important;
 }
 
-/* Show only the appropriate toggle button based on current theme */
-/* Hide all palette labels by default */
-.md-tabs .md-grid .md-header__option[data-md-component="palette"] label {
-  display: none !important;
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] .md-header__button:hover {
+  opacity: 1 !important;
 }
 
-/* In light mode (__palette_0 checked), show moon icon (label for __palette_1 to switch TO dark) */
-.md-tabs .md-grid .md-header__option[data-md-component="palette"] input#__palette_0:checked ~ label[for="__palette_1"] {
-  display: flex !important;
-  align-items: center !important;
-}
-
-/* In dark mode (__palette_1 checked), show sun icon (label for __palette_0 to switch TO light) */
-.md-tabs .md-grid .md-header__option[data-md-component="palette"] input#__palette_1:checked ~ label[for="__palette_0"] {
-  display: flex !important;
-  align-items: center !important;
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] .md-header__button svg {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  pointer-events: none;
 }
 
 /* Search wrapper in tabs row - always visible search box */
