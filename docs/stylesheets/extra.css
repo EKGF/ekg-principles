@@ -432,21 +432,22 @@
   height: 1.5rem;
 }
 
-.md-tabs .md-grid .md-header__option[data-md-component="palette"] label {
-  display: flex !important;
-  align-items: center;
-}
-
 /* Show only the appropriate toggle button based on current theme */
-/* When input is NOT checked, show its associated label (the toggle to switch TO that theme) */
-.md-tabs .md-grid .md-header__option[data-md-component="palette"] input:not(:checked) + label[hidden] {
-  display: flex !important;
-  visibility: visible !important;
+/* Hide all palette labels by default */
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] label {
+  display: none !important;
 }
 
-/* When input IS checked, hide its label (already in that theme) */
-.md-tabs .md-grid .md-header__option[data-md-component="palette"] input:checked + label[hidden] {
-  display: none !important;
+/* In light mode (__palette_0 checked), show moon icon (label for __palette_1 to switch TO dark) */
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] input#__palette_0:checked ~ label[for="__palette_1"] {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* In dark mode (__palette_1 checked), show sun icon (label for __palette_0 to switch TO light) */
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] input#__palette_1:checked ~ label[for="__palette_0"] {
+  display: flex !important;
+  align-items: center !important;
 }
 
 /* Search wrapper in tabs row - always visible search box */
