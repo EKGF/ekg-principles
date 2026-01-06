@@ -670,18 +670,19 @@ body[data-md-color-scheme="slate"]
 
 .ekgf-footer__social-link {
   color: var(--md-default-fg-color--light);
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .ekgf-footer__social-link:hover {
   color: var(--md-default-fg-color);
-  transform: translateY(-1px);
 }
 
-.ekgf-footer__social-link .twemoji svg {
-  width: 0.95rem;
-  height: 0.95rem;
-  fill: currentColor;
+.ekgf-footer__social-link svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  stroke: currentColor;
+  fill: none;
 }
 
 .ekgf-footer__bottom {
