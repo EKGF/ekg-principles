@@ -10,8 +10,10 @@ hide:
        [sustainability](vocab/sustainability.md), [fairness](vocab/fairness.md) and
        [accountability](vocab/accountability.md) are going to be required at all levels
        in any organization or ecosystem.
-    2. Human Capital needs to be known, valued, leveraged and optimized.
-    3. Data Capital needs to be known, valued, leveraged and optimized.
+    2. [Human Capital](vocab/human-capital.md) needs to be known, 
+       valued, leveraged and optimized.
+    3. [Data Capital](vocab/data-capital.md) needs to be known, 
+       valued, leveraged and optimized.
     4. Increasing competitiveness depends more and more on having the 
        highest quality and depth of data, information and knowledge.
     5. Having one "censored", biased, Single version of the Truth (SVOT)
@@ -34,6 +36,8 @@ hide:
         * Information, Knowledge, Meaning, Logic: it's all data.
         * Knowledge & Meaning will be captured as _machine-readable executable 
           models_.
+        * Data is considered explained when its usage has no
+          misconceptions or ambiguities.
         * All your connected data is an EKG.
     2. All data will be made available anywhere—secured and within entitlement
        limits—at any time to any device, node or edge.
@@ -83,7 +87,7 @@ hide:
         - Identifiers shall be meaningless, opaque, web-resolvable and universally unique.<br/>
           See [principle 1](principle/01-identity.md).
         - An object can have multiple identifiers.
-    4. Any given object consists of 1 or more datapoints.
+    4. Any given object consists of 1 or more datapoints. 
     5. A datapoint represents a logical property of a given object.
         - The identifier for a datapoint is the identifier of the object it belongs to plus at least one
           identifier of the axiom that describes its meaning (which is also an object).
@@ -99,25 +103,3 @@ hide:
        See [principle 1](principle/01-identity.md).
 
     See also [principle 4: Open World](principle/04-open-world.md).
-
-=== "Notes"
-
-
-    Work in progress notes: that add more explanation to the above:
-    
-    1. Data will be considered explained when its usage has no misconceptions nor ambiguities.
-    1. The word “data” has a lot of different notions associated with it.
-    We have these statements above, like “all data is connected”, “…data will be made available anywhere…”,
-    which could reinforce a particular notion that data is something that “exists” all around us,
-    like a digital footprint of activities.
-    On top of these statements on “data”, the EKG is introduced as a combination of one or more data markets,
-    which could further reinforce that "EKG is connected data".
-    If that’s the notion that the manifesto wants to declare, it may appeal strongly to some sections more than others,
-    like those dealing with consolidation, analysis, reporting, verification etc.
-    If the manifesto’s intent is broader (here, I am very conscious of Carl’s note that it should stay away
-    from any hubris!) it would help if there is a way to declare that information and knowledge is also data.
-    And it is when we combine the digital footprint of activities along with a digital representation of
-    information and knowledge, that a Knowledge Graph emerges.
-    And on top of that notion, an Enterprise Knowledge Graph is connections of Knowledge Graphs across an Enterprise.
-    The intent of the above is to appeal broadly to different sections of an Enterprise,
-    accommodating different norms and notions (again referring to Carl’s insightful comment on Norms and Notions)

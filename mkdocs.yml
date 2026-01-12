@@ -66,8 +66,6 @@ extra:
     provider: google
     property: G-3SJE3CEZ3S
 extra_javascript:
-  - "javascript/images_dark.js"
-  - "javascript/refresh_on_toggle_dark_light.js"
   - "https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"
 plugins:
   - material-ekgf
