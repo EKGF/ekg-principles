@@ -1,7 +1,787 @@
 :root {
-  --md-primary-fg-color:        #4A23D9;
-  --md-primary-fg-color--light: #4A23D9;
-  --md-primary-fg-color--dark:  #25126A;
+  /* EKGF custom colors */
+  --md-primary-fg-color: #4051b5;
+  --md-primary-fg-color--light: #5c6bc0;
+  --md-primary-fg-color--dark: #303f9f;
+  --md-accent-fg-color: #ff6f00;
+  --md-accent-fg-color--light: #ff9800;
+  --md-accent-fg-color--dark: #e65100;
+
+  /* OMG separator color alignment - matched to SVG color + link opacity (0.85) */
+  --omg-separator-color: rgba(163, 163, 163, 0.85);
+
+  /* Fine-tune: align header "EKGF" text with first top-level tab label */
+  --ekgf-logo-text-offset-x: -27px;
+
+  /* ekgf.org surface tokens (light) */
+  /* Slightly off-white to create a subtle contrast vs the (pure white) footer */
+  --ekgf-bg: hsl(240 4.8% 97%);
+  --ekgf-fg: rgba(1, 1, 1, 0.8); /* #010101 at 80% opacity */
+  --ekgf-muted-fg: #71717a;
+  --ekgf-border: var(--omg-separator-color);
+  --ekgf-surface-2: #f4f4f5;
+  --ekgf-header-bg: rgba(255, 255, 255, 0.9);
+  --ekgf-header-border: var(--omg-separator-color);
+  /* Footer should read as fully white, slightly distinct from content */
+  --ekgf-footer-bg: #ffffff;
+  --ekgf-footer-border: var(--omg-separator-color);
+
+  /* Map tokens into Material variables */
+  --md-default-bg-color: var(--ekgf-bg);
+  --md-default-fg-color: var(--ekgf-fg);
+  --md-default-fg-color--light: var(--ekgf-muted-fg);
+  --md-default-fg-color--lighter: rgba(1, 1, 1, 0.35);
+  --md-default-fg-color--lightest: rgba(1, 1, 1, 0.12);
+  --md-typeset-color: var(--ekgf-fg);
+  --md-typeset-a-color: var(--md-primary-fg-color);
+  --md-code-bg-color: var(--ekgf-surface-2);
+  --md-code-fg-color: var(--ekgf-fg);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #808bb3;
+  --md-primary-fg-color--light: #808bb3;
+  --md-primary-fg-color--dark: #808bb3;
+  --md-accent-fg-color: #997b66;
+  --md-accent-fg-color--light: #997b66;
+  --md-accent-fg-color--dark: #997b66;
+
+  /* OMG separator color alignment - matched to SVG color + link opacity (0.85) */
+  --omg-separator-color: rgba(148, 163, 184, 0.85);
+
+  /* ekgf.org surface tokens (dark) */
+  /*
+    Match ekgf-website's subtle "pre-footer" dark section tone as the standard
+    background: slightly lighter than the footer/background.
+  */
+  --ekgf-bg: hsl(240 10% 10%);
+  --ekgf-fg: #afafb6;
+  --ekgf-muted-fg: #6d6d78;
+  --ekgf-border: var(--omg-separator-color);
+  --ekgf-surface-2: #242428;
+  --ekgf-header-bg: rgba(18, 18, 22, 0.9);
+  --ekgf-header-border: var(--omg-separator-color);
+  /* Footer/background a touch darker than content to preserve section contrast */
+  --ekgf-footer-bg: hsl(240 10% 8%);
+  --ekgf-footer-border: var(--omg-separator-color);
+
+  /* Map tokens into Material variables */
+  --md-default-bg-color: var(--ekgf-bg);
+  --md-default-fg-color: var(--ekgf-fg);
+  --md-default-fg-color--light: var(--ekgf-muted-fg);
+  --md-default-fg-color--lighter: rgba(175, 175, 182, 0.35);
+  --md-default-fg-color--lightest: rgba(175, 175, 182, 0.12);
+  --md-typeset-color: var(--ekgf-fg);
+  --md-typeset-a-color: var(--md-primary-fg-color);
+  --md-code-bg-color: var(--ekgf-surface-2);
+  --md-code-fg-color: var(--ekgf-fg);
+
+  /* Color matching OMG logo white in dark mode */
+  --omg-logo-white: #E6E8EA;
+}
+
+/* ===== EKGF chrome alignment (header) ===== */
+
+.md-header {
+  background-color: var(--ekgf-header-bg) !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  color: var(--md-default-fg-color) !important;
+  backdrop-filter: saturate(180%) blur(12px);
+}
+
+[data-md-color-scheme="slate"] .md-header__col--title .md-ellipsis,
+[data-md-color-scheme="slate"] .md-header__button.md-logo .ekgf-logo-text {
+  color: var(--omg-logo-white);
+  opacity: 0.85;
+}
+
+[data-md-color-scheme="slate"] .md-header__button.md-logo:hover .ekgf-logo-text {
+  opacity: 1;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link {
+  color: var(--omg-logo-white);
+  opacity: 0.85;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link--active {
+  color: #ff9900 !important;
+  opacity: 1;
+}
+
+.md-header__inner {
+  min-height: 0; /* Remove fixed height */
+  padding-top: 0.4rem;
+  padding-bottom: 0; /* Drastically reduce bottom padding */
+}
+
+/* Header grid layout */
+.md-header__row {
+  display: grid;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Header rows layout */
+.md-header__row--top {
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0 !important; /* Drastically reduced bottom padding */
+  max-width: 61rem; /* Match Material's default container width */
+  margin: 0 auto;
+  margin-bottom: -0.4rem; /* Pull navigation row up further */
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.md-header__col {
+  display: flex;
+  align-items: center;
+}
+
+.md-header__col--logo {
+  justify-content: flex-start;
+}
+
+.md-header__col--omg {
+  justify-content: flex-end;
+}
+
+.md-header__col--title {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.md-header__col--title .md-header__title {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.md-header__col--title .md-header__ellipsis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.md-header__col--title .md-header__topic {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.md-header__col--title .md-ellipsis {
+  text-align: center;
+  display: inline-block;
+  font-size: 1.25rem;
+  /*
+    Match MkDocs Material H1 typography (but keep header colors unchanged).
+    From built Material CSS: `.md-typeset h1,.md-typeset h2{font-weight:300;letter-spacing:-.01em}`
+    and `.md-typeset h1{line-height:1.3}`
+  */
+  font-weight: 300 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.3 !important;
+}
+
+.md-header__col--omg {
+  justify-content: flex-end;
+}
+
+.md-header__nav-items {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.md-header__nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* EKGF logo and title container - match ekgf-website layout */
+.md-header__button.md-logo {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* gap-2 equivalent */
+  font-size: 1.5rem; /* Reduced from 1.875rem */
+  line-height: 1;
+  font-weight: 900; /* font-black equivalent */
+  letter-spacing: -0.05em; /* tracking-tighter equivalent */
+  color: inherit;
+  text-decoration: none;
+}
+
+.md-header__button.md-logo:hover {
+  text-decoration: none;
+}
+
+/* Hide any duplicate logo images that Material might render */
+.md-header__button.md-logo img {
+  display: none !important;
+}
+
+/* Logo alignment wrapper so text can align with tabs while symbol hangs left */
+.md-header__button.md-logo .ekgf-logo-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  padding-left: 0.8rem; /* baseline tab offset (.2rem + .6rem) */
+  transform: translateX(var(--ekgf-logo-text-offset-x));
+}
+
+.md-header__button.md-logo svg.ekgf-logo-symbol {
+  height: 1em;
+  width: 1em;
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  display: block;
+}
+
+@media screen and (min-width: 960px) {
+  .md-header__button.md-logo svg.ekgf-logo-symbol {
+    position: absolute;
+    right: 100%;
+    margin-right: 0rem;
+    top: 50%;
+    transform: translateY(calc(-50% - 1px));
+  }
+}
+
+.md-header__button.md-logo:hover svg.ekgf-logo-symbol {
+  transform: translateY(-1px) scale(1.1);
+}
+
+@media screen and (min-width: 960px) {
+  /* Keep the same anchored translate when the symbol is absolutely positioned */
+  .md-header__button.md-logo:hover svg.ekgf-logo-symbol {
+    transform: translateY(calc(-50% - 1px)) scale(1.1);
+  }
+}
+
+/* Hide any duplicate SVGs that aren't our custom one */
+.md-header__button.md-logo svg:not(.ekgf-logo-symbol) {
+  display: none !important;
+}
+
+/* "EKGF" text next to logo (injected via JS) */
+.md-header__button.md-logo .ekgf-logo-text {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+/* Show the title in the center column */
+.md-header__title {
+  display: block;
+}
+
+@media screen and (max-width: 640px) {
+  .md-header__button.md-logo .ekgf-logo-text {
+    display: none !important; /* Hide on small screens like ekgf-website */
+  }
+}
+
+.md-tabs {
+  background-color: var(--ekgf-header-bg) !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  overflow-y: hidden !important; /* Prevent vertical scrollbar */
+}
+
+.md-tabs .md-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  min-height: 2.8rem;
+  gap: 1rem;
+}
+
+.md-tabs__list {
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+.md-tabs__item {
+  padding-top: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+.md-tabs__link {
+  opacity: 0.8;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  padding-top: 0.4rem !important;
+  padding-bottom: 0.4rem !important;
+  line-height: 1.2;
+  color: var(--md-default-fg-color);
+}
+
+.md-tabs__link:hover {
+  opacity: 1;
+  color: var(--md-default-fg-color) !important;
+}
+
+.md-tabs__link--active {
+  color: #ff9900 !important;
+  opacity: 1;
+}
+
+/* Hide the wrapper containing components to be relocated by JS */
+.ekgf-header-hidden-components {
+  display: none;
+}
+
+/* Hide default search button in header while keeping it in the DOM for Material's JS */
+.ekgf-hidden-search-trigger {
+  display: none !important;
+}
+
+/* Style the search results overlay to appear below our custom search box */
+/* We don't hide the .md-search container itself, but we reposition it */
+.md-header .md-search {
+  display: block !important;
+  position: absolute;
+  top: 100%;
+  right: 0.5rem;
+  width: 30rem;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s, visibility 0.25s;
+  pointer-events: none;
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-search {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.md-header .md-search__inner {
+  background-color: var(--md-default-bg-color);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-height: 25rem;
+}
+
+/* Hide the redundant search form in the dialog since we have our own entry box */
+.md-header .md-search__form {
+  display: none;
+}
+
+/* Adjust results spacing */
+.md-header .md-search__output {
+  width: 100%;
+}
+
+/* Show search box in tabs grid */
+.md-tabs .md-grid .ekgf-header-search {
+  display: flex !important;
+  align-items: center;
+  width: 18.75rem; /* 300px */
+  flex-shrink: 0;
+}
+
+.ekgf-header-search__form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.ekgf-header-search__input {
+  width: 100%;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.375rem;
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font-size: 0.875rem;
+  height: 1.8rem; /* Tighter than tabs */
+  transition: border-color 0.25s;
+}
+
+.ekgf-header-search__input:focus {
+  outline: none;
+  border-color: var(--md-primary-fg-color);
+  background-color: var(--md-default-bg-color);
+}
+
+.ekgf-header-search__input::placeholder {
+  color: var(--md-default-fg-color--light);
+  opacity: 0.6;
+}
+
+/* Wrapper for theme toggle and search in tabs row */
+.ekgf-tabs-controls {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+  flex-shrink: 0 !important;
+  margin-left: auto !important;
+  height: 100% !important;
+}
+
+/* Remove any extra spacing around the palette form inside the tabs controls */
+.md-tabs .ekgf-tabs-controls form.md-header__option[data-md-component="palette"] {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+
+.md-tabs .ekgf-tabs-controls .ekgf-header-search {
+  margin-left: 0 !important;
+}
+
+/* Theme toggle styling */
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] {
+  display: flex !important;
+  align-items: center !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative !important;
+  transform: none !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+}
+
+/* Show only ONE theme toggle icon (moon in light mode, sun in dark mode) */
+/* Hide both labels by default (scoped to our tabs row placement) */
+.md-tabs .ekgf-tabs-controls form.md-header__option[data-md-component="palette"]
+  > label.md-header__button {
+  display: none !important;
+}
+
+/* Light mode: show the icon that switches TO dark mode */
+body[data-md-color-scheme="default"]
+  .md-tabs
+  .ekgf-tabs-controls
+  form.md-header__option[data-md-component="palette"]
+  > label.md-header__button[for="__palette_1"] {
+  display: flex !important;
+}
+
+/* Dark mode: show the icon that switches TO light mode */
+body[data-md-color-scheme="slate"]
+  .md-tabs
+  .ekgf-tabs-controls
+  form.md-header__option[data-md-component="palette"]
+  > label.md-header__button[for="__palette_0"] {
+  display: flex !important;
+}
+
+/* Match theme toggle icon color to menu items */
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] .md-header__button {
+  color: var(--md-default-fg-color) !important;
+  opacity: 0.8 !important;
+  transition: opacity 0.2s ease;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 2.4rem !important;
+  height: 2.4rem !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] .md-header__button:hover {
+  opacity: 1 !important;
+}
+
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] .md-header__button svg {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  display: block !important;
+  fill: currentColor !important;
+}
+
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] .md-header__button:hover {
+  opacity: 1 !important;
+}
+
+.md-tabs .md-grid .md-header__option[data-md-component="palette"] .md-header__button svg {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  pointer-events: none;
+}
+
+/* Search wrapper in tabs row - always visible search box */
+.ekgf-tabs-search-wrapper {
+  position: absolute;
+  right: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--ekgf-surface-2);
+  border: 1px solid var(--ekgf-border);
+  border-radius: 0.375rem;
+  padding: 0.2rem 0.75rem; /* Tighter search box */
+  min-width: 12rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ekgf-tabs-search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--md-default-fg-color--light);
+  cursor: pointer;
+}
+
+.ekgf-tabs-search-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+}
+
+.ekgf-tabs-search-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--md-default-fg-color);
+  font-size: 0.875rem;
+  outline: none;
+  padding: 0;
+  min-width: 0;
+}
+
+.ekgf-tabs-search-input::placeholder {
+  color: var(--md-default-fg-color--light);
+  opacity: 0.6;
+}
+
+/* Hide the repo widget in the header (we'll expose repo links in footer) */
+.md-header .md-header__source {
+  display: none !important;
+}
+
+/* OMG logo link (injected via docs-overrides/main.html) */
+/* Vertical alignment line gimmick */
+.md-main__inner.md-grid {
+  border-right: 0.5px solid var(--omg-separator-color);
+}
+
+.ekgf-omg-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0; /* Remove horizontal padding to simplify alignment */
+  margin-left: 0.5rem;  /* Add space from previous element instead */
+  border-radius: 0.5rem;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+  margin-right: -5.3rem; /* Adjusted further right by ~2px for perfect alignment */
+}
+
+.ekgf-omg-link:hover {
+  opacity: 1;
+}
+
+.ekgf-omg-logo {
+  height: 1.5rem; /* Reduced from 2rem */
+  width: auto;
+  max-width: none;
+  min-width: 0;
+  display: block;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+.ekgf-omg-logo--dark {
+  display: none;
+}
+
+[data-md-color-scheme="slate"] .ekgf-omg-logo--dark {
+  display: block;
+}
+
+[data-md-color-scheme="slate"] .ekgf-omg-logo--light {
+  display: none;
+}
+
+@media screen and (max-width: 959px) {
+  .ekgf-omg-link {
+    display: none;
+  }
+}
+
+/* ===== EKGF chrome alignment (footer) ===== */
+
+.ekgf-footer {
+  border-top: none !important;
+  background-color: var(--ekgf-footer-bg);
+  color: var(--md-default-fg-color);
+  width: 100%;
+}
+
+/* Sidebar separator gimmick */
+.md-sidebar--primary {
+  border-right: 0.5px solid var(--omg-separator-color);
+}
+
+.ekgf-footer__inner {
+  padding-top: 1em;
+  padding-bottom: 10px;
+  /* Fine-tune footer gutter alignment */
+  padding-left: calc(0.8rem - 2px);
+  padding-right: calc(0.8rem - 2px);
+}
+
+/* Fine-tune: align top-level page H1 with the tabs/logo gutter */
+.md-content__inner > h1 {
+  margin-left: -2px;
+}
+
+.ekgf-footer__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 600px) {
+  .ekgf-footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .ekgf-footer__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.ekgf-footer__title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.ekgf-footer__text {
+  font-size: 0.65rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.6;
+}
+
+.ekgf-footer__list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.ekgf-footer__list li {
+  margin-bottom: 0.5rem;
+}
+
+.ekgf-footer__link {
+  font-size: 0.65rem;
+  color: var(--md-default-fg-color--light);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ekgf-footer__link:hover {
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+}
+
+.ekgf-footer__link--icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ekgf-footer__social {
+  display: flex;
+  gap: 1rem;
+}
+
+.ekgf-footer__social-link {
+  color: var(--md-default-fg-color--light);
+  transition: color 0.2s ease;
+}
+
+.ekgf-footer__social-link:hover {
+  color: var(--md-default-fg-color);
+}
+
+.ekgf-footer__social-link svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  stroke: currentColor;
+  fill: none;
+}
+
+.ekgf-footer__bottom {
+  margin-top: 1rem;
+  padding-top: 0;
+  border-top: 0.5px solid var(--omg-separator-color);
+  text-align: center;
+  font-size: 0.65rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.ekgf-footer__license {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ekgf-footer__license img {
+  height: 17px !important;
+  width: auto !important;
+  display: inline-block !important;
+}
+
+.ekgf-footer__legal {
+  margin-top: 0.5rem;
+}
+
+.ekgf-footer__legal a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.1);
+  transition: color 0.2s ease;
+}
+
+[data-md-color-scheme="slate"] .ekgf-footer__legal a {
+  text-decoration-color: rgba(255, 255, 255, 0.1);
+}
+
+.ekgf-footer__legal a:hover {
+  color: var(--md-default-fg-color);
+}
+
+/* Hide original Material footer elements if any remain */
+.md-footer-meta {
+  display: block !important;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
 /* Card Design Enhancements */
@@ -829,6 +1609,23 @@
 
 .md-typeset blockquote p:last-child {
   margin-bottom: 0;
+}
+
+/* Fix tab labels: prevent anchor links from interfering with tab switching */
+/* Material for MkDocs adds permalink anchors to tab labels via JavaScript when toc.permalink is enabled */
+/* These anchors interfere with the label's click event, so we disable pointer events on them */
+.md-typeset .tabbed-labels > label > a,
+.md-typeset .tabbed-labels > label > a[href^="#"] {
+  pointer-events: none !important;
+  text-decoration: none;
+  color: inherit;
+  cursor: inherit;
+}
+
+/* Prevent scrollbar from appearing/disappearing when switching tabs */
+/* This reserves space for the scrollbar to prevent content shift */
+html {
+  scrollbar-gutter: stable;
 }
 
 /* Hide the single "Themes" tab header to save vertical space */
