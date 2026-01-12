@@ -12,12 +12,9 @@ copyright: >-
 
 # Navigation
 # nav: omitted, because we're using the awesome-pages plugin (https://squidfunk.github.io/mkdocs-material/plugins/awesome-pages/)
-extra_css:
-  - stylesheets/extra.css
 theme:
   name: material
   language: en
-  custom_dir: docs-overrides/
   font:
     text: Roboto
     code: Roboto Mono
@@ -73,6 +70,7 @@ extra_javascript:
   - "javascript/refresh_on_toggle_dark_light.js"
   - "https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"
 plugins:
+  - material-ekgf
   - include-markdown
   - git-revision-date-localized:
       enable_creation_date: true
