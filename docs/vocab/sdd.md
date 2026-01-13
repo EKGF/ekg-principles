@@ -18,7 +18,7 @@ The general idea is that _everything that <ins>can</ins> be said about a given d
 <ins>should</ins> be described---as close as possible and ideally in---that dataset itself._
 
 Many topic areas can require such description, most of which would be described as "policies"
-in the form of models that are enforceable by EKG/Platform Services at run-time.
+in the form of models that are enforceable by EKG Platform Services at run-time.
 <!--term-end-->
 
 ## Topic Areas
@@ -71,7 +71,7 @@ Policies that describe in detail how any given datapoint can be constructed from
 Used to:
 
 - provide the detail that's necessary to build up the proper end-to-end [lineage](#lineage) information.
-- enable smart generic EKG/Platform Services or EKGOps Pipelines to transform data in a model-driven fashion 
+- enable smart generic EKG Platform Services or EKGOps Pipelines to transform data in a model-driven fashion 
 
 ### Changes
 
@@ -87,7 +87,7 @@ Policies that describe how the overall "hygiene" of the dataset can be checked.
 
 Used to:
 
-- enable smart generic EKG/Platform Services or EKGOps Pipelines to do a quick "smoke test" of the data and/or a thorough check
+- enable smart generic EKG Platform Services or EKGOps Pipelines to do a quick "smoke test" of the data and/or a thorough check
   on all kinds of (technical) details such as data formats etc (relates to [data profiling](#data-profiling-policies) as well)
 
 ### Data Profiling Policies
@@ -152,7 +152,7 @@ Ontologies:
 
 How is temporality being dealt with, which parts of the dataset are just reflecting the "current state"
 and which parts are historic (or future / "what if") data? And which design patterns are used to maintain
-temporality? Smart model-driven EKG/Platform services can then a) maintain temporality and b) use it properly.
+temporality? Smart model-driven EKG Platform services can then a) maintain temporality and b) use it properly.
 
 ### Data Retention & Archiving Policies
 
@@ -207,7 +207,7 @@ realistic test-data in the first place.
   for testing purposes that contains all the relevant edge cases.
 - For confidential data, [masking policies or obfuscation policies](#obfuscation-masking-policies)
   may come into play.
-- Goal is to have smart EKG/Platform Services that generate test data on demand for 
+- Goal is to have smart EKG Platform Services that generate test data on demand for 
   DEV/TEST/UAT environments. 
 
 ### Query & Search Policies

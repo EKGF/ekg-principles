@@ -9,7 +9,7 @@ to a _machine-readable definition_ in verifiable formal logic.
 <!--summary-end-->
 
 A Data Point combines an object---using its [_Enterprise Knowledge Graph 
-IRI (EKG/IRI)_](https://method.ekgf.org/vocab/ekg-iri) as its 
+IRI (EKG IRI)_](https://method.ekgf.org/vocab/ekg-iri) as its 
 identifier---with the value of a _property_ in some context.
 Hence, data is expressed at its most granular level for both data-at-rest
 and data-in-motion.
@@ -54,7 +54,7 @@ The benefit is consistency, accuracy and the ability to make sound business deci
 
 ## Advanced
 
-At higher levels of EKG/Platform maturity (level 4 and 5 to be exact) the term 
+At higher levels of EKG Platform maturity (level 4 and 5 to be exact) the term 
 "Data Point" may in fact become a more complex data structure that is used 
 "on the wire" that represents the Data Point at a more "holistic" level, 
 profoundly supporting _Multiple Versions of the Truth (MVOT)_.

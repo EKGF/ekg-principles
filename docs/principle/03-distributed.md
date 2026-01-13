@@ -9,7 +9,7 @@ Any access point provides connectivity to all EKG content regardless of where it
 <!--summary-end-->
 
 The physical stores could include traditional databases as well as varied 
-_EKG/Platforms_ specifically designed for hosting EKGs. 
+_EKG Platforms_ specifically designed for hosting EKGs. 
 And some which may be hosted outside the enterprise including by information 
 services or governments. 
 All seamlessly accessed using W3C (internet-based) protocols which also allow 

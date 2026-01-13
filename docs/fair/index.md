@@ -27,7 +27,7 @@ of principles used by many Knowledge Graph practitioners.
       
         - Metadata (objects) and data (objects) can potentially have multiple identifiers (but at least one).
         - Those identifiers do not necessarily be "persistent" as long as they are (always) resolvable (through HTTP).
-        - The EKG identifiers (EKG/IRIs) of data objects (but not necessarily metadata objects) should be
+        - The EKG identifiers (EKG IRIs) of data objects (but not necessarily metadata objects) should be
           "opaque" as in "meaningless", (relatively) safe to be emailed around, stored in other platforms,
           maximising "proliferation".
         - FAIR principle **F3** would be phrased the other way around: the data described by metadata refers to it via
