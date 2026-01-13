@@ -151,7 +151,7 @@
     }
     
   ],
-  "dateModified": "<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 5, 2022 07:26:30 EDT"><span class="timeago" datetime="2022-10-05T07:26:30-04:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 5, 2022 07:26:30 EDT">2022-10-05</span>",
+  "dateModified": "<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="January 12, 2026 19:53:33 EST"><span class="timeago" datetime="2026-01-12T19:53:33-05:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="January 12, 2026 19:53:33 EST">2026-01-12</span>",
   "mainEntity": {
     "@type": "Article",
     "headline": "Self-describing Dataset",
@@ -733,14 +733,7 @@
 
     
     
-      
-      
-        <div class="ekgf-hidden-search-trigger">
-          <label class="md-header__button md-icon" for="__search">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-          </label>
-          <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -772,8 +765,6 @@
     </div>
   </div>
 </div>
-        </div>
-      
     
   </div>
   
@@ -861,22 +852,10 @@
       
       
 
-  <div class="ekgf-header-search">
-    <form class="ekgf-header-search__form" name="search">
-      <input
-        type="text"
-        class="ekgf-header-search__input"
-        name="query"
-        aria-label="Search"
-        placeholder="Search"
-        autocapitalize="off"
-        autocorrect="off"
-        autocomplete="off"
-        spellcheck="false"
-        required
-      />
-    </form>
-  </div>
+  <label class="ekgf-search-button md-header__button md-icon" for="__search" title="Search" aria-label="Search">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+  </label>
 
     </div>
   </div>
@@ -3025,7 +3004,7 @@ Depending on maturity and architecture these SDDs are also known as <em>data pro
 <p>The general idea is that <em>everything that <ins>can</ins> be said about a given dataset
 <ins>should</ins> be described---as close as possible and ideally in---that dataset itself.</em></p>
 <p>Many topic areas can require such description, most of which would be described as "policies"
-in the form of models that are enforceable by <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/Platform Services at run-time.</p>
+in the form of models that are enforceable by <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Platform Services at run-time.</p>
 <!--term-end-->
 
 <h2 id="topic-areas">Topic Areas<a class="headerlink" href="#topic-areas" title="Permanent link">&para;</a></h2>
@@ -3064,7 +3043,7 @@ in the form of models that are enforceable by <abbr title="Enterprise Knowledge 
 <p>Used to:</p>
 <ul>
 <li>provide the detail that's necessary to build up the proper end-to-end <a href="#lineage">lineage</a> information.</li>
-<li>enable smart generic <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/Platform Services or EKGOps Pipelines to transform data in a model-driven fashion </li>
+<li>enable smart generic <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Platform Services or EKGOps Pipelines to transform data in a model-driven fashion </li>
 </ul>
 <h3 id="changes">Changes<a class="headerlink" href="#changes" title="Permanent link">&para;</a></h3>
 <h3 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h3>
@@ -3074,7 +3053,7 @@ in the form of models that are enforceable by <abbr title="Enterprise Knowledge 
 <p>Policies that describe how the overall "hygiene" of the dataset can be checked.</p>
 <p>Used to:</p>
 <ul>
-<li>enable smart generic <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/Platform Services or EKGOps Pipelines to do a quick "smoke test" of the data and/or a thorough check
+<li>enable smart generic <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Platform Services or EKGOps Pipelines to do a quick "smoke test" of the data and/or a thorough check
   on all kinds of (technical) details such as data formats etc (relates to <a href="#data-profiling-policies">data profiling</a> as well)</li>
 </ul>
 <h3 id="data-profiling-policies">Data Profiling Policies<a class="headerlink" href="#data-profiling-policies" title="Permanent link">&para;</a></h3>
@@ -3118,7 +3097,7 @@ of the dataset in the context of the larger <a href="#data-supply-chain"><em>dat
 <h3 id="temporality-policies">Temporality Policies<a class="headerlink" href="#temporality-policies" title="Permanent link">&para;</a></h3>
 <p>How is temporality being dealt with, which parts of the dataset are just reflecting the "current state"
 and which parts are historic (or future / "what if") data? And which design patterns are used to maintain
-temporality? Smart model-driven <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/Platform services can then a) maintain temporality and b) use it properly.</p>
+temporality? Smart model-driven <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Platform services can then a) maintain temporality and b) use it properly.</p>
 <h3 id="data-retention-archiving-policies">Data Retention &amp; Archiving Policies<a class="headerlink" href="#data-retention-archiving-policies" title="Permanent link">&para;</a></h3>
 <h3 id="physical-dataset-policies">Physical Dataset Policies<a class="headerlink" href="#physical-dataset-policies" title="Permanent link">&para;</a></h3>
 <p>Given the logical dataset---the <abbr title="Self-describing dataset, an EKGF standard">SDD</abbr>---which physical manifestations does it have, what types, which ones
@@ -3159,7 +3138,7 @@ realistic test-data in the first place.</p>
   for testing purposes that contains all the relevant edge cases.</li>
 <li>For confidential data, <a href="#obfuscation-masking-policies">masking policies or obfuscation policies</a>
   may come into play.</li>
-<li>Goal is to have smart <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr>/Platform Services that generate test data on demand for 
+<li>Goal is to have smart <abbr title="Enterprise Knowledge Graph, an EKGF standard">EKG</abbr> Platform Services that generate test data on demand for 
   DEV/TEST/UAT environments. </li>
 </ul>
 <h3 id="query-search-policies">Query &amp; Search Policies<a class="headerlink" href="#query-search-policies" title="Permanent link">&para;</a></h3>
@@ -3237,7 +3216,7 @@ realistic test-data in the first place.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="October 5, 2022 07:26:30 EDT"><span class="timeago" datetime="2022-10-05T07:26:30-04:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="October 5, 2022 07:26:30 EDT">2022-10-05</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="January 12, 2026 19:53:33 EST"><span class="timeago" datetime="2026-01-12T19:53:33-05:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="January 12, 2026 19:53:33 EST">2026-01-12</span>
   </span>
 
     
