@@ -9,7 +9,7 @@ to a _machine-readable definition_ in verifiable formal logic.
 <!--summary-end-->
 
 A Data Point combines an object---using its [_Enterprise Knowledge Graph 
-IRI (EKG IRI)_](https://method.ekgf.org/vocab/ekg-iri) as its 
+IRI (EKG IRI)_](https://method.ekgf.org/article/ekg-iri) as its 
 identifier---with the value of a _property_ in some context.
 Hence, data is expressed at its most granular level for both data-at-rest
 and data-in-motion.
