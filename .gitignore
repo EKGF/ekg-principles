@@ -57,3 +57,5 @@ out/
 .idea
 *.fdb_latexmk
 *.xdy
+node_modules/
+.playwright-mcp/
