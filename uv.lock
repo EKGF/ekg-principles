@@ -275,12 +275,44 @@ wheels = [
 ]
 
 [[package]]
+name = "ekg-lib"
+version = "0.0.30"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "boto3" },
+    { name = "boto3-stubs" },
+    { name = "botocore" },
+    { name = "data-science-types" },
+    { name = "humps" },
+    { name = "inflection" },
+    { name = "ldap3" },
+    { name = "mdutils" },
+    { name = "mkdocs-gen-files" },
+    { name = "numpy" },
+    { name = "openpyxl" },
+    { name = "option" },
+    { name = "owlrl" },
+    { name = "pandas" },
+    { name = "pandas-stubs" },
+    { name = "python-dateutil" },
+    { name = "rdflib" },
+    { name = "requests" },
+    { name = "sparqlwrapper" },
+    { name = "stringcase" },
+    { name = "toml" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/1f/06/d3e0bf4fc27a522b5f851057602549884908cc0481e09d4e9964b1141159/ekg_lib-0.0.30.tar.gz", hash = "sha256:e5ce0e76c07e240b712bb48787089ddd2f943cd1dd337d79e99966239d28bd13", size = 74485, upload-time = "2026-01-15T11:35:11.181Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/02/c6/d109f0c74828a623b8fc7ef4e7d2773def1b0d8060bb9611d5806abe8ed2/ekg_lib-0.0.30-py3-none-any.whl", hash = "sha256:e31b20122cbae44ad6342f10f3a42d719e6841133c0f2826240933e9fd3fed52", size = 4280, upload-time = "2026-01-15T11:35:09.581Z" },
+]
+
+[[package]]
 name = "ekg-principles"
 version = "1.0.0"
 source = { virtual = "." }
 dependencies = [
     { name = "cairosvg" },
-    { name = "ekglib" },
+    { name = "ekg-lib" },
     { name = "markdown-emdash" },
     { name = "mdutils" },
     { name = "mdx-spanner" },
@@ -307,7 +339,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "cairosvg" },
-    { name = "ekglib", git = "https://github.com/EKGF/ekglib.git" },
+    { name = "ekg-lib", specifier = ">=0.0.30" },
     { name = "markdown-emdash" },
     { name = "mdutils" },
     { name = "mdx-spanner" },
@@ -323,41 +355,12 @@ requires-dist = [
     { name = "mkdocs-localsearch" },
     { name = "mkdocs-macros-plugin" },
     { name = "mkdocs-material" },
-    { name = "mkdocs-material-ekgf", specifier = ">=0.0.17" },
+    { name = "mkdocs-material-ekgf", specifier = ">=0.0.20" },
     { name = "mkdocs-mermaid2-plugin" },
     { name = "mkdocs-minify-plugin" },
     { name = "mkdocs-redirects" },
     { name = "pillow" },
     { name = "smartypants" },
-]
-
-[[package]]
-name = "ekglib"
-version = "0.0.30"
-source = { git = "https://github.com/EKGF/ekglib.git#6ea1aa1d809098cffd7285547bdb6ec50f67939e" }
-dependencies = [
-    { name = "boto3" },
-    { name = "boto3-stubs" },
-    { name = "botocore" },
-    { name = "data-science-types" },
-    { name = "humps" },
-    { name = "inflection" },
-    { name = "ldap3" },
-    { name = "mdutils" },
-    { name = "mkdocs-gen-files" },
-    { name = "numpy" },
-    { name = "openpyxl" },
-    { name = "option" },
-    { name = "owlrl" },
-    { name = "pandas" },
-    { name = "pandas-stubs" },
-    { name = "python-dateutil" },
-    { name = "rdflib" },
-    { name = "requests" },
-    { name = "setuptools" },
-    { name = "sparqlwrapper" },
-    { name = "stringcase" },
-    { name = "toml" },
 ]
 
 [[package]]
@@ -837,15 +840,15 @@ wheels = [
 
 [[package]]
 name = "mkdocs-material-ekgf"
-version = "0.0.17"
+version = "0.0.23"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "mkdocs" },
     { name = "mkdocs-material" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/91/e5/94744acd6ff69982c37faa9ef1b52e3a605a69d50f3953027e80ee386b44/mkdocs_material_ekgf-0.0.17.tar.gz", hash = "sha256:3b14e5578a9e5050f78324743b377bd49fde7f14f874dd42db47d4ff967f65a8", size = 88430, upload-time = "2026-01-14T01:24:38.628Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/2a/93/81870ef99bc4cee9272b2280b3e069e57151c3205cc420aeea4446e77a62/mkdocs_material_ekgf-0.0.23.tar.gz", hash = "sha256:981ea592bcd7ad7cc4d201b12643aedff555b7275ddcf7ff3de1d5a27396132a", size = 94913, upload-time = "2026-01-16T01:56:25.483Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/77/5e/0c08322dcb2de44111eac808dc8c4cd12688d41c495c78bb67f46dc4a8b7/mkdocs_material_ekgf-0.0.17-py3-none-any.whl", hash = "sha256:37f8645b2eb782beaca98eab61c9e6211b687c84683d782dfef90e0beb86c146", size = 88796, upload-time = "2026-01-14T01:24:37.262Z" },
+    { url = "https://files.pythonhosted.org/packages/0f/be/f23f4f2402febfb338a0669120c19bd6956218afdb029102f5683b38e7f4/mkdocs_material_ekgf-0.0.23-py3-none-any.whl", hash = "sha256:8d30631c590ada466e7f3d8778f28f2ab9cf224be92f5f01ab7d9f8dbc3d5e63", size = 94599, upload-time = "2026-01-16T01:56:23.884Z" },
 ]
 
 [[package]]
@@ -1084,11 +1087,11 @@ wheels = [
 
 [[package]]
 name = "pyasn1"
-version = "0.6.1"
+version = "0.6.2"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/ba/e9/01f1a64245b89f039897cb0130016d79f77d52669aae6ee7b159a6c4c018/pyasn1-0.6.1.tar.gz", hash = "sha256:6f580d2bdd84365380830acf45550f2511469f673cb4a5ae3857a3170128b034", size = 145322, upload-time = "2024-09-10T22:41:42.55Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/fe/b6/6e630dff89739fcd427e3f72b3d905ce0acb85a45d4ec3e2678718a3487f/pyasn1-0.6.2.tar.gz", hash = "sha256:9b59a2b25ba7e4f8197db7686c09fb33e658b98339fadb826e9512629017833b", size = 146586, upload-time = "2026-01-16T18:04:18.534Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c8/f1/d6a797abb14f6283c0ddff96bbdd46937f64122b8c925cab503dd37f8214/pyasn1-0.6.1-py3-none-any.whl", hash = "sha256:0d632f46f2ba09143da3a8afe9e33fb6f92fa2320ab7e886e2d0f7672af84629", size = 83135, upload-time = "2024-09-11T16:00:36.122Z" },
+    { url = "https://files.pythonhosted.org/packages/44/b5/a96872e5184f354da9c84ae119971a0a4c221fe9b27a4d94bd43f2596727/pyasn1-0.6.2-py3-none-any.whl", hash = "sha256:1eb26d860996a18e9b6ed05e7aae0e9fc21619fcee6af91cca9bad4fbea224bf", size = 83371, upload-time = "2026-01-16T18:04:17.174Z" },
 ]
 
 [[package]]
