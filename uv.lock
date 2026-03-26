@@ -1,6 +1,10 @@
 version = 1
 revision = 3
 requires-python = ">=3.14.2"
+resolution-markers = [
+    "python_full_version >= '3.14.3'",
+    "python_full_version < '3.14.3'",
+]
 
 [[package]]
 name = "anyio"
@@ -275,66 +279,9 @@ wheels = [
 ]
 
 [[package]]
-name = "ekg-principles"
-version = "1.0.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "cairosvg" },
-    { name = "ekglib" },
-    { name = "markdown-emdash" },
-    { name = "mdutils" },
-    { name = "mdx-spanner" },
-    { name = "mkdocs-awesome-pages-plugin" },
-    { name = "mkdocs-build-plantuml-plugin" },
-    { name = "mkdocs-exclude" },
-    { name = "mkdocs-exclude-search" },
-    { name = "mkdocs-gen-files" },
-    { name = "mkdocs-git-revision-date-localized-plugin" },
-    { name = "mkdocs-graphviz" },
-    { name = "mkdocs-include-markdown-plugin" },
-    { name = "mkdocs-kroki-plugin" },
-    { name = "mkdocs-localsearch" },
-    { name = "mkdocs-macros-plugin" },
-    { name = "mkdocs-material" },
-    { name = "mkdocs-material-ekgf" },
-    { name = "mkdocs-mermaid2-plugin" },
-    { name = "mkdocs-minify-plugin" },
-    { name = "mkdocs-redirects" },
-    { name = "pillow" },
-    { name = "smartypants" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "cairosvg" },
-    { name = "ekglib", git = "https://github.com/EKGF/ekglib.git" },
-    { name = "markdown-emdash" },
-    { name = "mdutils" },
-    { name = "mdx-spanner" },
-    { name = "mkdocs-awesome-pages-plugin" },
-    { name = "mkdocs-build-plantuml-plugin" },
-    { name = "mkdocs-exclude" },
-    { name = "mkdocs-exclude-search" },
-    { name = "mkdocs-gen-files" },
-    { name = "mkdocs-git-revision-date-localized-plugin" },
-    { name = "mkdocs-graphviz" },
-    { name = "mkdocs-include-markdown-plugin" },
-    { name = "mkdocs-kroki-plugin" },
-    { name = "mkdocs-localsearch" },
-    { name = "mkdocs-macros-plugin" },
-    { name = "mkdocs-material" },
-    { name = "mkdocs-material-ekgf", specifier = ">=0.0.17" },
-    { name = "mkdocs-mermaid2-plugin" },
-    { name = "mkdocs-minify-plugin" },
-    { name = "mkdocs-redirects" },
-    { name = "pillow" },
-    { name = "smartypants" },
-]
-
-[[package]]
-name = "ekglib"
+name = "ekg-lib"
 version = "0.0.30"
-source = { git = "https://github.com/EKGF/ekglib.git#6ea1aa1d809098cffd7285547bdb6ec50f67939e" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "boto3" },
     { name = "boto3-stubs" },
@@ -354,10 +301,71 @@ dependencies = [
     { name = "python-dateutil" },
     { name = "rdflib" },
     { name = "requests" },
-    { name = "setuptools" },
     { name = "sparqlwrapper" },
     { name = "stringcase" },
     { name = "toml" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/1f/06/d3e0bf4fc27a522b5f851057602549884908cc0481e09d4e9964b1141159/ekg_lib-0.0.30.tar.gz", hash = "sha256:e5ce0e76c07e240b712bb48787089ddd2f943cd1dd337d79e99966239d28bd13", size = 74485, upload-time = "2026-01-15T11:35:11.181Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/02/c6/d109f0c74828a623b8fc7ef4e7d2773def1b0d8060bb9611d5806abe8ed2/ekg_lib-0.0.30-py3-none-any.whl", hash = "sha256:e31b20122cbae44ad6342f10f3a42d719e6841133c0f2826240933e9fd3fed52", size = 4280, upload-time = "2026-01-15T11:35:09.581Z" },
+]
+
+[[package]]
+name = "ekg-principles"
+version = "1.0.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "cairosvg" },
+    { name = "ekg-lib" },
+    { name = "markdown-emdash" },
+    { name = "mdutils" },
+    { name = "mdx-spanner" },
+    { name = "mkdocs-awesome-pages-plugin" },
+    { name = "mkdocs-build-plantuml-plugin" },
+    { name = "mkdocs-exclude" },
+    { name = "mkdocs-exclude-search" },
+    { name = "mkdocs-gen-files" },
+    { name = "mkdocs-git-revision-date-localized-plugin" },
+    { name = "mkdocs-graphviz" },
+    { name = "mkdocs-include-markdown-plugin" },
+    { name = "mkdocs-kroki-plugin" },
+    { name = "mkdocs-localsearch" },
+    { name = "mkdocs-macros-plugin" },
+    { name = "mkdocs-material" },
+    { name = "mkdocs-material-ekgf", version = "0.0.24", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.14.3'" },
+    { name = "mkdocs-material-ekgf", version = "0.0.25", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.14.3'" },
+    { name = "mkdocs-mermaid2-plugin" },
+    { name = "mkdocs-minify-plugin" },
+    { name = "mkdocs-redirects" },
+    { name = "pillow" },
+    { name = "smartypants" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "cairosvg" },
+    { name = "ekg-lib", specifier = ">=0.0.30" },
+    { name = "markdown-emdash" },
+    { name = "mdutils" },
+    { name = "mdx-spanner" },
+    { name = "mkdocs-awesome-pages-plugin" },
+    { name = "mkdocs-build-plantuml-plugin" },
+    { name = "mkdocs-exclude" },
+    { name = "mkdocs-exclude-search" },
+    { name = "mkdocs-gen-files" },
+    { name = "mkdocs-git-revision-date-localized-plugin" },
+    { name = "mkdocs-graphviz" },
+    { name = "mkdocs-include-markdown-plugin" },
+    { name = "mkdocs-kroki-plugin" },
+    { name = "mkdocs-localsearch" },
+    { name = "mkdocs-macros-plugin" },
+    { name = "mkdocs-material" },
+    { name = "mkdocs-material-ekgf", specifier = ">=0.0.20" },
+    { name = "mkdocs-mermaid2-plugin" },
+    { name = "mkdocs-minify-plugin" },
+    { name = "mkdocs-redirects" },
+    { name = "pillow" },
+    { name = "smartypants" },
 ]
 
 [[package]]
@@ -837,15 +845,34 @@ wheels = [
 
 [[package]]
 name = "mkdocs-material-ekgf"
-version = "0.0.17"
+version = "0.0.24"
 source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "mkdocs" },
-    { name = "mkdocs-material" },
+resolution-markers = [
+    "python_full_version < '3.14.3'",
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/91/e5/94744acd6ff69982c37faa9ef1b52e3a605a69d50f3953027e80ee386b44/mkdocs_material_ekgf-0.0.17.tar.gz", hash = "sha256:3b14e5578a9e5050f78324743b377bd49fde7f14f874dd42db47d4ff967f65a8", size = 88430, upload-time = "2026-01-14T01:24:38.628Z" }
+dependencies = [
+    { name = "mkdocs", marker = "python_full_version < '3.14.3'" },
+    { name = "mkdocs-material", marker = "python_full_version < '3.14.3'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/27/33/d7219e80c5cf87bcd2c44a999c7044fbcdd33c50c31737a2a1dc6175cdf9/mkdocs_material_ekgf-0.0.24.tar.gz", hash = "sha256:804811939f2c0f3eddf2a9599d1d02356364c43e3fbe8cb53d0d25203c5f1abb", size = 95397, upload-time = "2026-02-18T18:29:29.862Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/77/5e/0c08322dcb2de44111eac808dc8c4cd12688d41c495c78bb67f46dc4a8b7/mkdocs_material_ekgf-0.0.17-py3-none-any.whl", hash = "sha256:37f8645b2eb782beaca98eab61c9e6211b687c84683d782dfef90e0beb86c146", size = 88796, upload-time = "2026-01-14T01:24:37.262Z" },
+    { url = "https://files.pythonhosted.org/packages/f6/96/5bfe62dd9056b1b1bcf7f96bffa37e542cd9077219ffbb5bc7dac35d719f/mkdocs_material_ekgf-0.0.24-py3-none-any.whl", hash = "sha256:c5b1d507db81b535684c72eb8bb85eabfe8e8e64b6905c907718265dd8806e9a", size = 95094, upload-time = "2026-02-18T18:29:28.603Z" },
+]
+
+[[package]]
+name = "mkdocs-material-ekgf"
+version = "0.0.25"
+source = { registry = "https://pypi.org/simple" }
+resolution-markers = [
+    "python_full_version >= '3.14.3'",
+]
+dependencies = [
+    { name = "mkdocs", marker = "python_full_version >= '3.14.3'" },
+    { name = "mkdocs-material", marker = "python_full_version >= '3.14.3'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/77/bc/d0c1c59359f05bd386a0d7eb97bdfad56dba9f6ab56b13751540cf827c74/mkdocs_material_ekgf-0.0.25.tar.gz", hash = "sha256:b3d4470b7e49e57edbe95d58f67d218c4fb5d9693d135519f8fd312545bb1680", size = 95400, upload-time = "2026-02-18T20:44:57.813Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/60/46/75f0bc1bc2a42bbfb5fd63d08ed4a4cd1b2617e06cfd4491c096f18b5197/mkdocs_material_ekgf-0.0.25-py3-none-any.whl", hash = "sha256:d315a58ccb8fc09377314aaf0b81edaeedbd2a878717e25a0d7dec9f1b55b3a9", size = 95084, upload-time = "2026-02-18T20:44:56.442Z" },
 ]
 
 [[package]]
@@ -1204,7 +1231,7 @@ wheels = [
 
 [[package]]
 name = "requests"
-version = "2.32.5"
+version = "2.33.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "certifi" },
@@ -1212,9 +1239,9 @@ dependencies = [
     { name = "idna" },
     { name = "urllib3" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c9/74/b3ff8e6c8446842c3f5c837e9c3dfcfe2018ea6ecef224c710c85ef728f4/requests-2.32.5.tar.gz", hash = "sha256:dbba0bac56e100853db0ea71b82b4dfd5fe2bf6d3754a8893c3af500cec7d7cf", size = 134517, upload-time = "2025-08-18T20:46:02.573Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/34/64/8860370b167a9721e8956ae116825caff829224fbca0ca6e7bf8ddef8430/requests-2.33.0.tar.gz", hash = "sha256:c7ebc5e8b0f21837386ad0e1c8fe8b829fa5f544d8df3b2253bff14ef29d7652", size = 134232, upload-time = "2026-03-25T15:10:41.586Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/1e/db/4254e3eabe8020b458f1a747140d32277ec7a271daf1d235b70dc0b4e6e3/requests-2.32.5-py3-none-any.whl", hash = "sha256:2462f94637a34fd532264295e186976db0f5d453d1cdd31473c85a6a161affb6", size = 64738, upload-time = "2025-08-18T20:46:00.542Z" },
+    { url = "https://files.pythonhosted.org/packages/56/5d/c814546c2333ceea4ba42262d8c4d55763003e767fa169adc693bd524478/requests-2.33.0-py3-none-any.whl", hash = "sha256:3324635456fa185245e24865e810cecec7b4caf933d7eb133dcde67d48cee69b", size = 65017, upload-time = "2026-03-25T15:10:40.382Z" },
 ]
 
 [[package]]
